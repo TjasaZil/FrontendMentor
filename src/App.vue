@@ -1,15 +1,15 @@
 <template>
-  <section>
-    <HamburgerComponent />
+  <section class="bg-slate-700 text-slate-200">
+    <Navigation />
     <router-view />
   </section>
 </template>
 
 <script>
-import HamburgerComponent from "@/components/Shared/Navigation/HamburgerComponent.vue";
+import Navigation from "./components/Shared/Navigation/Navigation.vue";
 export default {
   name: "App",
-  components: { HamburgerComponent },
+  components: { Navigation },
 };
 </script>
 

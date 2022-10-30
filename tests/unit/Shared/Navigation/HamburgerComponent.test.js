@@ -74,4 +74,33 @@ describe("HamburgerComponent", () => {
       expect(junior).toBeInTheDocument();
     });
   });
+  describe("has appropriate links", () => {
+    it("has appropriate home link", async () => {
+      const user = userEvent.setup();
+      render(HamburgerComponent);
+      let img = screen.queryByRole("img");
+      await user.click(img);
+      let home = screen.queryByText("home");
+      await user.click(home);
+      expect(window.location.href).toContain("/");
+    });
+    /*it("has appropriate newbie link", async () => {
+      const user = userEvent.setup();
+      render(HamburgerComponent);
+      let img = screen.queryByRole("img");
+      await user.click(img);
+      let newbie = screen.queryByText("newbie challenges");
+      await user.click(newbie);
+      expect(window.location.href).toContain("/newbie-challenges");
+    });
+    it("has appropriate junior link", async () => {
+      const user = userEvent.setup();
+      render(HamburgerComponent);
+      let img = screen.queryByRole("img");
+      await user.click(img);
+      let junior = screen.queryByText("junior challenges");
+      await user.click(junior);
+      expect(window.location.href).toContain("/junior-challenges");
+    });*/
+  });
 });
