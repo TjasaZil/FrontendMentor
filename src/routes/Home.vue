@@ -5,7 +5,8 @@
       paragraph="Welcome to my Frontend Mentor challenges page. This is where all of my
         challenges found their home. You can browse them using the menu at the
         top. If you want to look at more of my projects feel free to visit my
-        GitHub page."
+        GitHub page.
+        Most of the challenges are made using TDD (Jest and Vue testing library), Vue.js and Tailwindcss."
     />
 
     <section class="flex justify-center items-center space-x-5 mt-5">
