@@ -14,6 +14,30 @@
         heading="this is a test heading"
         paragraph="test paragraph"
       />
+      <Container
+        :image="TestImage"
+        alt="test image"
+        heading="this is a test heading"
+        paragraph="test paragraph"
+      />
+      <Container
+        :image="TestImage"
+        alt="test image"
+        heading="this is a test heading"
+        paragraph="test paragraph"
+      />
+      <Container
+        :image="TestImage"
+        alt="test image"
+        heading="this is a test heading"
+        paragraph="test paragraph"
+      />
+      <Container
+        :image="TestImage"
+        alt="test image"
+        heading="this is a test heading"
+        paragraph="test paragraph"
+      />
     </section>
   </section>
 </template>
