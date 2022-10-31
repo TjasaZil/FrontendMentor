@@ -46,12 +46,12 @@ describe("Footer", () => {
       });
       it("has link with href github", () => {
         render(Footer);
-        let github = screen.queryByTestId("github-link-test");
+        let github = screen.queryByTestId("github-link");
         expect(github).toHaveAttribute("href", "https://github.com/zuzexx");
       });
       it("has link with href linkedin", () => {
         render(Footer);
-        let linkedin = screen.queryByTestId("linkedin-link-test");
+        let linkedin = screen.queryByTestId("linkedin-link");
         expect(linkedin).toHaveAttribute(
           "href",
           "https://www.linkedin.com/in/tjasa-zilavec/"

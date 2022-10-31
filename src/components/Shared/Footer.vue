@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full h-16 tablet:h-20 laptopl:h-24 4kay:h-28 bg-slate-800 border-t-2 border-solid border-slate-200 mt-16"
+    class="w-full h-16 tablet:h-20 laptopl:h-24 4kay:h-28 bg-slate-800 border-t-2 border-solid border-slate-200 mt-8"
   >
     <div
       class="flex justify-between items-center w-full p-4 h-16 tablet:h-20 laptopl:h-24 4kay:h-28"
@@ -12,7 +12,7 @@
         <a
           href="https://github.com/zuzexx"
           target="_blank"
-          data-testid="github-link-test"
+          data-testid="github-link"
         >
           <img
             class="w-8 laptop:w-10 laptopl:w-11 4kay:w-14"
@@ -22,7 +22,7 @@
         <a
           href="https://www.linkedin.com/in/tjasa-zilavec/"
           target="_blank"
-          data-testid="linkedin-link-test"
+          data-testid="linkedin-link"
         >
           <img
             class="w-8 laptop:w-10 laptopl:w-11 4kay:w-14"

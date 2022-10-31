@@ -11,6 +11,10 @@ const router = createRouter({
       component: () => import("@/routes/NewbiePage.vue"),
     },
     {
+      path: "/nft-preview-card",
+      component: () => import("@/routes/NewbieChallenges/NFTPreviewCard.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },

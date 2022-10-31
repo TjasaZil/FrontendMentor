@@ -12,17 +12,19 @@
     </div>
 
     <h3
-      class="font-semibold text-lg tablet:text-xl laptopl:text-2xl 4kay:text-3xl"
+      class="font-semibold text-center mx-auto text-lg tablet:text-xl laptopl:text-2xl 4kay:text-3xl"
     >
       {{ heading }}
     </h3>
     <hr class="w-5/6 border-2 bg-slate-50 border-slate-50 rounded-lg mx-auto" />
-    <div role="paragraph">{{ paragraph }}</div>
+    <div role="paragraph" class="w-5/6 mx-auto text-">
+      {{ paragraph }}
+    </div>
     <div class="flex justify-around items-center pb-3 mx-auto w-full">
       <a href="https://github.com/zuzexx" target="_blank"
         ><MainButton text="github" data-testid="main-button-component-test"
       /></a>
-      <router-link to="/"
+      <router-link :to="router"
         ><MainButton
           text="live site"
           data-testid="main-button-component-test"
@@ -49,6 +51,11 @@ export default {
     heading: {
       type: String,
       required: true,
+    },
+    router: {
+      type: String,
+      required: false,
+      default: "/",
     },
     paragraph: {
       type: String,
