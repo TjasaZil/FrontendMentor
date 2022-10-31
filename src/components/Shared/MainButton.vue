@@ -34,7 +34,7 @@ export default {
 
 <style scoped>
 button {
-  @apply px-4 py-2 xl:text-lg font-semibold rounded-full uppercase;
+  @apply px-4 py-2 4kay:px-6 4kay:py-3 xl:text-lg font-semibold rounded-full uppercase 4kay:text-xl;
 }
 .primary {
   @apply bg-slate-800 hover:opacity-90 text-slate-100   hover:border-2;
