@@ -5,14 +5,31 @@
       heading="newbie challenges"
       paragraph="This page holds all of my finished newbie challenges."
     />
+    <section
+      class="mt-16 w-5/6 mx-auto flex flex-wrap justify-around items-center"
+    >
+      <Container
+        :image="TestImage"
+        alt="test image"
+        heading="this is a test heading"
+        paragraph="test paragraph"
+      />
+    </section>
   </section>
 </template>
 
 <script>
 import IntroText from "@/components/Shared/IntroText.vue";
+import Container from "@/components/Shared/Container.vue";
+import TestImage from "@/assets/test.jpg";
 export default {
   name: "NewbiePage",
-  components: { IntroText },
+  components: { IntroText, Container },
+  data() {
+    return {
+      TestImage,
+    };
+  },
 };
 </script>
 
