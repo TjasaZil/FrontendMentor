@@ -8,7 +8,7 @@
 
 <script>
 import Navigation from "./components/Shared/Navigation/Navigation.vue";
-import Footer from "./components/Shared/Footer/Footer.vue";
+import Footer from "./components/Shared/Footer.vue";
 export default {
   name: "App",
   components: { Navigation, Footer },

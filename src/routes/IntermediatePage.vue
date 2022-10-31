@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "IntermediateChallenges",
+  name: "IntermediatePage",
 };
 </script>
 

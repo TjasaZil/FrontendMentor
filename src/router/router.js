@@ -8,15 +8,15 @@ const router = createRouter({
     },
     {
       path: "/newbie-challenges",
-      component: () => import("@/routes/NewbieChallenges.vue"),
+      component: () => import("@/routes/NewbiePage.vue"),
     },
     {
       path: "/junior-challenges",
-      component: () => import("@/routes/JuniorChallenges.vue"),
+      component: () => import("@/routes/JuniorPage.vue"),
     },
     {
       path: "/Intermediate-challenges",
-      component: () => import("@/routes/IntermediateChallenges.vue"),
+      component: () => import("@/routes/IntermediatePage.vue"),
     },
   ],
 });
