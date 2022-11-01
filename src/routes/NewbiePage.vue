@@ -20,7 +20,7 @@
           router="/nft-preview-card"
         />
         <Container
-          :image="NFTImage"
+          :image="QRImage"
           alt="QR Code Component"
           heading="QR Code Component"
           paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
@@ -36,6 +36,7 @@
 import IntroText from "@/components/Shared/IntroText.vue";
 import Container from "@/components/Shared/Container.vue";
 import NFTImage from "@/assets/NFTPreviewCard/design/desktop-design.jpg";
+import QRImage from "@/assets/QRCodeComponent/design/desktop-design.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 
@@ -45,6 +46,7 @@ export default {
   data() {
     return {
       NFTImage,
+      QRImage,
     };
   },
 };

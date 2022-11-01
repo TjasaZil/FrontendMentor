@@ -21,7 +21,7 @@
       {{ paragraph }}
     </div>
     <div class="flex justify-around items-center pb-3 mx-auto w-full">
-      <a href="https://github.com/zuzexx" target="_blank"
+      <a href="https://github.com/zuzexx/FrontendMentor" target="_blank"
         ><MainButton text="github" data-testid="main-button-component-test"
       /></a>
       <router-link :to="router"
