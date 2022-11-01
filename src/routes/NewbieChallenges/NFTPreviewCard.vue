@@ -12,7 +12,7 @@
         <img
           src="@/assets/NFTPreviewCard/image-equilibrium.jpg"
           alt="equilibrium"
-          class="hover:opacity-50 hover:scale-x-110 rounded-xl w-11/12 max-w-[325px] h-full max-h-[400px] mx-auto"
+          class="hover:opacity-50 hover:scale-x-110 rounded-xl w-11/12 max-w-[325px] h-full max-h-[425px] mx-auto"
         />
       </div>
       <div class="w-10/12 mx-auto max-w-[325px] space-y-5">

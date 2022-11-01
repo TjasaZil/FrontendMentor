@@ -36,7 +36,8 @@ npm run lint
 
 ### Newbie:
 
--[NFT Preview Card](https://frontendmentor-steel.vercel.app/nft-preview-card)
+- [NFT Preview Card](https://frontendmentor-steel.vercel.app/nft-preview-card)
+- [QR Code Component](https://frontendmentor-steel.vercel.app/qr-code-component)
 
 ### Junior:
 
