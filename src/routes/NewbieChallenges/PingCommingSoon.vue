@@ -16,7 +16,7 @@
       <span class="font-bold text-ping-very-dark-blue">soon!</span>
     </h1>
     <h2
-      class="text-sm mb-5 mt-4 lg:text-xl text-ping-very-dark-blue"
+      class="text-sm mb-5 mt-5 lg:text-xl text-ping-very-dark-blue"
       x-intersect="$el.classList.add('fadeLeftRight')"
     >
       Subscribe and get notified
@@ -50,7 +50,7 @@
     <footer class="mx-auto flex flex-col content-center justify-center">
       <div
         id="social-media"
-        class="flex flex-row w-120px justify-center content-evenly mt-5"
+        class="flex flex-row w-120px justify-center content-evenly mt-10"
         x-intersect="$el.classList.add('swingIn')"
       >
         <img
