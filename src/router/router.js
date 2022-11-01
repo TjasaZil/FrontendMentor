@@ -23,6 +23,11 @@ const router = createRouter({
       component: () => import("@/routes/NewbieChallenges/PingCommingSoon.vue"),
     },
     {
+      path: "/profile-card-component",
+      component: () =>
+        import("@/routes/NewbieChallenges/ProfileCardComponent.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },

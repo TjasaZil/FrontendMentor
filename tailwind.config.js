@@ -26,6 +26,29 @@ module.exports = {
         "ping-light-red": "hsl(354, 100%, 66%)",
         "ping-gray": "hsl(0, 0%, 59%)",
         "ping-very-dark-blue": "hsl(209, 33%, 12%)",
+        "profile-dark-cyan": "hsl(185, 75%, 39%)",
+        "profile-very-dark-blue": "hsl(229, 23%, 23%)",
+        "profile-dark-grayish-blue": "hsl(227, 10%, 46%)",
+        "profile-dark-gray": "hsl(0, 0%, 59%)",
+      },
+      width: {
+        "profile-mobile-container-width": "326px",
+        "profile-desktop-container-width": "350px",
+        "profile-mobile-profile-width": "100px",
+      },
+      height: {
+        "profile-mobile-container-height": "374px",
+
+        "profile-mobile-container-background-height": "140px",
+        "profile-mobile-profile-height": "100px",
+      },
+      backgroundImage: {
+        "profile-container-bg":
+          "url('./assets/ProfileCardComponent/bg-pattern-card.svg')",
+        "profile-circle-up-bg":
+          "url('./assets/ProfileCardComponent/bg-pattern-top.svg')",
+        "profile-circle-bottom-bg":
+          "url('./assets/ProfileCardComponent/bg-pattern-bottom.svg')",
       },
     },
   },
