@@ -1,9 +1,9 @@
 <template>
-  <body
+  <section
     class="main flex flex-col items-center justify-center bg-profile-dark-cyan w-screen h-screen"
   >
     <MainComponent />
-  </body>
+  </section>
 </template>
 
 <script>
