@@ -3,7 +3,7 @@
     class="h-screen bg-nft-main-bg pt-20 main flex flex-col justify-center items-center w-screen"
   >
     <section
-      class="bg-nft-card-bg w-5/6 h-[543px] max-w-[350px] lg:h-[596px] rounded-xl space-y-5 -mt-5"
+      class="bg-nft-card-bg w-5/6 h-[543px] max-w-[350px] lg:h-[596px] rounded-xl space-y-5 -mt-10"
     >
       <div
         class="overlay mt-6 rounded-xl mx-auto w-11/12 max-w-[325px] h-11/12 max-h-[325px] z-50"
