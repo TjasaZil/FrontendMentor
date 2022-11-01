@@ -54,10 +54,10 @@ describe("NFTPreviewCard", () => {
       });
     });
     describe("images", () => {
-      it("has 5 images", () => {
+      it("has 4 images", () => {
         render(NFT);
         const images = screen.queryAllByRole("img");
-        expect(images.length).toBe(5);
+        expect(images.length).toBe(4);
       });
       it("clock icon has src", () => {
         render(NFT);
@@ -79,16 +79,7 @@ describe("NFTPreviewCard", () => {
         const eth = screen.queryByAltText("etherium icon");
         expect(eth).toBeInTheDocument();
       });
-      it("view icon has src", () => {
-        render(NFT);
-        const view = screen.queryByAltText("view icon");
-        expect(view).toHaveAttribute("src");
-      });
-      it("view icon has alt", () => {
-        render(NFT);
-        const view = screen.queryByAltText("view icon");
-        expect(view).toBeInTheDocument();
-      });
+
       it("image avatar has src", () => {
         render(NFT);
         const avatar = screen.queryByAltText("Jules Wyvern avatar");
