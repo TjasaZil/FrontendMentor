@@ -3,7 +3,7 @@
     class="h-screen bg-nft-main-bg pt-20 main flex flex-col justify-center items-center w-screen"
   >
     <section
-      class="bg-nft-card-bg w-5/6 h-[543px] max-w-[350px] lg:h-[596px] rounded-xl space-y-5 -mt-10"
+      class="bg-nft-card-bg w-5/6 h-[543px] max-w-[350px] lg:h-[596px] rounded-xl space-y-5 -mt-16"
     >
       <div
         class="overlay mt-6 rounded-xl mx-auto w-11/12 max-w-[325px] h-11/12 max-h-[325px] z-50"
@@ -17,7 +17,7 @@
       </div>
       <div class="w-10/12 mx-auto max-w-[325px] space-y-5">
         <h1
-          class="capitalize font-semibold text-lg tablet:text-2xl tracking-wide hover:text-nft-cyan hover:cursor-pointer"
+          class="capitalize font-semibold text-lg tablet:text-xl tracking-wide hover:text-nft-cyan hover:cursor-pointer"
           x-intersect="$el.classList.add('fadeRightLeft')"
         >
           equilibrium #3429
