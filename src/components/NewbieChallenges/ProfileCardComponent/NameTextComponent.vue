@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col content-center m-auto w-32 text-center mt-6">
+  <div class="flex flex-col content-center m-auto w-32 text-center mt-6">
     <h1
       data-test="name-test"
       class="text-profile-very-dark-blue font-semibold text-base md:text-lg flex flex-row w-36 justify-evenly"
@@ -17,7 +17,7 @@
     >
       {{ location }}
     </h2>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <main
+  <div
     class="w-profile-mobile-container-width h-profile-mobile-container-height bg-white m-auto flex flex-col rounded-2xl font-['Kumbh Sans'] md:w-profile-desktop-container-width"
   >
     <div
@@ -11,7 +11,7 @@
     <NameTextComponent />
     <hr class="border-gray-200 border-1 mb-5" />
     <StatisticsComponent />
-  </main>
+  </div>
 </template>
 
 <script>
