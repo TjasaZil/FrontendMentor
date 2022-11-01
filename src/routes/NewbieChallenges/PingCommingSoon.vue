@@ -1,6 +1,6 @@
 <template>
   <main
-    class="bg-white flex items-center justify-center h-screen flex-col font-['Libre_Franklin']"
+    class="bg-white flex items-center justify-center h-screen pt-5 flex-col font-['Libre_Franklin']"
   >
     <img
       src="@/assets/PingCommingSoon/logo.svg"
@@ -23,19 +23,19 @@
     </h2>
     <div
       role="form"
-      class="flex flex-col content-center justify-center mt-5 lg:flex-row lg:w-[600px]"
+      class="flex flex-col items-center justify-center mt-5 lg:flex-row lg:w-[580px]"
       x-intersect="$el.classList.add('fadeIn')"
     >
       <input
         type="email"
         placeholder="Your email address..."
-        class="peer border w-80 h-10 p-2 px-3 rounded-full border-ping-pale-blue placeholder:text-ping-gray lg:w-[421px] lg:h-56px"
+        class="peer border w-80 py-4 px-3 rounded-full border-ping-pale-blue placeholder:text-ping-gray lg:w-[380px] lg:h-56px"
         label="email"
         required
       />
 
       <button
-        class="px-10 py-3 font-bold bg-ping-blue p-2 rounded-full mt-4 text-white text-sm hover:bg-ping-pale-blue lg:w-200px lg:h-56px lg:mt-0 lg:ml-6 drop-shadow-xl"
+        class="px-12 py-4 font-bold bg-ping-blue p-2 rounded-full mt-4 text-white text-sm hover:bg-ping-pale-blue lg:w-200px lg:h-56px lg:mt-0 lg:ml-6 drop-shadow-xl"
       >
         Notify me
       </button>
@@ -44,7 +44,7 @@
     <img
       src="@/assets/PingCommingSoon/illustration-dashboard.png"
       alt="dashboard illustration"
-      class="w-80 mt-[70px] lg:w-[620px]"
+      class="w-80 mt-[70px] lg:w-[580px]"
       x-intersect="$el.classList.add('swingIn')"
     />
     <footer class="mx-auto flex flex-col content-center justify-center">
