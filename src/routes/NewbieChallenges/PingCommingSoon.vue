@@ -1,6 +1,6 @@
 <template>
   <main
-    class="bg-white flex items-center justify-center h-screen pt-5 flex-col font-['Libre_Franklin']"
+    class="bg-white flex items-center justify-center h-screen pt-2 flex-col font-['Libre_Franklin']"
   >
     <img
       src="@/assets/PingCommingSoon/logo.svg"
@@ -23,7 +23,7 @@
     </h2>
     <div
       role="form"
-      class="flex flex-col items-center justify-center lg:flex-row lg:w-[580px]"
+      class="flex flex-col items-center justify-center mt-5 lg:flex-row lg:w-[580px]"
       x-intersect="$el.classList.add('fadeIn')"
     >
       <input
