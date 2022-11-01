@@ -12,12 +12,12 @@
         <img
           src="@/assets/NFTPreviewCard/image-equilibrium.jpg"
           alt="equilibrium"
-          class="hover:opacity-50 hover:scale-x-110 rounded-xl w-11/12 max-w-[325px] h-11/12 max-h-[350px] mx-auto"
+          class="hover:opacity-50 hover:scale-x-110 rounded-xl w-11/12 max-w-[325px] h-11/12 max-h-[375px] mx-auto"
         />
       </div>
       <div class="w-10/12 mx-auto max-w-[325px] space-y-5">
         <h1
-          class="capitalize font-semibold text-lg tablet:text-xl tracking-wide hover:text-nft-cyan hover:cursor-pointer"
+          class="capitalize font-semibold text-lg tablet:text-2xl tracking-wide hover:text-nft-cyan hover:cursor-pointer"
           x-intersect="$el.classList.add('fadeRightLeft')"
         >
           equilibrium #3429
