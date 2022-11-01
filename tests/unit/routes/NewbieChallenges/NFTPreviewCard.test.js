@@ -34,7 +34,7 @@ describe("NFTPreviewCard", () => {
       });
       it("has appropriate paragraph 2 text", () => {
         render(NFT);
-        const paragraph = screen.queryByText("0.041eth");
+        const paragraph = screen.queryByText("0.041 eth");
         expect(paragraph).toBeInTheDocument();
       });
       it("has appropriate paragraph 3 text", () => {

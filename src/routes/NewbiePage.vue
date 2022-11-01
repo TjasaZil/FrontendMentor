@@ -18,6 +18,7 @@
           heading="NFT Preview Card Component"
           paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
           router="/nft-preview-card"
+          x-intersect="$el.classList.add('swingIn')"
         />
         <Container
           :image="QRImage"
@@ -25,6 +26,15 @@
           heading="QR Code Component"
           paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
           router="/qr-code-component"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
+          :image="PingImage"
+          alt="Ping comming soon"
+          heading="Ping Single Column Coming Soon Page"
+          paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
+          router="/ping-comming-soon"
+          x-intersect="$el.classList.add('swingIn')"
         />
       </section>
     </section>
@@ -36,7 +46,8 @@
 import IntroText from "@/components/Shared/IntroText.vue";
 import Container from "@/components/Shared/Container.vue";
 import NFTImage from "@/assets/NFTPreviewCard/design/desktop-design.jpg";
-import QRImage from "@/assets/QRCodeComponent/design/desktop-design.jpg";
+import QRImage from "@/assets/QRCodeComponent/design/desktop-preview.jpg";
+import PingImage from "@/assets/PingCommingSoon/design/desktop-preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 
@@ -47,6 +58,7 @@ export default {
     return {
       NFTImage,
       QRImage,
+      PingImage,
     };
   },
 };

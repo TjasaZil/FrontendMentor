@@ -38,6 +38,7 @@ npm run lint
 
 - [NFT Preview Card](https://frontendmentor-steel.vercel.app/nft-preview-card)
 - [QR Code Component](https://frontendmentor-steel.vercel.app/qr-code-component)
+- [Ping Single Column Coming Soon Page](https://frontendmentor-steel.vercel.app/ping-comming-soon)
 
 ### Junior:
 

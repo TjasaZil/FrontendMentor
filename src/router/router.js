@@ -19,6 +19,10 @@ const router = createRouter({
       component: () => import("@/routes/NewbieChallenges/QRCodeComponent.vue"),
     },
     {
+      path: "/ping-comming-soon",
+      component: () => import("@/routes/NewbieChallenges/PingCommingSoon.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },

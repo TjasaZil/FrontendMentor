@@ -12,7 +12,7 @@
         x-intersect="$el.classList.add('swingIn')"
       />
       <h1
-        class="text-qr-dark-blue font-bold w-9/12 mx-auto text-center text-lg tablet:text-xl mt-1 hover:shadow-lg hover:cursor-pointer hover:text-qr-grayish-blue hover:font-extrabold"
+        class="text-qr-dark-blue font-bold w-9/12 mx-auto text-center text-lg tablet:text-[21px] mt-1 hover:shadow-lg hover:cursor-pointer hover:text-qr-grayish-blue hover:font-extrabold"
         x-intersect="$el.classList.add('fadeRightLeft')"
       >
         Improve your front-end skills by building projects
