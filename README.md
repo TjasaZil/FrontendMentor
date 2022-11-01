@@ -1,6 +1,6 @@
 # Frontent mentor
 
-this is a site that holds all of my Frontend Mentor projects
+this is a site that holds all of my Frontend Mentor projects. If you want to see a README.md file for a specific project you can find it in the src/assets/{'project name'} folder.
 
 ### Project setup
 
@@ -32,9 +32,15 @@ npm run test:unit
 npm run lint
 ```
 
-### Challenges:
+## Challenges:
 
-## Technologies used:
+### Newbie:
+
+-[NFT Preview Card]()
+
+### Junior:
+
+## Build with:
 
 - [VUE.js](https://cli.vuejs.org/) - Javascript framework - used because I really like working with it and enjoy the workflow
 - [Tailwindcss](https://tailwindcss.com/) - CSS framework - used because I like working with it and it enables me to style components quickly, meaning I can use my time for other things that I find more important (like testing).
@@ -45,8 +51,6 @@ npm run lint
 - [DOM testing library](https://testing-library.com/docs/dom-testing-library/install) - used in conjunction with Jest
 - [User event testing library](https://testing-library.com/docs/user-event/install) - used in conjunction with Jest
 - [Jest dom testing library](https://testing-library.com/docs/ecosystem-jest-dom) - used in conjunction with Jest
-
-- [Pictures source](https://pixabay.com/photos/search/pasta/?manual_search=1&pagi=2) - royalty free pictures
 
 ### Picture sources:
 
