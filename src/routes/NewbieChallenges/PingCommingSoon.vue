@@ -9,7 +9,7 @@
       x-intersect="$el.classList.add('fadeLeftRight')"
     />
     <h1
-      class="text-2xl font-thin mt-[50px] text-ping-gray lg:text-5xl"
+      class="text-2xl font-thin pt-10 text-ping-gray lg:text-[42px]"
       x-intersect="$el.classList.add('fadeRightLeft')"
     >
       We are launching
