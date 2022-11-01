@@ -14,10 +14,17 @@
       >
         <Container
           :image="NFTImage"
-          alt="test image"
+          alt="NFT image"
           heading="NFT Preview Card Component"
           paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
           router="/nft-preview-card"
+        />
+        <Container
+          :image="NFTImage"
+          alt="QR Code Component"
+          heading="QR Code Component"
+          paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
+          router="/qr-code-component"
         />
       </section>
     </section>

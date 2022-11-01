@@ -15,6 +15,10 @@ const router = createRouter({
       component: () => import("@/routes/NewbieChallenges/NFTPreviewCard.vue"),
     },
     {
+      path: "/qr-code-component",
+      component: () => import("@/routes/NewbieChallenges/QRCodeComponent.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },
