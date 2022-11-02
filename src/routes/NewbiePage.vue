@@ -16,7 +16,6 @@
           :image="NFTImage"
           alt="NFT image"
           heading="NFT Preview Card Component"
-          paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
           router="/nft-preview-card"
           x-intersect="$el.classList.add('swingIn')"
         />
@@ -24,7 +23,6 @@
           :image="QRImage"
           alt="QR Code Component"
           heading="QR Code Component"
-          paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
           router="/qr-code-component"
           x-intersect="$el.classList.add('swingIn')"
         />
@@ -32,15 +30,13 @@
           :image="ProfileImage"
           alt="Profile Card Component"
           heading="Profile Card Component"
-          paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
           router="/profile-card-component"
           x-intersect="$el.classList.add('swingIn')"
         />
         <Container
           :image="PingImage"
           alt="Ping comming soon"
-          heading="Ping Single Column Coming Soon Page"
-          paragraph="The challenge is to build out this preview card component and get it looking as close to the design as possible."
+          heading="Ping  Coming Soon Page"
           router="/ping-comming-soon"
           x-intersect="$el.classList.add('swingIn')"
         />

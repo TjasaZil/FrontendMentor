@@ -5,9 +5,11 @@
     <div
       class="w-full h-16 flex tablet:h-20 laptopl:h-24 4kay:h-28 justify-between items-center mx-auto"
     >
-      <h1 class="ml-5 tablet:text-2xl 4kay:text-4xl">
-        My Frontend Mentor Challenges
-      </h1>
+      <router-link to="/">
+        <h1 class="ml-5 tablet:text-2xl 4kay:text-4xl">
+          My Frontend Mentor Challenges
+        </h1></router-link
+      >
       <HamburgerComponent data-testid="hamburger-component-test" />
       <ul
         class="hidden lg:visible pr-4 lg:flex lg:justify-between lg:items-center"
