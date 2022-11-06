@@ -24,10 +24,10 @@
         />
       </picture>
       <div
-        class="space-y-5 flex flex-col justify-center items-center tablet:w-[311px]"
+        class="tablet:-mt-2 space-y-4 flex flex-col justify-center items-center tablet:w-[311px]"
       >
         <h2
-          class="w-10/12 mt-3 font-medium text-product-dark-grayish-blue uppercase tracking-[2px]"
+          class="w-10/12 mt-3 font-medium text-product-dark-grayish-blue uppercase tracking-[2px] text-sm"
           x-intersect="$el.classList.add('fadeLeftRight')"
         >
           perfume
@@ -39,7 +39,6 @@
           Gabrielle Essence Eau De Parfum
         </h1>
         <p
-          role="paragraph"
           class="mx-auto w-10/12 text-[13px] leading-5 tablet:text-[15px] font-medium text-product-dark-grayish-blue tablet:leading-6"
           x-intersect="$el.classList.add('fadeIn')"
         >
@@ -50,14 +49,12 @@
           class="flex flex-row justify-start items-center mx-auto w-10/12 space-x-8"
         >
           <p
-            role="paragraph"
             x-intersect="$el.classList.add('fadeLeftRight')"
             class="text-product-dark-cyan font-bold text-3xl big-cash"
           >
             $149.99
           </p>
           <p
-            role="paragraph"
             x-intersect="$el.classList.add('fadeRightLeft')"
             class="text-product-dark-grayish-blue line-through font-medium text-[13px]"
           >
