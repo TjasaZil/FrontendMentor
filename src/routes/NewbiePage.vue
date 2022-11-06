@@ -35,6 +35,13 @@
         />
         <Container
           :image="PingImage"
+          alt="Product Preview Card Component"
+          heading="Product Preview Card"
+          router="/product-preview-card-component"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
+          :image="PingImage"
           alt="Ping comming soon"
           heading="Ping  Coming Soon Page"
           router="/ping-comming-soon"

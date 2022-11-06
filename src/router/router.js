@@ -28,6 +28,11 @@ const router = createRouter({
         import("@/routes/NewbieChallenges/ProfileCardComponent.vue"),
     },
     {
+      path: "/product-preview-card-component",
+      component: () =>
+        import("@/routes/NewbieChallenges/ProductPreviewCardComponent.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },

@@ -30,6 +30,10 @@ module.exports = {
         "profile-very-dark-blue": "hsl(229, 23%, 23%)",
         "profile-dark-grayish-blue": "hsl(227, 10%, 46%)",
         "profile-dark-gray": "hsl(0, 0%, 59%)",
+        "product-dark-cyan": "hsl(158, 36%, 37%)",
+        "product-cream": "hsl(30, 38%, 92%)",
+        "product-very-dark-blue": "hsl(212, 21%, 14%)",
+        "product-dark-grayish-blue": "hsl(228, 12%, 48%)",
       },
       width: {
         "profile-mobile-container-width": "326px",

@@ -1,6 +1,6 @@
-# Frontend Mentor - Ping coming soon page solution
+# Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Ping coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-rh-nmATorI)
-- Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/ping-comming-soon)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/product-preview-card-sass-and-flexbox-a8BZdeMLp7)
+- Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/product-preview-card-component)
 
 ## My process
 
