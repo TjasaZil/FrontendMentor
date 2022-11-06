@@ -24,20 +24,20 @@
         />
       </picture>
       <div
-        class="tablet:-mt-2 space-y-4 flex flex-col justify-center items-center tablet:w-[311px]"
+        class="space-y-4 tablet:space-y-5 flex flex-col justify-center items-center tablet:w-[311px]"
       >
-        <h2
-          class="w-10/12 mt-3 font-medium text-product-dark-grayish-blue uppercase tracking-[2px] text-sm"
+        <h1
+          class="w-10/12 mt-4 tablet:-mt-3 font-medium text-product-dark-grayish-blue uppercase tracking-[2px] text-sm"
           x-intersect="$el.classList.add('fadeLeftRight')"
         >
           perfume
-        </h2>
-        <h1
+        </h1>
+        <h2
           class="w-10/12 text-3xl font-bold text-product-very-dark-blue"
           x-intersect="$el.classList.add('fadeRightLeft')"
         >
           Gabrielle Essence Eau De Parfum
-        </h1>
+        </h2>
         <p
           class="mx-auto w-10/12 text-[13px] leading-5 tablet:text-[15px] font-medium text-product-dark-grayish-blue tablet:leading-6"
           x-intersect="$el.classList.add('fadeIn')"
@@ -66,7 +66,7 @@
           x-intersect="$el.classList.add('fadeIn')"
         >
           <div
-            class="flex mx-auto flex-center justify-center items-center w-full py-4 my-auto space-x-3 font-bold"
+            class="flex mx-auto flex-center justify-center items-center w-full py-3 my-auto space-x-3 font-bold"
             x-intersect="$el.classList.add('swingIn')"
           >
             <img
@@ -93,7 +93,7 @@ export default {
 .main {
   font-family: "Montserrat", sans-serif;
 }
-h1,
+h2,
 .big-cash {
   font-family: "Fraunces", serif;
 }

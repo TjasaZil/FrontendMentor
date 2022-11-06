@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-slate-700 text-slate-200">
+  <div class="bg-slate-700 text-slate-200">
     <router-view />
-  </section>
+  </div>
 </template>
 
 <script>
