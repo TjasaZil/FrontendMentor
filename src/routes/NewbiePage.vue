@@ -34,7 +34,7 @@
           x-intersect="$el.classList.add('swingIn')"
         />
         <Container
-          :image="PingImage"
+          :image="ProductImage"
           alt="Product Preview Card Component"
           heading="Product Preview Card"
           router="/product-preview-card-component"
@@ -59,6 +59,7 @@ import Container from "@/components/Shared/Container.vue";
 import NFTImage from "@/assets/NFTPreviewCard/design/desktop-design.jpg";
 import QRImage from "@/assets/QRCodeComponent/design/desktop-preview.jpg";
 import PingImage from "@/assets/PingCommingSoon/design/desktop-preview.jpg";
+import ProductImage from "@/assets/ProductPreviewCardComponent/design/desktop-preview.jpg";
 import ProfileImage from "@/assets/ProfileCardComponent/design/desktop-preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
@@ -72,6 +73,7 @@ export default {
       QRImage,
       PingImage,
       ProfileImage,
+      ProductImage,
     };
   },
 };
