@@ -3,7 +3,7 @@
     class="main w-screen h-screen flex flex-col justify-center items-center bg-product-cream"
   >
     <section
-      class="bg-white w-10/12 mx-auto h-[611px] mobilem:w-[343px] flex flex-col justify-start items-center rounded-md tablet:w-[600px] tablet:h-[450px] tablet:flex-row tablet:space-x-5 text-left"
+      class="bg-white w-10/12 mx-auto h-[611px] mobilem:w-[343px] flex flex-col justify-start items-center rounded-lg tablet:w-[600px] tablet:h-[450px] tablet:flex-row text-left"
     >
       <picture x-intersect="$el.classList.add('swingIn')">
         <source
@@ -19,14 +19,14 @@
         <img
           src="@/assets/ProductPreviewCardComponent/image-product-mobile.jpg"
           alt="a square bottle with a gold lid and a label"
-          class="rounded-t-md tablet:rounded-t-none tablet:rounded-l-md tablet:h-[450px] tablet:w-[300px]"
+          class="rounded-t-lg tablet:rounded-t-none tablet:rounded-l-lg tablet:h-[450px] tablet:w-[300px]"
         />
       </picture>
       <section
         class="space-y-5 flex flex-col justify-center items-center tablet:w-[311px]"
       >
         <h2
-          class="w-10/12 mt-3 font-medium text-product-dark-grayish-blue uppercase"
+          class="w-10/12 mt-3 font-medium text-product-dark-grayish-blue uppercase tracking-[2px]"
           x-intersect="$el.classList.add('fadeLeftRight')"
         >
           perfume
@@ -39,7 +39,7 @@
         </h1>
         <div
           role="paragraph"
-          class="mx-auto w-10/12 text-[13px] leading-5 tablet:text-sm font-medium text-product-dark-grayish-blue"
+          class="mx-auto w-10/12 text-[13px] leading-5 tablet:text-[15px] font-medium text-product-dark-grayish-blue tablet:leading-6"
           x-intersect="$el.classList.add('fadeIn')"
         >
           A floral, solar and voluptuous interpretation composed by Olivier
@@ -64,17 +64,17 @@
           </div>
         </section>
         <button
-          class="bg-product-dark-cyan w-10/12 rounded-md text-center max-w-[295px] text-[13px]"
+          class="bg-product-dark-cyan w-10/12 rounded-lg text-center max-w-[295px] text-[13px] tablet:text-[15px] hover:bg-product-very-dark-blue"
           x-intersect="$el.classList.add('fadeIn')"
         >
           <div
-            class="flex mx-auto flex-center justify-center items-center w-full py-4 my-auto space-x-5"
+            class="flex mx-auto flex-center justify-center items-center w-full py-4 my-auto space-x-3 font-bold"
             x-intersect="$el.classList.add('swingIn')"
           >
             <img
               src="@/assets/ProductPreviewCardComponent/icon-cart.svg"
               alt="button icon"
-              class="w-5"
+              class="w-4"
             />
             <p>Add to Cart</p>
           </div>
