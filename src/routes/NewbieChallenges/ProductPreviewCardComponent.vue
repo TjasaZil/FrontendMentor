@@ -24,7 +24,7 @@
         />
       </picture>
       <div
-        class="space-y-4 tablet:space-y-5 flex flex-col justify-center items-center tablet:w-[311px]"
+        class="space-y-4 tablet:space-y-5 flex flex-col justify-center items-center tablet:w-[270px] mx-auto"
       >
         <h1
           class="w-10/12 mt-4 tablet:-mt-3 font-medium text-product-dark-grayish-blue uppercase tracking-[2px] text-sm"
@@ -39,7 +39,7 @@
           Gabrielle Essence Eau De Parfum
         </h2>
         <p
-          class="mx-auto w-10/12 text-[13px] leading-5 tablet:text-[15px] font-medium text-product-dark-grayish-blue tablet:leading-6"
+          class="mx-auto w-10/12 text-[13px] leading-5 tablet:text-[14px] font-medium text-product-dark-grayish-blue tablet:leading-6"
           x-intersect="$el.classList.add('fadeIn')"
         >
           A floral, solar and voluptuous interpretation composed by Olivier
@@ -62,7 +62,7 @@
           </p>
         </div>
         <button
-          class="bg-product-dark-cyan w-10/12 rounded-lg text-center max-w-[295px] text-[13px] tablet:text-[15px] hover:bg-product-very-dark-blue"
+          class="bg-product-dark-cyan w-10/12 rounded-lg text-center max-w-[295px] text-[13px] tablet:text-[14px] hover:bg-product-very-dark-blue"
           x-intersect="$el.classList.add('fadeIn')"
         >
           <div
