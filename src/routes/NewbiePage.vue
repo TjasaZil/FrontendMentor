@@ -41,6 +41,13 @@
           x-intersect="$el.classList.add('swingIn')"
         />
         <Container
+          :image="InteractiveImage"
+          alt="Interactive rating component"
+          heading="Interactive Rating Component"
+          router="/interactive-rating-component"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
           :image="PingImage"
           alt="Ping comming soon"
           heading="Ping  Coming Soon Page"
@@ -61,6 +68,7 @@ import QRImage from "@/assets/QRCodeComponent/design/desktop-preview.jpg";
 import PingImage from "@/assets/PingCommingSoon/design/desktop-preview.jpg";
 import ProductImage from "@/assets/ProductPreviewCardComponent/design/desktop-preview.jpg";
 import ProfileImage from "@/assets/ProfileCardComponent/design/desktop-preview.jpg";
+import InteractiveImage from "@/assets/InteractiveRatingComponent/design/desktop-preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 
@@ -74,6 +82,7 @@ export default {
       PingImage,
       ProfileImage,
       ProductImage,
+      InteractiveImage,
     };
   },
 };

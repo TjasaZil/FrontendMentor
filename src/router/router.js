@@ -33,6 +33,11 @@ const router = createRouter({
         import("@/routes/NewbieChallenges/ProductPreviewCardComponent.vue"),
     },
     {
+      path: "/interactive-rating-component",
+      component: () =>
+        import("@/routes/NewbieChallenges/InteractiveRatingComponent.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },
