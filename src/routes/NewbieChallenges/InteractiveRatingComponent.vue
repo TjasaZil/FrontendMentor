@@ -10,7 +10,7 @@
         class="text-left w-10/12 mx-auto my-auto space-y-5"
       >
         <div
-          class="rounded-full p-3 bg-interactive-dark-blue w-fit mt-3 mobilel:mt-5"
+          class="rounded-full p-3 bg-interactive-dark-blue w-fit mt-3 mobilel:mt-8"
         >
           <img
             alt="star icon"
@@ -28,7 +28,7 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div class="flex justify-between items-center w-full mx-auto">
+        <div class="flex justify-between items-center w-full mx-auto py-2">
           <button
             value="1"
             class="value-button"
@@ -145,6 +145,6 @@ h1 {
   @apply text-2xl mobilel:text-[28px] font-bold text-white;
 }
 .main-paragraph {
-  @apply text-[13.5px] mobilel:text-[15px]  leading-5 mobilel:leading-7 font-medium;
+  @apply text-[13.5px] mobilel:text-[15px]  leading-5 mobilel:leading-6 font-medium;
 }
 </style>
