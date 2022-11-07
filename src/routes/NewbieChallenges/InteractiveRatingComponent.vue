@@ -10,7 +10,7 @@
         class="text-left w-10/12 mx-auto my-auto space-y-5"
       >
         <div
-          class="rounded-full p-3 bg-interactive-dark-blue w-fit mt-3 mobilel:mt-12"
+          class="rounded-full p-3 bg-interactive-dark-blue w-fit mt-3 mobilel:mt-9"
         >
           <img
             alt="star icon"
@@ -20,7 +20,9 @@
           />
         </div>
 
-        <h1 x-intersect="$el.classList.add('fadeRightLeft')">How did we do?</h1>
+        <h1 class="pt-p" x-intersect="$el.classList.add('fadeRightLeft')">
+          How did we do?
+        </h1>
         <p
           class="main-paragraph text-interactive-medium-grey"
           x-intersect="$el.classList.add('fadeLeftRight')"
@@ -28,7 +30,7 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div class="flex justify-between items-center w-full mx-auto py-2">
+        <div class="flex justify-between items-center w-full mx-auto py-4">
           <button
             value="1"
             class="value-button"
@@ -76,7 +78,7 @@
           </button>
         </div>
         <button
-          class="w-full py-3 bg-interactive-orange rounded-full uppercase text-white font-medium text-sm tracking-widest hover:text-white hover:bg-interactive-orange mobilel:py-4 mobilel:tracking mobilel:text-[15px]"
+          class="w-full py-3 bg-interactive-orange rounded-full uppercase text-white font-medium text-sm tracking-widest hover:text-white hover:bg-interactive-orange mobilel:tracking mobilel:text-[15px]"
           @click="submitRating"
           data-testid="submit-button-test"
           x-intersect="$el.classList.add('fadeLeftRight')"
