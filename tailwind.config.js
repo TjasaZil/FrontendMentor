@@ -36,7 +36,7 @@ module.exports = {
         "product-dark-grayish-blue": "hsl(228, 12%, 48%)",
         "interactive-orange": "hsl(25, 97%, 53%)",
         "interactive-light-grey": "hsl(217, 12%, 63%)",
-        "interactive-medium-grey": "hsl(217, 12%, 63%)",
+        "interactive-medium-grey": "hsl(216, 12%, 54%)",
         "interactive-dark-blue": "hsl(213, 19%, 18%)",
         "interactive-very-dark-blue": "hsl(216, 12%, 8%)",
       },

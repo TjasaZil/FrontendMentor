@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/qr-code-component-made-using-flexbox-and-sass-iuhN_2XzMP)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/interactive-rating-component-C6firAO43l)
 - Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/interactive-rating-component)
 
 ## My process
