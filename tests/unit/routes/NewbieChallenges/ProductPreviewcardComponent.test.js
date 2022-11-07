@@ -20,11 +20,7 @@ describe("ProductPreviewCardComponent", () => {
         let heading = screen.queryByText("Gabrielle Essence Eau De Parfum");
         expect(heading).toBeInTheDocument();
       });
-      it("has a 3 paragraphs", () => {
-        render(Product);
-        let paragraphs = screen.queryAllByRole("paragraph");
-        expect(paragraphs.length).toBe(3);
-      });
+
       it("has appropriate big paragraph text", () => {
         render(Product);
         let paragraph = screen.queryByText(
