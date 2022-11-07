@@ -20,11 +20,11 @@
           />
         </div>
 
-        <h1 class="pt-5" x-intersect="$el.classList.add('fadeRightLeft')">
+        <h1 class="pt-6" x-intersect="$el.classList.add('fadeRightLeft')">
           How did we do?
         </h1>
         <p
-          class="main-paragraph text-interactive-medium-grey"
+          class="main-paragraph text-interactive-medium-grey -pt-2"
           x-intersect="$el.classList.add('fadeLeftRight')"
         >
           Please let us know how we did with your support request. All feedback
