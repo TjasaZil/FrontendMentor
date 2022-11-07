@@ -10,12 +10,12 @@
         class="text-left w-10/12 mx-auto my-auto space-y-5"
       >
         <div
-          class="rounded-full p-3 bg-interactive-dark-blue w-fit mt-3 mobilel:mt-8"
+          class="rounded-full p-3 bg-interactive-dark-blue w-fit mt-3 mobilel:mt-12"
         >
           <img
             alt="star icon"
             src="@/assets/InteractiveRatingComponent/icon-star.svg"
-            class="w-5"
+            class="w-4"
             x-intersect="$el.classList.add('fadeIn')"
           />
         </div>
@@ -145,6 +145,6 @@ h1 {
   @apply text-2xl mobilel:text-[28px] font-bold text-white;
 }
 .main-paragraph {
-  @apply text-[13.5px] mobilel:text-[15px]  leading-5 mobilel:leading-6 font-medium;
+  @apply text-[13.5px] mobilel:text-[15px]  leading-5 font-medium;
 }
 </style>
