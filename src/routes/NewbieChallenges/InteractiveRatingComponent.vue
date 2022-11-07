@@ -20,7 +20,7 @@
           />
         </div>
 
-        <h1 class="pt-p" x-intersect="$el.classList.add('fadeRightLeft')">
+        <h1 class="pt-5" x-intersect="$el.classList.add('fadeRightLeft')">
           How did we do?
         </h1>
         <p
@@ -30,7 +30,7 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div class="flex justify-between items-center w-full mx-auto py-4">
+        <div class="flex justify-between items-center w-full mx-auto py-2">
           <button
             value="1"
             class="value-button"
