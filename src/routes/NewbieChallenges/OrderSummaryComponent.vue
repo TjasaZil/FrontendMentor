@@ -3,7 +3,7 @@
     class="main w-full h-screen flex flex-col justify-center items-center"
   >
     <div
-      class="bg-white rounded-3xl h-[567px] w-11/12 mobilem:w-[327px] mobilel:w-9/12 mobilel:max-w-[450px] mobilel:h-[697px] flex flex-col justify-start items-center text-center space-y-5 mobilel:space-y-7"
+      class="bg-white rounded-3xl h-[567px] w-11/12 mobilem:w-[327px] mobilel:w-9/12 mobilel:max-w-[450px] mobilel:h-[697px] flex flex-col justify-start items-center text-center space-y-5 mobilel:space-y-6"
     >
       <img
         src="@/assets/OrderSumaryComponent/illustration-hero.svg"
@@ -27,7 +27,7 @@
         device anywhere you like!
       </p>
       <div
-        class="w-9/12 mobilem:max-w-[279px] mobilem:max-h-[98px] mobilel:max-w-[354px] mx-auto flex justify-center items-center bg-order-very-pale-blue rounded-2xl mt-3 mobilel:pt-7 mobilel:pb-7"
+        class="w-9/12 mobilem:max-w-[279px] mobilem:max-h-[98px] mobilel:max-w-[354px] mx-auto flex justify-center items-center bg-order-very-pale-blue rounded-2xl mobilel:pt-7 mobilel:pb-7"
         x-intersect="$el.classList.add('fadeIn')"
       >
         <div
