@@ -9,19 +9,19 @@
         class="mx-auto bg-white rounded-t-lg mobilem:w-[311px] h-[228px] tablet:w-[635px] tablet:h-[259px] space-y-4"
       >
         <h1
-          class="w-10/12 mx-auto text-price-cyan text-lg font-semibold mt-4 tablet:mt-6"
+          class="w-10/12 mx-auto text-price-cyan text-xl font-semibold mt-4 tablet:mt-8 tablet:text-2xl"
           x-intersect="$el.classList.add('fadeRightLeft')"
         >
           Join our community
         </h1>
         <h2
-          class="w-10/12 mx-auto text-price-bright-yellow"
+          class="w-10/12 mx-auto text-lg tablet:text-[19px] text-price-bright-yellow"
           x-intersect="$el.classList.add('fadeRightLeft')"
         >
           30-day, hassle-free money back guarantee
         </h2>
         <p
-          class="w-10/12 mx-auto text-[13px] leading-5 text-price-grayish-blue rounded-b-lg tablet:leading-7 tablet:text-[16px]"
+          class="w-10/12 mx-auto text-[13px] leading-5 text-price-grayish-blue rounded-b-lg tablet:leading-7 tablet:text-[16px] font-normal"
           data-testid="paragraph-test"
         >
           Gain access to our full library of tutorials along with expert code
@@ -49,7 +49,7 @@
             <div>per month</div>
           </div>
           <p
-            class="w-10/12 mx-auto text-sm text-white"
+            class="w-10/12 mx-auto text-sm text-white tablet:text-[17px] pb-2"
             data-testid="paragraph-test"
             x-intersect="$el.classList.add('fadeLeftRight')"
           >
@@ -63,16 +63,16 @@
           </button>
         </div>
         <div
-          class="mx-auto bg-price-cyan h-[227px] mobilem:w-[311px] rounded-b-lg tablet:rounded-b-none space-y-4 tablet:w-[318px] tablet:h-[259px]"
+          class="mx-auto bg-price-cyan h-[227px] mobilem:w-[311px] rounded-b-lg tablet:rounded-b-none space-y-2 tablet:w-[318px] tablet:h-[259px]"
         >
           <h3
-            class="text-white text-lg font-semibold w-10/12 mx-auto mt-4 tablet:mt-7"
+            class="text-white text-lg font-semibold w-10/12 mx-auto mt-5 tablet:mt-7"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             Why us
           </h3>
           <p
-            class="w-7/12 mx-auto text-left text-[15px] tablet:text-[16px] tablet:leading-6 leading-5 ml-6"
+            class="w-7/12 text-white mx-auto text-left text-[15px] font-normal tablet:leading-6 leading-5 ml-6"
             data-testid="paragraph-test"
             x-intersect="$el.classList.add('fadeLeftRight')"
           >
