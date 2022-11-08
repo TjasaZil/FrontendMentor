@@ -3,7 +3,7 @@
     class="main w-full h-screen flex flex-col justify-center items-center"
   >
     <div
-      class="bg-white rounded-3xl h-[567px] w-11/12 mobilem:w-[327px] mobilel:w-9/12 mobilel:max-w-[450px] mobilel:h-[697px] flex flex-col justify-start items-center text-center space-y-5 drop-shadow-2xl shadow-order-dark-blue"
+      class="bg-white rounded-3xl h-[567px] w-11/12 mobilem:w-[327px] mobilel:w-9/12 mobilel:max-w-[450px] mobilel:h-[697px] flex flex-col justify-start items-center text-center space-y-6 drop-shadow-2xl shadow-order-dark-blue"
     >
       <img
         src="@/assets/OrderSumaryComponent/illustration-hero.svg"
