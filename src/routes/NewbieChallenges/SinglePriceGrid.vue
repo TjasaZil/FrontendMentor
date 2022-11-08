@@ -6,10 +6,10 @@
       class="w-11/12 mobilem:w-[311px] tablet:w-[635px] tablet:h-[475px] flex flex-col justify-center items-center drop-shadow-2xl shadow-black"
     >
       <div
-        class="mx-auto bg-white rounded-t-lg mobilem:w-[311px] h-[228px] space-y-4"
+        class="mx-auto bg-white rounded-t-lg mobilem:w-[311px] h-[228px] tablet:w-[635px] tablet:h-[259px] space-y-4"
       >
         <h1
-          class="w-10/12 mx-auto text-price-cyan text-lg font-semibold mt-4"
+          class="w-10/12 mx-auto text-price-cyan text-lg font-semibold mt-4 tablet:mt-6"
           x-intersect="$el.classList.add('fadeRightLeft')"
         >
           Join our community
@@ -21,7 +21,7 @@
           30-day, hassle-free money back guarantee
         </h2>
         <p
-          class="w-10/12 mx-auto text-[13px] leading-5 text-price-grayish-blue"
+          class="w-10/12 mx-auto text-[13px] leading-5 text-price-grayish-blue rounded-b-lg tablet:leading-7 tablet:text-[16px]"
           data-testid="paragraph-test"
         >
           Gain access to our full library of tutorials along with expert code
@@ -30,13 +30,13 @@
         </p>
       </div>
       <div
-        class="mx-auto flex flex-col justify-center items-center tablet:flex-row"
+        class="mx-auto flex flex-col justify-center items-center tablet:flex-row tablet:w-[635px] tablet:h-[259px] rounded-b-lg"
       >
         <div
-          class="flex flex-col justify-center items-center bg-price-cyan brightness-90 h-[227px] mobilem:w-[311px] space-y-3"
+          class="flex flex-col justify-center items-center bg-price-cyan brightness-90 h-[227px] mobilem:w-[311px] tablet:w-[318px] tablet:h-[259px] space-y-3"
         >
           <h3
-            class="text-white text-lg font-semibold w-10/12 mx-auto mt-2"
+            class="text-white text-lg font-semibold w-10/12 mx-auto mt-2 tablet:-mt-3"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             Monthly Subscriptions
@@ -56,23 +56,23 @@
             Full access for less than $1 a day
           </p>
           <button
-            class="w-10/12 mx-auto mobilem:w-[263px] py-3 bg-price-bright-yellow rounded-lg drop-shadow-xl shadow-price-grayish-blue"
+            class="w-10/12 mx-auto mobilem:w-[263px] py-3 bg-price-bright-yellow rounded-lg text-white drop-shadow-xl shadow-price-grayish-blue"
             x-intersect="$el.classList.add('swingIn')"
           >
             Sign Up
           </button>
         </div>
         <div
-          class="mx-auto bg-price-cyan h-[227px] mobilem:w-[311px] rounded-b-lg space-y-4"
+          class="mx-auto bg-price-cyan h-[227px] mobilem:w-[311px] rounded-b-lg tablet:rounded-b-none space-y-4 tablet:w-[318px] tablet:h-[259px]"
         >
           <h3
-            class="text-white text-lg font-semibold w-10/12 mx-auto mt-4"
+            class="text-white text-lg font-semibold w-10/12 mx-auto mt-4 tablet:mt-7"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             Why us
           </h3>
           <p
-            class="w-7/12 mx-auto text-left text-[15px] leading-5 ml-6"
+            class="w-7/12 mx-auto text-left text-[15px] tablet:text-[16px] tablet:leading-6 leading-5 ml-6"
             data-testid="paragraph-test"
             x-intersect="$el.classList.add('fadeLeftRight')"
           >
