@@ -48,6 +48,13 @@
           x-intersect="$el.classList.add('swingIn')"
         />
         <Container
+          :image="PriceImage"
+          alt="Single Price Grid"
+          heading="Single Price Grid"
+          router="/single-price-grid"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
           :image="InteractiveImage"
           alt="Interactive rating component"
           heading="Interactive Rating Component"
@@ -77,6 +84,7 @@ import ProductImage from "@/assets/ProductPreviewCardComponent/design/desktop-pr
 import ProfileImage from "@/assets/ProfileCardComponent/design/desktop-preview.jpg";
 import InteractiveImage from "@/assets/InteractiveRatingComponent/design/desktop-preview.jpg";
 import OrderImage from "@/assets/OrderSumaryComponent/design/desktop-preview.jpg";
+import PriceImage from "@/assets/SinglePriceGrid/design/desktop-preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 
@@ -92,6 +100,7 @@ export default {
       ProductImage,
       InteractiveImage,
       OrderImage,
+      PriceImage,
     };
   },
 };

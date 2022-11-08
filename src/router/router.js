@@ -43,6 +43,10 @@ const router = createRouter({
         import("@/routes/NewbieChallenges/OrderSummaryComponent.vue"),
     },
     {
+      path: "/single-price-grid",
+      component: () => import("@/routes/NewbieChallenges/SinglePriceGrid.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },
