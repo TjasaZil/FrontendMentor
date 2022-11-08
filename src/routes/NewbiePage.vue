@@ -27,6 +27,13 @@
           x-intersect="$el.classList.add('swingIn')"
         />
         <Container
+          :image="OrderImage"
+          alt="Order Summary Component"
+          heading="Order Summary Component"
+          router="/order-summary-component"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
           :image="ProfileImage"
           alt="Profile Card Component"
           heading="Profile Card Component"
@@ -69,6 +76,7 @@ import PingImage from "@/assets/PingCommingSoon/design/desktop-preview.jpg";
 import ProductImage from "@/assets/ProductPreviewCardComponent/design/desktop-preview.jpg";
 import ProfileImage from "@/assets/ProfileCardComponent/design/desktop-preview.jpg";
 import InteractiveImage from "@/assets/InteractiveRatingComponent/design/desktop-preview.jpg";
+import OrderImage from "@/assets/OrderSumaryComponent/design/desktop-preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 
@@ -83,6 +91,7 @@ export default {
       ProfileImage,
       ProductImage,
       InteractiveImage,
+      OrderImage,
     };
   },
 };

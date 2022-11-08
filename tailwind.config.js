@@ -39,6 +39,11 @@ module.exports = {
         "interactive-medium-grey": "hsl(216, 12%, 54%)",
         "interactive-dark-blue": "hsl(213, 19%, 18%)",
         "interactive-very-dark-blue": "hsl(216, 12%, 8%)",
+        "order-pale-blue": "hsl(225, 100%, 94%)",
+        "order-bright-blue": "hsl(245, 75%, 52%)",
+        "order-very-pale-blue": "hsl(225, 100%, 98%)",
+        "order-desaturated-blue": "hsl(224, 23%, 55%)",
+        "order-dark-blue": "hsl(223, 47%, 23%)",
       },
       width: {
         "profile-mobile-container-width": "326px",

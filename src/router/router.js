@@ -38,6 +38,11 @@ const router = createRouter({
         import("@/routes/NewbieChallenges/InteractiveRatingComponent.vue"),
     },
     {
+      path: "/order-summary-component",
+      component: () =>
+        import("@/routes/NewbieChallenges/OrderSummaryComponent.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },

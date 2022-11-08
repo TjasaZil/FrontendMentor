@@ -24,7 +24,7 @@
           How did we do?
         </h1>
         <p
-          class="main-paragraph text-interactive-medium-grey -pt-2"
+          class="main-paragraph text-interactive-medium-grey -mt-4"
           x-intersect="$el.classList.add('fadeLeftRight')"
         >
           Please let us know how we did with your support request. All feedback
