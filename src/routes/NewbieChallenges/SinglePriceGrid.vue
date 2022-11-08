@@ -66,13 +66,13 @@
           class="mx-auto bg-price-cyan h-[227px] mobilem:w-[311px] rounded-b-lg tablet:rounded-b-none space-y-2 tablet:w-[318px] tablet:h-[259px]"
         >
           <h3
-            class="text-white text-lg font-semibold w-10/12 mx-auto mt-5 tablet:mt-7"
+            class="text-white text-lg font-semibold w-10/12 mx-auto mt-5 tablet:mt-7 ml-8"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             Why us
           </h3>
           <p
-            class="w-7/12 text-white mx-auto text-left text-[15px] font-normal tablet:leading-6 leading-5 ml-6"
+            class="w-7/12 text-white mx-auto text-left text-[15px] font-normal tablet:leading-5 leading-4 ml-8"
             data-testid="paragraph-test"
             x-intersect="$el.classList.add('fadeLeftRight')"
           >
