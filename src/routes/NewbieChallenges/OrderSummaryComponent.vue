@@ -3,7 +3,7 @@
     class="main w-full h-screen flex flex-col justify-center items-center"
   >
     <div
-      class="bg-white rounded-3xl h-[567px] w-11/12 mobilem:w-[327px] mobilel:w-9/12 mobilel:max-w-[450px] mobilel:h-[697px] flex flex-col justify-start items-center text-center space-y-5 mobilel:space-y-6"
+      class="bg-white rounded-3xl h-[567px] w-11/12 mobilem:w-[327px] mobilel:w-9/12 mobilel:max-w-[450px] mobilel:h-[697px] flex flex-col justify-start items-center text-center space-y-5 drop-shadow-2xl shadow-order-dark-blue"
     >
       <img
         src="@/assets/OrderSumaryComponent/illustration-hero.svg"
@@ -66,7 +66,7 @@
         </div>
       </div>
       <button
-        class="w-9/12 mx-auto text-sm mobilel:text-base py-3 text-white bg-order-bright-blue font-bold shadow-3xl rounded-xl hover:cursor-pointer hover:opacity-90 mobilel:mt-10 hover:animate-pulse"
+        class="w-9/12 mx-auto text-sm mobilel:text-base py-3 text-white bg-order-bright-blue font-bold shadow-3xl rounded-xl hover:cursor-pointer hover:opacity-90 mobilel:mt-10 hover:animate-pulse shadow-order-dark-blue"
         x-intersect="$el.classList.add('fadeIn')"
       >
         Proceed to Payment
