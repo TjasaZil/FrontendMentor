@@ -65,6 +65,7 @@
           </p>
         </div>
       </div>
+
       <button
         class="w-9/12 mx-auto text-sm mobilel:text-base py-3 text-white bg-order-bright-blue font-bold shadow-3xl rounded-xl hover:cursor-pointer hover:opacity-90 mobilel:mt-10 hover:animate-pulse shadow-order-dark-blue"
         x-intersect="$el.classList.add('fadeIn')"
@@ -72,7 +73,7 @@
         Proceed to Payment
       </button>
       <p
-        class="w-9/12 mx-auto capitalize text-order-desaturated-blue hover:cursor-pointer hover:text-order-dark-blue"
+        class="w-9/12 pt-3 mx-auto capitalize text-order-desaturated-blue hover:cursor-pointer hover:text-order-dark-blue"
         x-intersect="$el.classList.add('fadeLeftRight')"
       >
         cancel order
