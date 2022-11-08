@@ -27,7 +27,7 @@
         device anywhere you like!
       </p>
       <div
-        class="w-9/12 mobilem:max-w-[279px] mobilem:max-h-[81px] mobilel:max-w-[354px] mobilel:py-5 mx-auto flex justify-center items-center bg-order-very-pale-blue rounded-2xl mt-5"
+        class="w-9/12 mobilem:max-w-[279px] mobilem:max-h-[81px] mobilel:max-w-[354px] mobilel:py-6 mx-auto flex justify-center items-center bg-order-very-pale-blue rounded-2xl mt-4"
         x-intersect="$el.classList.add('fadeIn')"
       >
         <div
@@ -66,7 +66,7 @@
         </div>
       </div>
       <button
-        class="w-9/12 mx-auto text-sm mobilel:text-base py-3 text-white bg-order-bright-blue font-bold shadow-3xl rounded-2xl hover:cursor-pointer hover:opacity-90 mobilel:mt-7 hover:animate-pulse"
+        class="w-9/12 mx-auto text-sm mobilel:text-base py-3 text-white bg-order-bright-blue font-bold shadow-3xl rounded-xl hover:cursor-pointer hover:opacity-90 mobilel:mt-10 hover:animate-pulse"
         x-intersect="$el.classList.add('fadeIn')"
       >
         Proceed to Payment
