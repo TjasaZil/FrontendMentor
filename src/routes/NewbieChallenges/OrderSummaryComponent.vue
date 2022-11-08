@@ -27,11 +27,11 @@
         device anywhere you like!
       </p>
       <div
-        class="w-9/12 mobilem:max-w-[279px] mobilem:max-h-[81px] mobilel:max-w-[354px] mobilel:py-6 mx-auto flex justify-center items-center bg-order-very-pale-blue rounded-2xl mt-4"
+        class="w-9/12 mobilem:max-w-[279px] mobilem:max-h-[98px] mobilel:max-w-[354px] mx-auto flex justify-center items-center bg-order-very-pale-blue rounded-2xl mt-3 mobilel:pt-7 mobilel:pb-7"
         x-intersect="$el.classList.add('fadeIn')"
       >
         <div
-          class="w-10/12 mobilem:w-[247px] mobilem:max-h-[48px] mobilel:w-[306px] mx-auto my-auto flex justify-between items-center"
+          class="w-10/12 mobilem:w-[247px] mobilem:h-[48px] mobilel:w-[306px] mx-auto my-auto flex justify-between items-center"
         >
           <div class="flex justify-between items-center space-x-4">
             <img
