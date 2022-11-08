@@ -20,7 +20,10 @@
         >
           30-day, hassle-free money back guarantee
         </h2>
-        <p class="w-10/12 mx-auto" data-testid="paragraph-test">
+        <p
+          class="w-10/12 mx-auto text-[13px] leading-5 text-price-grayish-blue"
+          data-testid="paragraph-test"
+        >
           Gain access to our full library of tutorials along with expert code
           reviews. Perfect for any developers who are serious about honing their
           skills.
@@ -33,7 +36,7 @@
           class="flex flex-col justify-center items-center bg-price-cyan brightness-90 h-[227px] mobilem:w-[311px] space-y-3"
         >
           <h3
-            class="text-white text-lg font-semibold w-10/12 mx-auto mt-4"
+            class="text-white text-lg font-semibold w-10/12 mx-auto mt-2"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             Monthly Subscriptions
@@ -42,11 +45,11 @@
             class="flex flex-row justify-start items-center w-10/12 mx-auto space-x-4"
             x-intersect="$el.classList.add('fadeIn')"
           >
-            <div>$29</div>
+            <div class="text-4xl text-white font-bold">$29</div>
             <div>per month</div>
           </div>
           <p
-            class="w-10/12 mx-auto"
+            class="w-10/12 mx-auto text-sm text-white"
             data-testid="paragraph-test"
             x-intersect="$el.classList.add('fadeLeftRight')"
           >
@@ -69,7 +72,7 @@
             Why us
           </h3>
           <p
-            class="w-10/12 mx-auto"
+            class="w-7/12 mx-auto text-left text-[15px] leading-5 ml-6"
             data-testid="paragraph-test"
             x-intersect="$el.classList.add('fadeLeftRight')"
           >
