@@ -31,7 +31,7 @@
         x-intersect="$el.classList.add('fadeIn')"
       >
         <div
-          class="w-10/12 mobilem:w-[247px] mobilem:h-[48px] mobilel:w-[306px] mx-auto my-auto flex justify-between items-center"
+          class="w-10/12 mobilem:w-[247px] mobilem:h-[48px] mobilel:w-[306px] mx-auto my-1 flex justify-between items-center"
         >
           <div class="flex justify-between items-center space-x-4">
             <img
@@ -58,7 +58,7 @@
           </div>
 
           <p
-            class="font-black underline text-order-bright-blue text-sm mobilel:text-base capitalize hover:cursor-pointer hover:opacity-90 hover:no-underline"
+            class="font-black underline text-order-bright-blue text-sm capitalize hover:cursor-pointer hover:opacity-90 hover:no-underline"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             change
@@ -67,13 +67,13 @@
       </div>
 
       <button
-        class="w-9/12 mx-auto text-sm mobilel:text-base py-3 text-white bg-order-bright-blue font-bold shadow-3xl rounded-xl hover:cursor-pointer hover:opacity-90 mobilel:mt-10 hover:animate-pulse shadow-order-dark-blue"
+        class="w-9/12 mx-auto text-sm mobilel:text-base py-3 text-white bg-order-bright-blue font-bold shadow-3xl rounded-xl hover:cursor-pointer hover:opacity-90 mobilel:mt-12 hover:animate-pulse shadow-order-dark-blue"
         x-intersect="$el.classList.add('fadeIn')"
       >
         Proceed to Payment
       </button>
       <p
-        class="w-9/12 pt-3 mx-auto capitalize text-order-desaturated-blue hover:cursor-pointer hover:text-order-dark-blue"
+        class="w-9/12 pt-2 mx-auto capitalize text-order-desaturated-blue hover:cursor-pointer hover:text-order-dark-blue"
         x-intersect="$el.classList.add('fadeLeftRight')"
       >
         cancel order
