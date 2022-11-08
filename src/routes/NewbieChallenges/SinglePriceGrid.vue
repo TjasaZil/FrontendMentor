@@ -6,7 +6,7 @@
       class="w-11/12 mobilem:w-[311px] tablet:w-[635px] tablet:h-[475px] flex flex-col justify-center items-center drop-shadow-2xl shadow-black"
     >
       <div
-        class="mx-auto bg-white rounded-t-lg mobilem:w-[311px] h-[228px] tablet:w-[635px] tablet:h-[259px] space-y-4"
+        class="mx-auto bg-white rounded-t-lg mobilem:w-[311px] h-[228px] tablet:w-[635px] tablet:h-[259px] space-y-3"
       >
         <h1
           class="w-10/12 mx-auto text-price-cyan text-xl font-semibold mt-4 tablet:mt-8 tablet:text-2xl"
