@@ -15,6 +15,11 @@ describe("NFTPreviewCard", () => {
         const heading = screen.queryByRole("heading");
         expect(heading).toBeInTheDocument();
       });
+      it("has visible heading", () => {
+        render(NFT);
+        const heading = screen.queryByRole("heading");
+        expect(heading).toBeVisible();
+      });
       it("has appropriate heading", () => {
         render(NFT);
         const heading = screen.queryByText("equilibrium #3429");
