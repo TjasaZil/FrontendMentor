@@ -12,13 +12,14 @@
       <section
         class="mt-16 w-5/6 mx-auto flex flex-wrap justify-around items-center"
       >
-        <!--      <Container
-          :image="TestImage"
-          alt="test image"
-          heading="this is a test heading"
-          paragraph="test paragraph"
-        />
         <Container
+          :image="AdviceImage"
+          alt="Advice Generator"
+          heading="Advice Generator"
+          router="/advice-generator"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <!-- <Container
           :image="TestImage"
           alt="test image"
           heading="this is a test heading"
@@ -50,16 +51,16 @@
 
 <script>
 import IntroText from "@/components/Shared/IntroText.vue";
-//import Container from "@/components/Shared/Container.vue";
-import TestImage from "@/assets/test.jpg";
+import Container from "@/components/Shared/Container.vue";
+import AdviceImage from "@/assets/AdviceGenerator/design/desktop-preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 export default {
   name: "NewbiePage",
-  components: { IntroText, Navigation, Footer },
+  components: { IntroText, Navigation, Footer, Container },
   data() {
     return {
-      TestImage,
+      AdviceImage,
     };
   },
 };

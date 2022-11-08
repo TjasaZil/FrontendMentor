@@ -48,6 +48,11 @@ module.exports = {
         "price-bright-yellow": "hsl(71, 73%, 54%)",
         "price-light-gray": "hsl(204, 43%, 93%)",
         "price-grayish-blue": "hsl(218, 22%, 67%)",
+        "advice-light-cyan": "hsl(193, 38%, 86%)",
+        "advice-neon-green": "hsl(150, 100%, 66%)",
+        "advice-grayish-blue": "hsl(217, 19%, 38%)",
+        "advice-dark-grayish-blue": "hsl(217, 19%, 24%)",
+        "advice-dark-blue": "hsl(218, 23%, 16%)",
       },
       width: {
         "profile-mobile-container-width": "326px",
