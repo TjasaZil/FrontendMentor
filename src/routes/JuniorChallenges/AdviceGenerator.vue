@@ -7,7 +7,7 @@
         class="bg-advice-dark-grayish-blue rounded-lg flex flex-col justify-center items-center h-[315px] w-5/6 mobilem:w-[343px] tablet:w-[540px] tablet:h-[322px] space-y-3"
       >
         <h1
-          class="text-sm text-advice-neon-green tracking-widest uppercase -mt-4"
+          class="text-sm text-advice-neon-green tracking-widest uppercase -mt-7"
         >
           Advice #{{ number }}
         </h1>
@@ -30,7 +30,7 @@
             <img
               src="@/assets/AdviceGenerator/pattern-divider-mobile.svg"
               alt="separator"
-              class="h-4 mt-5"
+              class="h-4 mt-6"
               data-testid="separator-image-test"
             />
           </picture>
