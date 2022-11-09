@@ -55,6 +55,10 @@ const router = createRouter({
       component: () => import("@/routes/JuniorChallenges/AdviceGenerator.vue"),
     },
     {
+      path: "/news-homepage",
+      component: () => import("@/routes/JuniorChallenges/NewsHomepage.vue"),
+    },
+    {
       path: "/Intermediate-challenges",
       component: () => import("@/routes/IntermediatePage.vue"),
     },
