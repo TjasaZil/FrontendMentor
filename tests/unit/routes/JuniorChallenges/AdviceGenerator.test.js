@@ -37,11 +37,6 @@ describe("AdviceGenerator", () => {
         const image = screen.queryAllByRole("img");
         expect(image.length).toBe(2);
       });
-      it("has 2 separators", () => {
-        render(Advice);
-        const separator = screen.queryAllByRole("separator");
-        expect(separator.length).toBe(2);
-      });
       it("has image with alt dice icon", () => {
         render(Advice);
         const dice = screen.queryByTestId("dice-icon-test");

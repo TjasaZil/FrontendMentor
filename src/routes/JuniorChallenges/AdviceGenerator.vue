@@ -2,35 +2,46 @@
   <section
     class="main w-full font-extrabold h-screen bg-advice-dark-blue flex flex-col justify-center items-center"
   >
-    <div
-      class="bg-advice-grayish-blue rounded-lg flex flex-col justify-center items-center"
-    >
-      <h1>Advice #{{ number }}</h1>
-      <p data-testid="paragraph-test">{{ advice }}</p>
-      <div class="flex justify-center items-center w-full">
-        <hr />
-        <picture>
-          <source
-            media="(min-width:768px)"
-            srcset="@/assets/AdviceGenerator/pattern-divider-desktop.svg"
-          />
-          <source
-            media="(max-width:767px)"
-            srcset="@/assets/AdviceGenerator/pattern-divider-mobile.svg"
-          />
-          <img
-            src="@/assets/AdviceGenerator/pattern-divider-mobile.svg"
-            alt="separator"
-            data-testid="separator-image-test"
-          />
-        </picture>
-        <hr />
+    <div>
+      <div
+        class="bg-advice-grayish-blue rounded-lg flex flex-col justify-center items-center h-[315px] w-5/6 mobilem:w-[343px] tablet:w-[540px] tablet_h-[322px] space-y-3"
+      >
+        <h1 class="text-base text-advice-neon-green tracking-widest uppercase">
+          Advice #{{ number }}
+        </h1>
+        <p
+          class="w-10/12 mx-auto text-advice-light-cyan text-2xl tablet:leading-9 tablet:text-[28px] text-center"
+          data-testid="paragraph-test"
+        >
+          "{{ advice }}"
+        </p>
+        <div class="flex justify-center items-center w-10/12">
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="@/assets/AdviceGenerator/pattern-divider-desktop.svg"
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="@/assets/AdviceGenerator/pattern-divider-mobile.svg"
+            />
+            <img
+              src="@/assets/AdviceGenerator/pattern-divider-mobile.svg"
+              alt="separator"
+              class="h-4 mt-5"
+              data-testid="separator-image-test"
+            />
+          </picture>
+        </div>
       </div>
-
-      <button @click="generateNewAdvice">
+      <button
+        @click="generateNewAdvice"
+        class="btn bg-advice-neon-green rounded-full w-16 h-16 relative -mt-8 ml-[138px] tablet:ml-[235px]"
+      >
         <img
           src="@/assets/AdviceGenerator/icon-dice.svg"
           alt="dice icon"
+          class="w-6 h-6 mx-auto"
           data-testid="dice-icon-test"
         />
       </button>
@@ -65,5 +76,10 @@ export default {
 
 .main {
   font-family: "Manrope", sans-serif;
+}
+
+.btn:hover {
+  box-shadow: 0rem 0rem 1rem hsl(150, 100%, 66%);
+  cursor: pointer;
 }
 </style>
