@@ -4,13 +4,15 @@
   >
     <div>
       <div
-        class="bg-advice-grayish-blue rounded-lg flex flex-col justify-center items-center h-[315px] w-5/6 mobilem:w-[343px] tablet:w-[540px] tablet_h-[322px] space-y-3"
+        class="bg-advice-dark-grayish-blue rounded-lg flex flex-col justify-center items-center h-[315px] w-5/6 mobilem:w-[343px] tablet:w-[540px] tablet:h-[322px] space-y-3"
       >
-        <h1 class="text-base text-advice-neon-green tracking-widest uppercase">
+        <h1
+          class="text-sm text-advice-neon-green tracking-widest uppercase -mt-4"
+        >
           Advice #{{ number }}
         </h1>
         <p
-          class="w-10/12 mx-auto text-advice-light-cyan text-2xl tablet:leading-9 tablet:text-[28px] text-center"
+          class="w-10/12 mx-auto text-advice-light-cyan text-2xl tablet:leading-9 tablet:text-[28px] text-center pt-4"
           data-testid="paragraph-test"
         >
           "{{ advice }}"
@@ -36,7 +38,7 @@
       </div>
       <button
         @click="generateNewAdvice"
-        class="btn bg-advice-neon-green rounded-full w-16 h-16 relative -mt-8 ml-[138px] tablet:ml-[235px]"
+        class="btn bg-advice-neon-green rounded-full w-16 h-16 relative -mt-8 ml-[138px] tablet:ml-[238px]"
       >
         <img
           src="@/assets/AdviceGenerator/icon-dice.svg"
