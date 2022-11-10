@@ -102,8 +102,8 @@ describe("NewsHomepage", () => {
         const menu = screen.queryByTestId("menu-icon-test");
         await user.click(menu);
         await waitFor(() => {
-          const list = screen.queryByRole("list");
-          expect(list).toBeVisible();
+          const list = screen.queryAllByRole("list");
+          expect(list.length).toBe(2);
         });
       });
       it("list disappears when clicked on the closed icon", async () => {
@@ -114,8 +114,8 @@ describe("NewsHomepage", () => {
         const close = screen.queryByTestId("closed-icon-test");
         await user.click(close);
         await waitFor(() => {
-          const list = screen.queryByRole("list");
-          expect(list).toBeNull();
+          const list = screen.queryAllByRole("list");
+          expect(list.length).toBe(1);
         });
       });
       it("has list items when the menu icon is clicked", async () => {
@@ -125,7 +125,7 @@ describe("NewsHomepage", () => {
         await user.click(menu);
         await waitFor(() => {
           const item = screen.queryAllByRole("listitem");
-          expect(item.length).toBe(5);
+          expect(item.length).toBe(10);
         });
       });
       it("list items disappear when clicked on the closed icon", async () => {
@@ -136,8 +136,8 @@ describe("NewsHomepage", () => {
         const close = screen.queryByTestId("closed-icon-test");
         await user.click(close);
         await waitFor(() => {
-          const item = screen.queryByRole("listitem");
-          expect(item).toBeNull();
+          const item = screen.queryAllByRole("listitem");
+          expect(item.length).toBe(5);
         });
       });
     });
@@ -148,8 +148,8 @@ describe("NewsHomepage", () => {
         const menu = screen.queryByTestId("menu-icon-test");
         await user.click(menu);
         await waitFor(() => {
-          const item = screen.queryByText("home");
-          expect(item).toBeVisible();
+          const item = screen.queryAllByText("home");
+          expect(item.length).toBe(2);
         });
       });
       it("has new text", async () => {
@@ -158,8 +158,8 @@ describe("NewsHomepage", () => {
         const menu = screen.queryByTestId("menu-icon-test");
         await user.click(menu);
         await waitFor(() => {
-          const item = screen.queryByText("new");
-          expect(item).toBeVisible();
+          const item = screen.queryAllByText("new");
+          expect(item.length).toBe(2);
         });
       });
       it("has popular text", async () => {
@@ -168,8 +168,8 @@ describe("NewsHomepage", () => {
         const menu = screen.queryByTestId("menu-icon-test");
         await user.click(menu);
         await waitFor(() => {
-          const item = screen.queryByText("popular");
-          expect(item).toBeVisible();
+          const item = screen.queryAllByText("popular");
+          expect(item.length).toBe(2);
         });
       });
       it("has trending text", async () => {
@@ -178,8 +178,8 @@ describe("NewsHomepage", () => {
         const menu = screen.queryByTestId("menu-icon-test");
         await user.click(menu);
         await waitFor(() => {
-          const item = screen.queryByText("trending");
-          expect(item).toBeVisible();
+          const item = screen.queryAllByText("trending");
+          expect(item.length).toBe(2);
         });
       });
       it("has categories text", async () => {
@@ -188,8 +188,8 @@ describe("NewsHomepage", () => {
         const menu = screen.queryByTestId("menu-icon-test");
         await user.click(menu);
         await waitFor(() => {
-          const item = screen.queryByText("categories");
-          expect(item).toBeVisible();
+          const item = screen.queryAllByText("categories");
+          expect(item.length).toBe(2);
         });
       });
     });

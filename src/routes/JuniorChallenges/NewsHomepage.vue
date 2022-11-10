@@ -4,7 +4,7 @@
   >
     <!-- NAVIGATION -->
     <div
-      class="absolute top-0 left-0 flex flex-row justify-between w-full items-center px-3"
+      class="absolute h-18 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3"
     >
       <!-- ICON -->
       <img
@@ -13,7 +13,7 @@
         data-testid="logo-icon-test"
       />
       <!-- MOBILE MENU -->
-      <div>
+      <div class="laptop:hidden">
         <img
           v-if="!this.open"
           src="@/assets/NewsHomepage/icon-menu.svg"
@@ -32,6 +32,14 @@
           <li v-for="nav in navs" :key="nav">{{ nav }}</li>
         </ul>
       </div>
+
+      <!-- DESKTOP MENU-->
+
+      <ul
+        class="hidden laptop:visible text-black laptop:flex flex-row justify-around items-center h-18 p-4"
+      >
+        <li v-for="nav in navs" :key="nav">{{ nav }}</li>
+      </ul>
     </div>
   </section>
 </template>
