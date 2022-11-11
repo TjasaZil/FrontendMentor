@@ -4,7 +4,7 @@
   >
     <!-- NAVIGATION -->
     <div
-      class="absolute h-18 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3"
+      class="absolute h-24 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3 b bg-news-off-white"
     >
       <!-- ICON -->
       <img
@@ -28,9 +28,16 @@
           @click="openMenu()"
           data-testid="closed-icon-test"
         />
-        <ul v-if="this.open">
-          <li v-for="nav in navs" :key="nav">{{ nav }}</li>
-        </ul>
+        <div v-if="this.open" class="flex justify-center items-center w-full">
+          <ul
+            class="bg-news-off-white w-2/3 pl-5 capitalize space-y-5 pt-10 absolute right-0 top-16 h-screen text-news-very-dark-blue font-normal"
+          >
+            <li v-for="nav in navs" :key="nav">{{ nav }}</li>
+          </ul>
+          <div
+            class="bg-black opacity-50 h-screen absolute left-0 top-0 w-1/3"
+          ></div>
+        </div>
       </div>
 
       <!-- DESKTOP MENU-->
@@ -63,27 +70,49 @@
             src="@/assets/NewsHomepage/image-web-3-mobile.jpg"
             alt="hero image"
             data-testid="hero-image-test"
+            class="w-11/12 mx-auto"
           />
         </picture>
 
-        <div class="laptop:flex laptop:justify-center laptop:items-center">
-          <h1 data-testid="hero-heading-test">The Bright Future of Web 3.0?</h1>
+        <div
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center"
+        >
+          <h1
+            class="text-news-very-dark-blue font-extrabold text-5xl w-3/4"
+            data-testid="hero-heading-test"
+          >
+            The Bright Future of Web 3.0?
+          </h1>
 
           <div
             class="laptop:flex-col laptop:justify-center laptop:items-center"
           >
-            <p>
+            <p
+              class="leading-5 text-sm text-news-dark-grayish-blue font-normal"
+            >
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
             </p>
-            <button>read more</button>
+            <button
+              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-7 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue"
+            >
+              read more
+            </button>
           </div>
         </div>
       </div>
       <!-- blog section -->
-      <div data-testid="blog-section-test">
-        <h2 data-testid="blog-section-heading">New</h2>
+      <div
+        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2"
+        data-testid="blog-section-test"
+      >
+        <h2
+          class="text-news-soft-orange text-3xl font-black"
+          data-testid="blog-section-heading"
+        >
+          New
+        </h2>
         <h3 data-testid="blog-small-heading">Hydrogen VS Electric Cars</h3>
         <p data-testid="blog-paragraph-test">
           Will hydrogen-fueled cars ever catch up to EVs?

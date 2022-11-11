@@ -142,54 +142,37 @@ describe("NewsHomepage", () => {
       });
     });
     describe("navigation text", () => {
-      it("has home text", async () => {
+      it("has appropriate navigation text", () => {
         render(News);
-        const user = userEvent.setup();
-        const menu = screen.queryByTestId("menu-icon-test");
-        await user.click(menu);
-        await waitFor(() => {
-          const item = screen.queryAllByText("home");
-          expect(item.length).toBe(2);
-        });
+        let navigationArray = [
+          "home",
+          "new",
+          "popular",
+          "trending",
+          "categories",
+        ];
+        for (let i = 0; i < navigationArray.length; i++) {
+          let text = screen.queryByText(navigationArray[i]);
+          expect(text).toBeInTheDocument();
+        }
       });
-      it("has new text", async () => {
+      it("has 2 appropriate navigation texts when the button is clicked", async () => {
         render(News);
         const user = userEvent.setup();
         const menu = screen.queryByTestId("menu-icon-test");
         await user.click(menu);
         await waitFor(() => {
-          const item = screen.queryAllByText("new");
-          expect(item.length).toBe(2);
-        });
-      });
-      it("has popular text", async () => {
-        render(News);
-        const user = userEvent.setup();
-        const menu = screen.queryByTestId("menu-icon-test");
-        await user.click(menu);
-        await waitFor(() => {
-          const item = screen.queryAllByText("popular");
-          expect(item.length).toBe(2);
-        });
-      });
-      it("has trending text", async () => {
-        render(News);
-        const user = userEvent.setup();
-        const menu = screen.queryByTestId("menu-icon-test");
-        await user.click(menu);
-        await waitFor(() => {
-          const item = screen.queryAllByText("trending");
-          expect(item.length).toBe(2);
-        });
-      });
-      it("has categories text", async () => {
-        render(News);
-        const user = userEvent.setup();
-        const menu = screen.queryByTestId("menu-icon-test");
-        await user.click(menu);
-        await waitFor(() => {
-          const item = screen.queryAllByText("categories");
-          expect(item.length).toBe(2);
+          let navigationArray = [
+            "home",
+            "new",
+            "popular",
+            "trending",
+            "categories",
+          ];
+          for (let i = 0; i < navigationArray.length; i++) {
+            let text = screen.queryAllByText(navigationArray[i]);
+            expect(text.length).toBe(2);
+          }
         });
       });
     });
@@ -291,24 +274,15 @@ describe("NewsHomepage", () => {
       describe("blog paragraphs", () => {
         it("has blog paragraph text Will hydrogen-fueled cars ever catch up to EVs?", () => {
           render(News);
-          const paragraph = screen.queryByText(
-            "Will hydrogen-fueled cars ever catch up to EVs?"
-          );
-          expect(paragraph).toBeInTheDocument();
-        });
-        it("has a blog paragraph text What are the possible adverse effects of on-demand AI image generation?", () => {
-          render(News);
-          const paragraph = screen.queryByText(
-            "What are the possible adverse effects of on-demand AI image generation?"
-          );
-          expect(paragraph).toBeInTheDocument();
-        });
-        it("has a blog paragraph text Is Private funding by VC firms is down 50% YOY. We take a look at what that means.", () => {
-          render(News);
-          const paragraph = screen.queryByText(
-            "Is Private funding by VC firms is down 50% YOY. We take a look at what that means."
-          );
-          expect(paragraph).toBeInTheDocument();
+          let paragraphArray = [
+            "Will hydrogen-fueled cars ever catch up to EVs?",
+            "What are the possible adverse effects of on-demand AI image generation?",
+            "Is Private funding by VC firms is down 50% YOY. We take a look at what that means.",
+          ];
+          for (let i = 0; i < paragraphArray.length; i++) {
+            const paragraph = screen.queryByText(paragraphArray[i]);
+            expect(paragraph).toBeInTheDocument();
+          }
         });
       });
     });
@@ -353,66 +327,49 @@ describe("NewsHomepage", () => {
         const number = screen.queryAllByTestId("number-test");
         expect(number.length).toBe(3);
       });
-      it("has text 01", () => {
+      it("has appropriate number text 01", () => {
         render(News);
-        const number = screen.queryByText("01");
-        expect(number).toBeInTheDocument();
+        let numberArray = ["01", "02", "03"];
+        for (let i = 0; i < numberArray.length; i++) {
+          const number = screen.queryByText(numberArray[i]);
+          expect(number).toBeInTheDocument();
+        }
       });
-      it("has text 02", () => {
-        render(News);
-        const number = screen.queryByText("02");
-        expect(number).toBeInTheDocument();
-      });
-      it("has text 03", () => {
-        render(News);
-        const number = screen.queryByText("03");
-        expect(number).toBeInTheDocument();
-      });
+
       it("has 3 small headings", () => {
         render(News);
         const heading = screen.queryAllByTestId("small-bottom-heading");
         expect(heading.length).toBe(3);
       });
-      it("has heading with text Reviving Retro PCs", () => {
+      it("has appropriate small headings ", () => {
         render(News);
-        const heading = screen.queryByText("Reviving Retro PCs");
-        expect(heading).toBeInTheDocument();
+        let headingArray = [
+          "Reviving Retro PCs",
+          "Top 10 Laptops of 2022",
+          "The Growth of Gaming",
+        ];
+        for (let i = 0; i < headingArray.length; i++) {
+          const heading = screen.queryByText(headingArray[i]);
+          expect(heading).toBeInTheDocument();
+        }
       });
-      it("has heading with text Top 10 Laptops of 2022", () => {
-        render(News);
-        const heading = screen.queryByText("Top 10 Laptops of 2022");
-        expect(heading).toBeInTheDocument();
-      });
-      it("has heading with text The Growth of Gaming", () => {
-        render(News);
-        const heading = screen.queryByText("The Growth of Gaming");
-        expect(heading).toBeInTheDocument();
-      });
+
       it("has 3 paragraphs", () => {
         render(News);
         const heading = screen.queryAllByTestId("small-bottom-paragraph");
         expect(heading.length).toBe(3);
       });
-      it("gas paragraph with text What happens when old PCs are given modern upgrades?", () => {
+      it("has appropriate paragraphs with text What happens when old PCs are given modern upgrades?", () => {
         render(News);
-        const paragraph = screen.queryByText(
-          "What happens when old PCs are given modern upgrades?"
-        );
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("gas paragraph with text Our best picks for various needs and budgets", () => {
-        render(News);
-        const paragraph = screen.queryByText(
-          "Our best picks for various needs and budgets"
-        );
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("gas paragraph with text How the pandemic has sparked fresh opportunities", () => {
-        render(News);
-        const paragraph = screen.queryByText(
-          "How the pandemic has sparked fresh opportunities"
-        );
-        expect(paragraph).toBeInTheDocument();
+        let paragraphArray = [
+          "What happens when old PCs are given modern upgrades?",
+          "Our best picks for various needs and budgets",
+          "How the pandemic has sparked fresh opportunities",
+        ];
+        for (let i = 0; i < paragraphArray.length; i++) {
+          const paragraph = screen.queryByText(paragraphArray[i]);
+          expect(paragraph).toBeInTheDocument();
+        }
       });
     });
   });
