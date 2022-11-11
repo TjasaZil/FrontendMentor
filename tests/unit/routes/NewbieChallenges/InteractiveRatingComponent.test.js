@@ -108,55 +108,20 @@ describe("InteractiveRatingComponent", () => {
         expect(submit).toBeInTheDocument();
       });
       describe("choose value button", () => {
-        it("has button with text 1", () => {
+        it("has buttons with appropriate value and text", async () => {
           render(Interactive);
-          const value = screen.queryByText("1");
-          expect(value).toBeInTheDocument();
-        });
-        it("has button with text 2", () => {
-          render(Interactive);
-          const value = screen.queryByText("2");
-          expect(value).toBeInTheDocument();
-        });
-        it("has button with text 3", () => {
-          render(Interactive);
-          const value = screen.queryByText("3");
-          expect(value).toBeInTheDocument();
-        });
-        it("has button with text 4", () => {
-          render(Interactive);
-          const value = screen.queryByText("4");
-          expect(value).toBeInTheDocument();
-        });
-        it("has button with text 5", () => {
-          render(Interactive);
-          const value = screen.queryByText("5");
-          expect(value).toBeInTheDocument();
-        });
-        it("has button with value 1", () => {
-          render(Interactive);
-          const value = screen.queryByText("1");
-          expect(value).toHaveValue("1");
-        });
-        it("has button with value 2", () => {
-          render(Interactive);
-          const value = screen.queryByText("2");
-          expect(value).toHaveValue("2");
-        });
-        it("has button with value 3", () => {
-          render(Interactive);
-          const value = screen.queryByText("3");
-          expect(value).toHaveValue("3");
-        });
-        it("has button with value 4", () => {
-          render(Interactive);
-          const value = screen.queryByText("4");
-          expect(value).toHaveValue("4");
-        });
-        it("has button with value 5", () => {
-          render(Interactive);
-          const value = screen.queryByText("5");
-          expect(value).toHaveValue("5");
+          const user = userEvent.setup();
+          let textArray = ["1", "2", "3", "4", "5"];
+          let valueArray = ["1", "2", "3", "4", "5"];
+          const submit = screen.queryByTestId("submit-button-test");
+          for (let i = 0; i < textArray.length; i++) {
+            const text = screen.queryByText(textArray[i]);
+            await user.click(text);
+            await user.click(submit);
+            expect(
+              screen.queryByText(`You selected ${valueArray[i]} out of 5`)
+            );
+          }
         });
       });
       describe("submit button", () => {

@@ -53,6 +53,12 @@ module.exports = {
         "advice-grayish-blue": "hsl(217, 19%, 38%)",
         "advice-dark-grayish-blue": "hsl(217, 19%, 24%)",
         "advice-dark-blue": "hsl(218, 23%, 16%)",
+        "news-soft-orange": "hsl(35, 77%, 62%)",
+        "news-soft-red": "hsl(5, 85%, 63%)",
+        "news-off-white": "hsl(36, 100%, 99%)",
+        "news-grayish-blue": "hsl(233, 8%, 79%)",
+        "news-dark-grayish-blue": "hsl(236, 13%, 42%)",
+        "news-very-dark-blue": "hsl(240, 100%, 5%)",
       },
       width: {
         "profile-mobile-container-width": "326px",

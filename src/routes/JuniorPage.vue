@@ -19,30 +19,13 @@
           router="/advice-generator"
           x-intersect="$el.classList.add('swingIn')"
         />
-        <!-- <Container
-          :image="TestImage"
-          alt="test image"
-          heading="this is a test heading"
-          paragraph="test paragraph"
-        />
         <Container
-          :image="TestImage"
-          alt="test image"
-          heading="this is a test heading"
-          paragraph="test paragraph"
+          :image="NewsImage"
+          alt="News Homepage"
+          heading="News Homepage"
+          router="/news-homepage"
+          x-intersect="$el.classList.add('swingIn')"
         />
-        <Container
-          :image="TestImage"
-          alt="test image"
-          heading="this is a test heading"
-          paragraph="test paragraph"
-        />
-        <Container
-          :image="TestImage"
-          alt="test image"
-          heading="this is a test heading"
-          paragraph="test paragraph"
-        />-->
       </section>
     </section>
     <Footer />
@@ -53,6 +36,7 @@
 import IntroText from "@/components/Shared/IntroText.vue";
 import Container from "@/components/Shared/Container.vue";
 import AdviceImage from "@/assets/AdviceGenerator/design/desktop-preview.jpg";
+import NewsImage from "@/assets/NewsHomepage/design/desktop-preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 export default {
@@ -61,6 +45,7 @@ export default {
   data() {
     return {
       AdviceImage,
+      NewsImage,
     };
   },
 };
