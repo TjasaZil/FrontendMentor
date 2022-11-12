@@ -70,11 +70,11 @@
     <!-- BODY -->
     <!--- TOP -->
     <div
-      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-12 laptop:w-[1100px] laptop:h-[511px]"
+      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-12 laptop:w-[1100px] laptop:h-[450px]"
     >
       <!-- HERO IMAGE -->
       <div
-        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10"
+        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10 laptop:mt-7"
       >
         <picture>
           <source
@@ -95,7 +95,7 @@
 
         <!-- HERO TEXT -->
         <div
-          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-12"
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-10"
         >
           <h1
             class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-5xl"
@@ -115,7 +115,7 @@
               it really fulfilling its promise?
             </p>
             <button
-              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-7 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue laptop:text-[15px] laptop:tracking-widest"
+              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-8 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue laptop:text-[15px] laptop:tracking-widest"
             >
               read more
             </button>
@@ -124,7 +124,7 @@
       </div>
       <!-- DARK BLOG SECTION -->
       <div
-        class="bg-news-very-dark-blue w-11/12 mx-auto text-left flex flex-col justify-center items-center mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:h-[511px] laptop:mx-0"
+        class="bg-news-very-dark-blue w-11/12 mx-auto text-left flex flex-col justify-center items-center mt-3 laptop:w-1/3 laptop:max-w-[350px] laptop:h-[450px] laptop:mx-0"
         data-testid="blog-section-test"
       >
         <div
