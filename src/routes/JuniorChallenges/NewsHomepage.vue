@@ -165,7 +165,7 @@
     <!-- BOTTOM -->
 
     <div
-      class="flex flex-col laptop:flex-row justify-start items-start mt-12 w-11/12 mx-auto laptop:w-[1100px] laptop:h-[119px] laptop:space-x-5"
+      class="flex flex-col laptop:flex-row justify-start items-start mt-12 w-11/12 mx-auto laptop:w-[1000px] laptop:h-[119px] laptop:space-x-5"
     >
       <div
         v-for="blog in blogs"
