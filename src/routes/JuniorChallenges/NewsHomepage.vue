@@ -70,7 +70,7 @@
     <!-- BODY -->
     <!--- TOP -->
     <div
-      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-10 laptop:w-[1100px] laptop:h-[450px] laptop:pb-9"
+      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-8 laptop:w-[1100px] laptop:h-[450px] laptop:pb-9"
     >
       <!-- HERO IMAGE -->
       <div
@@ -95,7 +95,7 @@
 
         <!-- HERO TEXT -->
         <div
-          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-6"
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-4"
         >
           <h1
             class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-5xl"
@@ -115,7 +115,7 @@
               it really fulfilling its promise?
             </p>
             <button
-              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-8 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue laptop:text-[15px] laptop:tracking-widest"
+              class="mt-7 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-8 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue laptop:text-[15px] laptop:tracking-widest"
             >
               read more
             </button>
