@@ -54,7 +54,7 @@
         <!-- DESKTOP MENU-->
 
         <ul
-          class="hidden laptop:visible laptop:flex flex-row justify-around items-center text-[15px] p-4 laptop:h-36 space-x-10 capitalize text-news-dark-grayish-blue"
+          class="hidden laptop:visible laptop:flex flex-row justify-around items-center text-[15px] p-4 laptop:h-36 space-x-9 capitalize text-news-dark-grayish-blue"
         >
           <li
             v-for="nav in navs"
@@ -74,7 +74,7 @@
     >
       <!-- HERO IMAGE -->
       <div
-        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10 laptop:mt-7"
+        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10 laptop:mt-4"
       >
         <picture>
           <source
@@ -95,7 +95,7 @@
 
         <!-- HERO TEXT -->
         <div
-          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-10"
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-6"
         >
           <h1
             class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-5xl"
