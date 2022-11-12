@@ -70,7 +70,7 @@
     <!-- BODY -->
     <!--- TOP -->
     <div
-      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-40 xl:mt-20"
+      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-12 laptop:w-[1100px] laptop:h-[511px]"
     >
       <!-- HERO IMAGE -->
       <div
@@ -95,10 +95,10 @@
 
         <!-- HERO TEXT -->
         <div
-          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center laptop:w-[650px] laptop:space-x-7 laptop:space-y-0 laptop:pr-7 laptop:mt-9"
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-12"
         >
           <h1
-            class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-5xl laptop:pr-7"
+            class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-5xl"
             data-testid="hero-heading-test"
           >
             The Bright Future of Web 3.0?
@@ -124,11 +124,11 @@
       </div>
       <!-- DARK BLOG SECTION -->
       <div
-        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:-mt-5 laptop:p-1 laptop:mx-0 laptop:py-3"
+        class="bg-news-very-dark-blue w-11/12 mx-auto text-left flex flex-col justify-center items-center mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:h-[511px] laptop:mx-0"
         data-testid="blog-section-test"
       >
         <div
-          class="space-y-5 flex flex-col justify-center items-start w-11/12 laptop:w-10/12 m-auto text-left pb-2 laptop:pb-4"
+          class="space-y-4 flex flex-col justify-center items-start w-11/12 laptop:w-10/12 m-auto text-left"
         >
           <h2
             class="text-news-soft-orange text-3xl font-black"
@@ -260,7 +260,7 @@ h3 {
   @apply font-extrabold text-xl laptop:text-lg;
 }
 .small-paragraph {
-  @apply text-news-grayish-blue text-sm leading-5;
+  @apply text-news-grayish-blue text-sm  leading-5;
 }
 hr {
   @apply bg-news-dark-grayish-blue border border-solid border-news-grayish-blue w-full;
