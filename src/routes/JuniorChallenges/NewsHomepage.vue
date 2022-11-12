@@ -54,7 +54,7 @@
         <!-- DESKTOP MENU-->
 
         <ul
-          class="hidden laptop:visible laptop:flex flex-row justify-around items-center p-4 laptop:h-36 space-x-5 mr-10 capitalize text-news-dark-grayish-blue"
+          class="hidden laptop:visible laptop:flex flex-row justify-around items-center text-[15px] p-4 laptop:h-36 space-x-10 capitalize text-news-dark-grayish-blue"
         >
           <li
             v-for="nav in navs"
@@ -70,7 +70,7 @@
     <!-- BODY -->
     <!--- TOP -->
     <div
-      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-12 laptop:w-[1100px] laptop:h-[450px]"
+      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-12 laptop:w-[1100px] laptop:h-[450px] laptop:pb-8"
     >
       <!-- HERO IMAGE -->
       <div
@@ -165,7 +165,7 @@
     <!-- BOTTOM -->
 
     <div
-      class="flex flex-col laptop:flex-row justify-start items-start mt-12 w-11/12 mx-auto laptop:w-[1100px] laptop:h-[129px] laptop:space-x-5"
+      class="flex flex-col laptop:flex-row justify-start items-start mt-12 w-11/12 mx-auto laptop:w-[1000px] laptop:h-[129px] laptop:space-x-5"
     >
       <div
         v-for="blog in blogs"
