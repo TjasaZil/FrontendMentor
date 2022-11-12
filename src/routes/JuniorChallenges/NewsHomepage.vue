@@ -74,7 +74,7 @@
     >
       <!-- HERO IMAGE -->
       <div
-        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-16"
+        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10"
       >
         <picture>
           <source
@@ -89,16 +89,16 @@
             src="@/assets/NewsHomepage/image-web-3-mobile.jpg"
             alt="hero image"
             data-testid="hero-image-test"
-            class="w-11/12 mx-auto laptop:w-[710px]"
+            class="w-11/12 mx-auto laptop:w-[650px]"
           />
         </picture>
 
         <!-- HERO TEXT -->
         <div
-          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center laptop:w-[730px] laptop:space-x-7 laptop:mx-0 laptop:space-y-0"
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center laptop:w-[650px] laptop:space-x-7 laptop:space-y-0 laptop:pr-7 laptop:mt-9"
         >
           <h1
-            class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-6xl"
+            class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-5xl laptop:pr-7"
             data-testid="hero-heading-test"
           >
             The Bright Future of Web 3.0?
@@ -108,7 +108,7 @@
             class="laptop:flex-col laptop:justify-center laptop:items-center laptop:w-1/2"
           >
             <p
-              class="leading-5 text-sm text-news-dark-grayish-blue font-normal laptop:text-[15px] laptop:leading-6"
+              class="leading-5 text-sm text-news-dark-grayish-blue font-normal laptop:leading-6"
             >
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
@@ -124,11 +124,11 @@
       </div>
       <!-- DARK BLOG SECTION -->
       <div
-        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:-mt-11 laptop:p-3 laptop:mx-0"
+        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:-mt-5 laptop:p-1 laptop:mx-0 laptop:py-3"
         data-testid="blog-section-test"
       >
         <div
-          class="space-y-5 flex flex-col justify-center items-start w-11/12 m-auto text-left pb-2 laptop:pb-4"
+          class="space-y-5 flex flex-col justify-center items-start w-11/12 laptop:w-10/12 m-auto text-left pb-2 laptop:pb-4"
         >
           <h2
             class="text-news-soft-orange text-3xl font-black"
@@ -257,7 +257,7 @@ export default {
 }
 
 h3 {
-  @apply font-extrabold text-xl;
+  @apply font-extrabold text-xl laptop:text-lg;
 }
 .small-paragraph {
   @apply text-news-grayish-blue text-sm leading-5;
