@@ -7,60 +7,64 @@
     <div
       class="absolute h-24 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3 bg-news-off-white laptop:h-36"
     >
-      <!-- ICON -->
-      <img
-        src="@/assets/NewsHomepage/logo.svg"
-        alt="logo icon"
-        data-testid="logo-icon-test"
-        class="laptop:ml-10"
-      />
-      <!-- MOBILE MENU -->
-      <div class="laptop:hidden">
-        <img
-          v-if="!this.open"
-          src="@/assets/NewsHomepage/icon-menu.svg"
-          alt="menu icon"
-          @click="openMenu()"
-          data-testid="menu-icon-test"
-        />
-        <img
-          v-else
-          src="@/assets/NewsHomepage/icon-menu-close.svg"
-          alt="close menu icon"
-          @click="openMenu()"
-          data-testid="closed-icon-test"
-        />
-        <div v-if="this.open" class="flex justify-center items-center w-full">
-          <ul
-            class="bg-news-off-white w-2/3 pl-5 capitalize space-y-5 pt-10 absolute right-0 top-16 h-screen text-news-very-dark-blue font-normal"
-          >
-            <li
-              v-for="nav in navs"
-              :key="nav"
-              class="hover:font-bold hover:cursor-pointer hover:drop-shadow hover:shadow-news-dark-grayish-blue"
-            >
-              {{ nav }}
-            </li>
-          </ul>
-          <div
-            class="bg-black opacity-50 h-screen absolute left-0 top-0 w-1/3"
-          ></div>
-        </div>
-      </div>
-
-      <!-- DESKTOP MENU-->
-
-      <ul
-        class="hidden laptop:visible laptop:flex flex-row justify-around items-center p-4 laptop:h-36 space-x-5 mr-10 capitalize text-news-dark-grayish-blue"
+      <div
+        class="flex flex-row justify-between w-full h-24 mx-auto laptop:h-36 relative top-0 items-center px-3 laptop:w-[1110px]"
       >
-        <li
-          v-for="nav in navs"
-          :key="nav"
-          class="hover:cursor-pointer hover:text-news-soft-red"
+        <!-- ICON -->
+        <img
+          src="@/assets/NewsHomepage/logo.svg"
+          alt="logo icon"
+          data-testid="logo-icon-test"
+          class="laptop:ml-10"
+        />
+        <!-- MOBILE MENU -->
+        <div class="laptop:hidden">
+          <img
+            v-if="!this.open"
+            src="@/assets/NewsHomepage/icon-menu.svg"
+            alt="menu icon"
+            @click="openMenu()"
+            data-testid="menu-icon-test"
+          />
+          <img
+            v-else
+            src="@/assets/NewsHomepage/icon-menu-close.svg"
+            alt="close menu icon"
+            @click="openMenu()"
+            data-testid="closed-icon-test"
+          />
+          <div v-if="this.open" class="flex justify-center items-center w-full">
+            <ul
+              class="bg-news-off-white w-2/3 pl-5 capitalize space-y-5 pt-10 absolute right-0 top-16 h-screen text-news-very-dark-blue font-normal"
+            >
+              <li
+                v-for="nav in navs"
+                :key="nav"
+                class="hover:font-bold hover:cursor-pointer hover:drop-shadow hover:shadow-news-dark-grayish-blue"
+              >
+                {{ nav }}
+              </li>
+            </ul>
+            <div
+              class="bg-black opacity-50 h-screen absolute left-0 top-0 w-1/3"
+            ></div>
+          </div>
+        </div>
+
+        <!-- DESKTOP MENU-->
+
+        <ul
+          class="hidden laptop:visible laptop:flex flex-row justify-around items-center p-4 laptop:h-36 space-x-5 mr-10 capitalize text-news-dark-grayish-blue"
         >
-          {{ nav }}
-        </li>
-      </ul>
+          <li
+            v-for="nav in navs"
+            :key="nav"
+            class="hover:cursor-pointer hover:text-news-soft-red"
+          >
+            {{ nav }}
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- BODY -->
@@ -85,13 +89,13 @@
             src="@/assets/NewsHomepage/image-web-3-mobile.jpg"
             alt="hero image"
             data-testid="hero-image-test"
-            class="w-11/12 mx-auto laptop:w-[730px] laptop:h-[300px]"
+            class="w-11/12 mx-auto laptop:w-[700px]"
           />
         </picture>
 
         <!-- HERO TEXT -->
         <div
-          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center laptop:w-[730px] laptop:space-x-7 laptop:mx-0 laptop:space-y-0 laptop:mt-8"
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center laptop:w-[730px] laptop:space-x-7 laptop:mx-0 laptop:space-y-0"
         >
           <h1
             class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-6xl"
@@ -111,7 +115,7 @@
               it really fulfilling its promise?
             </p>
             <button
-              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-7 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue laptop:text-[15px] laptop:py-4 laptop:px-9 laptop:tracking-widest"
+              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-7 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue laptop:text-[15px] laptop:tracking-widest"
             >
               read more
             </button>
@@ -120,7 +124,7 @@
       </div>
       <!-- DARK BLOG SECTION -->
       <div
-        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:-mt-6 laptop:p-5 laptop:mx-0"
+        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:-mt-11 laptop:p-3 laptop:mx-0"
         data-testid="blog-section-test"
       >
         <div
@@ -166,7 +170,7 @@
       <div
         v-for="blog in blogs"
         :key="blog"
-        class="flex laptop:flex-row justify-start items-start mt-5 laptop:w-[350px] space-x-3"
+        class="flex laptop:flex-row justify-start items-start mt-5 laptop:mt-3 laptop:w-[350px] space-x-3"
       >
         <img
           :src="blog.img"
@@ -185,13 +189,13 @@
             {{ blog.number }}
           </p>
           <p
-            class="text-news-very-dark-blue text-xl hover:text-news-soft-red hover:cursor-pointer laptop:text-lg"
+            class="text-news-very-dark-blue text-xl hover:text-news-soft-red hover:cursor-pointer laptop:text-[17px] font-extrabold"
             data-testid="small-bottom-heading"
           >
             {{ blog.heading }}
           </p>
           <p
-            class="text-news-dark-grayish-blue text-base laptop:text-[15px]"
+            class="text-news-dark-grayish-blue text-base laptop:text-[14px]"
             data-testid="small-bottom-paragraph"
           >
             {{ blog.paragraph }}
