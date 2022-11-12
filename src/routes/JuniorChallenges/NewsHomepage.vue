@@ -5,13 +5,14 @@
   >
     <!-- NAVIGATION -->
     <div
-      class="absolute h-24 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3 bg-news-off-white"
+      class="absolute h-24 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3 bg-news-off-white laptop:h-36"
     >
       <!-- ICON -->
       <img
         src="@/assets/NewsHomepage/logo.svg"
         alt="logo icon"
         data-testid="logo-icon-test"
+        class="laptop:ml-10"
       />
       <!-- MOBILE MENU -->
       <div class="laptop:hidden">
@@ -50,19 +51,26 @@
       <!-- DESKTOP MENU-->
 
       <ul
-        class="hidden laptop:visible text-black laptop:flex flex-row justify-around items-center h-18 p-4"
+        class="hidden laptop:visible laptop:flex flex-row justify-around items-center p-4 laptop:h-36 space-x-5 mr-10 capitalize text-news-dark-grayish-blue"
       >
-        <li v-for="nav in navs" :key="nav">{{ nav }}</li>
+        <li
+          v-for="nav in navs"
+          :key="nav"
+          class="hover:cursor-pointer hover:text-news-soft-red"
+        >
+          {{ nav }}
+        </li>
       </ul>
     </div>
 
     <!-- BODY -->
     <!--- TOP -->
     <div
-      class="flex flex-col laptop:flex-row justify-center items-center w-full"
+      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-40 xl:mt-20"
     >
+      <!-- HERO IMAGE -->
       <div
-        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center"
+        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10"
       >
         <picture>
           <source
@@ -77,45 +85,46 @@
             src="@/assets/NewsHomepage/image-web-3-mobile.jpg"
             alt="hero image"
             data-testid="hero-image-test"
-            class="w-11/12 mx-auto"
+            class="w-11/12 mx-auto laptop:w-[730px] laptop:h-[300px]"
           />
         </picture>
 
+        <!-- HERO TEXT -->
         <div
-          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center"
+          class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-center laptop:items-center laptop:w-[730px] laptop:space-x-7 laptop:mx-0 laptop:space-y-0 laptop:mt-8"
         >
           <h1
-            class="text-news-very-dark-blue font-extrabold text-5xl w-3/4"
+            class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-6xl"
             data-testid="hero-heading-test"
           >
             The Bright Future of Web 3.0?
           </h1>
 
           <div
-            class="laptop:flex-col laptop:justify-center laptop:items-center"
+            class="laptop:flex-col laptop:justify-center laptop:items-center laptop:w-1/2"
           >
             <p
-              class="leading-5 text-sm text-news-dark-grayish-blue font-normal"
+              class="leading-5 text-sm text-news-dark-grayish-blue font-normal laptop:text-[15px] laptop:leading-6"
             >
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
             </p>
             <button
-              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-7 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue"
+              class="mt-5 uppercase text-news-off-white font-bold text-sm bg-news-soft-red px-7 py-3 hover:cursor-pointer hover:bg-news-very-dark-blue laptop:text-[15px] laptop:py-4 laptop:px-9 laptop:tracking-widest"
             >
               read more
             </button>
           </div>
         </div>
       </div>
-      <!-- blog section -->
+      <!-- DARK BLOG SECTION -->
       <div
-        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8"
+        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8 laptop:w-1/3 laptop:max-w-[350px] laptop:-mt-6 laptop:p-5 laptop:mx-0"
         data-testid="blog-section-test"
       >
         <div
-          class="space-y-5 flex flex-col justify-center items-start w-11/12 m-auto text-left pb-2"
+          class="space-y-5 flex flex-col justify-center items-start w-11/12 m-auto text-left pb-2 laptop:pb-4"
         >
           <h2
             class="text-news-soft-orange text-3xl font-black"
@@ -152,37 +161,37 @@
     <!-- BOTTOM -->
 
     <div
-      class="flex flex-col laptop:flex-row justify-center items-center mt-12 w-11/12 mx-auto"
+      class="flex flex-col laptop:flex-row justify-start items-start mt-12 w-11/12 mx-auto laptop:w-[1100px] laptop:h-[129px] laptop:space-x-5"
     >
       <div
         v-for="blog in blogs"
         :key="blog"
-        class="flex laptop:flex-row justify-start items-start space-x-3 mt-5"
+        class="flex laptop:flex-row justify-start items-start mt-5 laptop:w-[350px] space-x-3"
       >
         <img
           :src="blog.img"
           :alt="blog.alt"
-          class="w-1/4"
+          class="w-1/4 mobilel:w-[167px] laptop:w-[100px]"
           data-testid="bottom-image-test"
         />
 
         <div
-          class="flex flex-col justify-start items-start text-left space-y-3"
+          class="flex flex-col justify-start items-start text-left space-y-3 laptop:space-y-2"
         >
           <p
-            class="text-news-grayish-blue text-4xl font-bold"
+            class="text-news-grayish-blue text-4xl font-bold laptop:text-3xl"
             data-testid="number-test"
           >
             {{ blog.number }}
           </p>
           <p
-            class="text-news-very-dark-blue text-xl"
+            class="text-news-very-dark-blue text-xl hover:text-news-soft-red hover:cursor-pointer laptop:text-lg"
             data-testid="small-bottom-heading"
           >
             {{ blog.heading }}
           </p>
           <p
-            class="text-news-dark-grayish-blue text-base"
+            class="text-news-dark-grayish-blue text-base laptop:text-[15px]"
             data-testid="small-bottom-paragraph"
           >
             {{ blog.paragraph }}
