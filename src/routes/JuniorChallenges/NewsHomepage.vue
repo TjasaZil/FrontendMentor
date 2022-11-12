@@ -1,10 +1,11 @@
 <template>
+  /* eslint-disable */
   <section
     class="main flex flex-col text-black justify-center items-center laptop:h-screen w-full bg-news-off-white"
   >
     <!-- NAVIGATION -->
     <div
-      class="absolute h-24 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3 b bg-news-off-white"
+      class="absolute h-24 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3 bg-news-off-white"
     >
       <!-- ICON -->
       <img
@@ -32,7 +33,13 @@
           <ul
             class="bg-news-off-white w-2/3 pl-5 capitalize space-y-5 pt-10 absolute right-0 top-16 h-screen text-news-very-dark-blue font-normal"
           >
-            <li v-for="nav in navs" :key="nav">{{ nav }}</li>
+            <li
+              v-for="nav in navs"
+              :key="nav"
+              class="hover:font-bold hover:cursor-pointer hover:drop-shadow hover:shadow-news-dark-grayish-blue"
+            >
+              {{ nav }}
+            </li>
           </ul>
           <div
             class="bg-black opacity-50 h-screen absolute left-0 top-0 w-1/3"
@@ -104,53 +111,82 @@
       </div>
       <!-- blog section -->
       <div
-        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2"
+        class="bg-news-very-dark-blue w-11/12 mx-auto text-left p-2 mt-8"
         data-testid="blog-section-test"
       >
-        <h2
-          class="text-news-soft-orange text-3xl font-black"
-          data-testid="blog-section-heading"
+        <div
+          class="space-y-5 flex flex-col justify-center items-start w-11/12 m-auto text-left pb-2"
         >
-          New
-        </h2>
-        <h3 data-testid="blog-small-heading">Hydrogen VS Electric Cars</h3>
-        <p data-testid="blog-paragraph-test">
-          Will hydrogen-fueled cars ever catch up to EVs?
-        </p>
-        <hr />
-        <h3 data-testid="blog-small-heading">The Downsides of AI Artistry</h3>
-        <p data-testid="blog-paragraph-test">
-          What are the possible adverse effects of on-demand AI image
-          generation?
-        </p>
-        <hr />
-        <h3 data-testid="blog-small-heading">Is VC Funding Drying Up?</h3>
-        <p data-testid="blog-paragraph-test">
-          Is Private funding by VC firms is down 50% YOY. We take a look at what
-          that means.
-        </p>
+          <h2
+            class="text-news-soft-orange text-3xl font-black"
+            data-testid="blog-section-heading"
+          >
+            New
+          </h2>
+          <h3 class="text-news-off-white" data-testid="blog-small-heading">
+            Hydrogen VS Electric Cars
+          </h3>
+          <p class="small-paragraph" data-testid="blog-paragraph-test">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+          <hr />
+          <h3 class="text-news-off-white" data-testid="blog-small-heading">
+            The Downsides of AI Artistry
+          </h3>
+          <p class="small-paragraph" data-testid="blog-paragraph-test">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+          <hr />
+          <h3 class="text-news-off-white" data-testid="blog-small-heading">
+            Is VC Funding Drying Up?
+          </h3>
+          <p class="small-paragraph" data-testid="blog-paragraph-test">
+            Is Private funding by VC firms is down 50% YOY. We take a look at
+            what that means.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- BOTTOM -->
 
-    <div class="flex flex-col laptop:flex-row justify-center items-center">
+    <div
+      class="flex flex-col laptop:flex-row justify-center items-center mt-12 w-11/12 mx-auto"
+    >
       <div
         v-for="blog in blogs"
         :key="blog"
-        class="flex laptop:flex-row justify-center items-center"
+        class="flex laptop:flex-row justify-start items-start space-x-3 mt-5"
       >
-        <div>
-          <img
-            :src="blog.img"
-            :alt="blog.alt"
-            data-testid="bottom-image-test"
-          />
-        </div>
-        <div class="flex flex-col justify-center items-center">
-          <div data-testid="number-test">{{ blog.number }}</div>
-          <div data-testid="small-bottom-heading">{{ blog.heading }}</div>
-          <div data-testid="small-bottom-paragraph">{{ blog.paragraph }}</div>
+        <img
+          :src="blog.img"
+          :alt="blog.alt"
+          class="w-1/4"
+          data-testid="bottom-image-test"
+        />
+
+        <div
+          class="flex flex-col justify-start items-start text-left space-y-3"
+        >
+          <p
+            class="text-news-grayish-blue text-4xl font-bold"
+            data-testid="number-test"
+          >
+            {{ blog.number }}
+          </p>
+          <p
+            class="text-news-very-dark-blue text-xl"
+            data-testid="small-bottom-heading"
+          >
+            {{ blog.heading }}
+          </p>
+          <p
+            class="text-news-dark-grayish-blue text-base"
+            data-testid="small-bottom-paragraph"
+          >
+            {{ blog.paragraph }}
+          </p>
         </div>
       </div>
     </div>
@@ -205,5 +241,15 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 .main {
   font-family: "Inter", sans-serif;
+}
+
+h3 {
+  @apply font-extrabold text-xl;
+}
+.small-paragraph {
+  @apply text-news-grayish-blue text-sm leading-5;
+}
+hr {
+  @apply bg-news-dark-grayish-blue border border-solid border-news-grayish-blue w-full;
 }
 </style>
