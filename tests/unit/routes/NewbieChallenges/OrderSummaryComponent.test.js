@@ -31,52 +31,33 @@ describe("OrderSummaryComponent", () => {
         const paragraph = screen.queryByTestId("paragraph-text-test");
         expect(paragraph).toBeVisible();
       });
-      it("has text 'You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!'", () => {
+      it("has appropriate paragraph text", () => {
         render(Order);
-        const paragraph = screen.queryByText(
-          "You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!"
-        );
-        expect(paragraph).toBeInTheDocument();
+        const textArray = [
+          "You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!",
+          "annual plan",
+          "change",
+          "$59.99/year",
+          "cancel order",
+        ];
+        for (let i = 0; i < textArray.length; i++) {
+          const text = screen.queryByText(textArray[i]);
+          expect(text).toBeInTheDocument();
+        }
       });
-      it("has text Annual Plan", () => {
+      it("has visible paragraph text", () => {
         render(Order);
-        const paragraph = screen.queryByText("annual plan");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has text Annual Plan visible", () => {
-        render(Order);
-        const paragraph = screen.queryByText("annual plan");
-        expect(paragraph).toBeVisible();
-      });
-      it("has text change", () => {
-        render(Order);
-        const paragraph = screen.queryByText("change");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has text change visible", () => {
-        render(Order);
-        const paragraph = screen.queryByText("change");
-        expect(paragraph).toBeVisible();
-      });
-      it("has text $59.99/year", () => {
-        render(Order);
-        const paragraph = screen.queryByText("$59.99/year");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has text $59.99/year visible", () => {
-        render(Order);
-        const paragraph = screen.queryByText("$59.99/year");
-        expect(paragraph).toBeVisible();
-      });
-      it("has Cancel Order text", () => {
-        render(Order);
-        const paragraph = screen.queryByText("cancel order");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has Cancel Order text visible", () => {
-        render(Order);
-        const paragraph = screen.queryByText("cancel order");
-        expect(paragraph).toBeVisible();
+        const textArray = [
+          "You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!",
+          "annual plan",
+          "change",
+          "$59.99/year",
+          "cancel order",
+        ];
+        for (let i = 0; i < textArray.length; i++) {
+          const text = screen.queryByText(textArray[i]);
+          expect(text).toBeVisible();
+        }
       });
     });
     describe("image", () => {
@@ -85,45 +66,38 @@ describe("OrderSummaryComponent", () => {
         const image = screen.queryAllByRole("img");
         expect(image.length).toBe(2);
       });
-      it("has hero image", () => {
+      it("has hero and note image in the document", () => {
         render(Order);
-        const hero = screen.queryByTestId("hero-image-test");
-        expect(hero).toBeInTheDocument();
+        const imageArray = ["hero-image-test", "note-icon-test"];
+        for (let i = 0; i < imageArray.length; i++) {
+          const image = screen.queryByTestId(imageArray[i]);
+          expect(image).toBeInTheDocument();
+        }
       });
-      it("has hero image visible", () => {
+      it("has hero and note image visible", () => {
         render(Order);
-        const hero = screen.queryByTestId("hero-image-test");
-        expect(hero).toBeVisible();
+        const imageArray = ["hero-image-test", "note-icon-test"];
+        for (let i = 0; i < imageArray.length; i++) {
+          const image = screen.queryByTestId(imageArray[i]);
+          expect(image).toBeVisible();
+        }
       });
-      it("has note image", () => {
+      it("has hero and note image src", () => {
         render(Order);
-        const note = screen.queryByTestId("note-icon-test");
-        expect(note).toBeInTheDocument();
+        const imageArray = ["hero-image-test", "note-icon-test"];
+        for (let i = 0; i < imageArray.length; i++) {
+          const image = screen.queryByTestId(imageArray[i]);
+          expect(image).toHaveAttribute("src");
+        }
       });
-      it("has note image visible", () => {
+      it("has hero and note image with appropriate alt", () => {
         render(Order);
-        const note = screen.queryByTestId("note-icon-test");
-        expect(note).toBeVisible();
-      });
-      it("has hero image with appropriate src", () => {
-        render(Order);
-        const hero = screen.queryByTestId("hero-image-test");
-        expect(hero).toHaveAttribute("src");
-      });
-      it("has hero image with appropriate alt", () => {
-        render(Order);
-        const hero = screen.queryByTestId("hero-image-test");
-        expect(hero).toHaveAttribute("alt", "hero image");
-      });
-      it("has note image with appropriate src", () => {
-        render(Order);
-        const note = screen.queryByTestId("note-icon-test");
-        expect(note).toHaveAttribute("src");
-      });
-      it("has note image with appropriate alt", () => {
-        render(Order);
-        const note = screen.queryByTestId("note-icon-test");
-        expect(note).toHaveAttribute("alt", "note icon");
+        const imageArray = ["hero-image-test", "note-icon-test"];
+        const altArray = ["hero image", "note icon"];
+        for (let i = 0; i < imageArray.length; i++) {
+          const image = screen.queryByTestId(imageArray[i]);
+          expect(image).toHaveAttribute("alt", altArray[i]);
+        }
       });
     });
     describe("button", () => {

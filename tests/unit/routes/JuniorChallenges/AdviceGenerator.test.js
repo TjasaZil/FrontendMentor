@@ -37,25 +37,23 @@ describe("AdviceGenerator", () => {
         const image = screen.queryAllByRole("img");
         expect(image.length).toBe(2);
       });
-      it("has image with alt dice icon", () => {
+      it("has images with appropriate alt text", () => {
         render(Advice);
-        const dice = screen.queryByTestId("dice-icon-test");
-        expect(dice).toHaveAttribute("alt", "dice icon");
+        const idArray = ["dice-icon-test", "separator-image-test"];
+        const altArray = ["dice icon", "separator"];
+        for (let i = 0; i < altArray.length; i++) {
+          const alt = screen.queryByTestId(idArray[i]);
+          expect(alt).toHaveAttribute("alt", altArray[i]);
+        }
       });
-      it("dice icon has a src", () => {
+      it("has images with src attribute", () => {
         render(Advice);
-        const dice = screen.queryByTestId("dice-icon-test");
-        expect(dice).toHaveAttribute("src");
-      });
-      it("has separator image with alt separator", () => {
-        render(Advice);
-        const separator = screen.queryByTestId("separator-image-test");
-        expect(separator).toHaveAttribute("alt", "separator");
-      });
-      it("has separator image with src", () => {
-        render(Advice);
-        const separator = screen.queryByTestId("separator-image-test");
-        expect(separator).toHaveAttribute("src");
+        const idArray = ["dice-icon-test", "separator-image-test"];
+
+        for (let i = 0; i < idArray.length; i++) {
+          const src = screen.queryByTestId(idArray[i]);
+          expect(src).toHaveAttribute("src");
+        }
       });
     });
   });

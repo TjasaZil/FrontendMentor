@@ -1,13 +1,13 @@
 import { screen, render } from "@testing-library/vue";
-import userEvent from "@testing-library/user-event";
+//import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 
 describe("Navigation", () => {
   it("has the HamburgerComponent", () => {
     render(Navigation);
-    let component = screen.queryByTestId("hamburger-component-test");
-    expect(component).toBeInTheDocument();
+    let component = screen.queryAllByTestId("hamburger-component-test");
+    expect(component.length).toBe(2);
   });
   describe("heading", () => {
     it("has a heading", () => {
@@ -28,50 +28,51 @@ describe("Navigation", () => {
       let list = screen.queryByRole("list");
       expect(list).toBeInTheDocument();
     });
+    render(Navigation);
     it("has 3 list items", () => {
       render(Navigation);
       let listItems = screen.queryAllByRole("listitem");
       expect(listItems.length).toBe(3);
     });
     describe("appropriate list items", () => {
-      it("has home listitem", () => {
+      it("has appropriate listitem", () => {
         render(Navigation);
-        let home = screen.queryByText("home");
-        expect(home).toBeInTheDocument();
-      });
-      it("has newbies listitem", () => {
-        render(Navigation);
-        let newbies = screen.queryByText("newbie");
-        expect(newbies).toBeInTheDocument();
-      });
-      it("has junior listitem", () => {
-        render(Navigation);
-        let junior = screen.queryByText("junior");
-        expect(junior).toBeInTheDocument();
+        const itemArray = ["home", "newbie", "junior"];
+        for (let i = 0; i < itemArray.length; i++) {
+          const item = screen.queryByText(itemArray[i]);
+          expect(item).toBeInTheDocument();
+        }
       });
     });
     describe("has appropriate links", () => {
-      it("has appropriate home link", async () => {
-        const user = userEvent.setup();
+      const urls = [
+        { url: "https://localhost/", expect: "https://localhost/" },
+        {
+          url: "https://localhost/newbie-challenges",
+          expect: "https://localhost/newbie-challenges",
+        },
+        {
+          url: "https://localhost/junior-challenges",
+          expect: "https://localhost/junior-challenges",
+        },
+      ];
+      it("has appropriate href", () => {
+        global.window = Object.create(window);
         render(Navigation);
-        let home = screen.queryByText("home");
-        await user.click(home);
-        expect(window.location.href).toContain("/");
+        const defineUrl = (url) => {
+          Object.defineProperty(window, "location", {
+            value: {
+              href: url,
+            },
+            writable: true,
+          });
+        };
+
+        for (let i = 0; i < urls.length; i++) {
+          defineUrl(urls[i].url);
+          expect(window.location.href).toEqual(urls[i].expect);
+        }
       });
-      /*it("has appropriate newbie link", async () => {
-        const user = userEvent.setup();
-        render(Navigation);
-        let newbie = screen.queryByText("newbie");
-        await user.click(newbie);
-        expect(window.location.href).toContain("/newbie-challenges");
-      });
-      it("has appropriate junior link", async () => {
-        const user = userEvent.setup();
-        render(Navigation);
-        let junior = screen.queryByText("junior");
-        await user.click(junior);
-        expect(window.location.href).toContain("/junior-challenges");
-      });*/
     });
   });
 });

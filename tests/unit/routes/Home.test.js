@@ -4,11 +4,6 @@ import Home from "@/routes/Home.vue";
 
 describe("Home", () => {
   describe("layout", () => {
-    /* it("has heading", () => {
-      render(Home);
-      let heading = screen.queryByRole("heading");
-      expect(heading).toBeInTheDocument();
-    });*/
     it("has appropriate heading", () => {
       render(Home);
       let heading = screen.queryByText("welcome to my frontend mentor page");

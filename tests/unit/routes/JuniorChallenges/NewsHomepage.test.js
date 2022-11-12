@@ -244,26 +244,23 @@ describe("NewsHomepage", () => {
         const heading = screen.queryByTestId("blog-section-heading");
         expect(heading).toHaveTextContent("New");
       });
-      it("has 3 blog headings", () => {
-        render(News);
-        const heading = screen.queryAllByTestId("blog-small-heading");
-        expect(heading.length).toBe(3);
-      });
       describe("blog headings", () => {
-        it("has blog heading text Hydrogen VS Electric Cars", () => {
+        it("has 3 blog headings", () => {
           render(News);
-          const heading = screen.queryByText("Hydrogen VS Electric Cars");
-          expect(heading).toBeInTheDocument();
+          const heading = screen.queryAllByTestId("blog-small-heading");
+          expect(heading.length).toBe(3);
         });
-        it("has a blog heading text The Downsides of AI Artistry", () => {
+        it("has appropriate blog headings", () => {
           render(News);
-          const heading = screen.queryByText("The Downsides of AI Artistry");
-          expect(heading).toBeInTheDocument();
-        });
-        it("has a blog heading text Is VC Funding Drying Up?", () => {
-          render(News);
-          const heading = screen.queryByText("Is VC Funding Drying Up?");
-          expect(heading).toBeInTheDocument();
+          const headAlt = [
+            "Hydrogen VS Electric Cars",
+            "The Downsides of AI Artistry",
+            "Is VC Funding Drying Up?",
+          ];
+          for (let i = 0; i < headAlt.length; i++) {
+            const heading = screen.queryByText(headAlt[i]);
+            expect(heading).toBeInTheDocument();
+          }
         });
       });
       it("has 3 blog paragraphs", () => {
@@ -292,36 +289,25 @@ describe("NewsHomepage", () => {
         const image = screen.queryAllByTestId("bottom-image-test");
         expect(image.length).toBe(3);
       });
-      it("has image with alt retro PCs", () => {
+      it("has images with appropriate alt attribute", () => {
         render(News);
-        const image = screen.queryByAltText("retro PCs");
-        expect(image).toBeInTheDocument();
+        const altArray = ["retro PCs", "top laptops", "growth of gaming"];
+
+        for (let i = 0; i < altArray.length; i++) {
+          const alt = screen.queryByAltText(altArray[i]);
+          expect(alt).toBeInTheDocument();
+        }
       });
-      it("has retro pc image with src attribute", () => {
+      it("has images with src attribute", () => {
         render(News);
-        const image = screen.queryByAltText("retro PCs");
-        expect(image).toHaveAttribute("src");
+        const altArray = ["retro PCs", "top laptops", "growth of gaming"];
+
+        for (let i = 0; i < altArray.length; i++) {
+          const src = screen.queryByAltText(altArray[i]);
+          expect(src).toHaveAttribute("src");
+        }
       });
-      it("has image with alt top laptops", () => {
-        render(News);
-        const image = screen.queryByAltText("top laptops");
-        expect(image).toBeInTheDocument();
-      });
-      it("has top laptop image with src attribute", () => {
-        render(News);
-        const image = screen.queryByAltText("top laptops");
-        expect(image).toHaveAttribute("src");
-      });
-      it("has image with growth of gaming alt", () => {
-        render(News);
-        const image = screen.queryByAltText("growth of gaming");
-        expect(image).toBeInTheDocument();
-      });
-      it("has growth of gaming image with a src", () => {
-        render(News);
-        const image = screen.queryByAltText("growth of gaming");
-        expect(image).toHaveAttribute("src");
-      });
+
       it("has 3 numbers", () => {
         render(News);
         const number = screen.queryAllByTestId("number-test");

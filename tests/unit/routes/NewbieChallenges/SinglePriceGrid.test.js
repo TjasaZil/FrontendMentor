@@ -10,61 +10,38 @@ describe("SinglePriceGrid", () => {
         const heading = screen.queryAllByRole("heading");
         expect(heading.length).toBe(4);
       });
-      it("has heading Join our community", () => {
+      it("has appropriate heading text", () => {
         render(Price);
-        const heading = screen.queryByText("Join our community");
-        expect(heading).toBeInTheDocument();
+        const textArray = [
+          "Join our community",
+          "30-day, hassle-free money back guarantee",
+          "Monthly Subscriptions",
+          "Join our community",
+        ];
+        for (let i = 0; i < textArray.length; i++) {
+          const text = screen.queryByText(textArray[i]);
+          expect(text).toBeInTheDocument();
+        }
       });
-      it("has heading 30-day, hassle-free money back guarantee", () => {
-        render(Price);
-        const heading = screen.queryByText(
-          "30-day, hassle-free money back guarantee"
-        );
-        expect(heading).toBeInTheDocument();
-      });
-      it("has Monthly Subscriptions heading", () => {
-        render(Price);
-        const heading = screen.queryByText("Monthly Subscriptions");
-        expect(heading).toBeInTheDocument();
-      });
-      it("has heading Why us", () => {
-        render(Price);
-        const heading = screen.queryByText("Join our community");
-        expect(heading).toBeInTheDocument();
-      });
+
       it("has 3 paragraphs", () => {
         render(Price);
         const paragraph = screen.queryAllByTestId("paragraph-test");
         expect(paragraph.length).toBe(3);
       });
-      it("has text: Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.", () => {
+      it("has appropriate heading text", () => {
         render(Price);
-        const text = screen.queryByText(
-          "Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills."
-        );
-        expect(text).toBeInTheDocument();
-      });
-      it("has text $29", () => {
-        render(Price);
-        const text = screen.queryByText("$29");
-        expect(text).toBeInTheDocument();
-      });
-      it("has text, per month ", () => {
-        render(Price);
-        const text = screen.queryByText("per month");
-        expect(text).toBeInTheDocument();
-      });
-      it("has text Full access for less than $1 a day", () => {
-        render(Price);
-        const text = screen.queryByText("Full access for less than $1 a day");
-        expect(text).toBeInTheDocument();
-      });
-      it("has a text  Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos Community forum Flashcard decks New videos every week", () => {
-        render(Price);
-        const text = screen.queryByText(
-          "Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos Community forum Flashcard decks New videos every week"
-        );
-        expect(text).toBeInTheDocument();
+        const textArray = [
+          "Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.",
+          "$29",
+          "Full access for less than $1 a day",
+          "per month",
+          "Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos Community forum Flashcard decks New videos every week",
+        ];
+        for (let i = 0; i < textArray.length; i++) {
+          const text = screen.queryByText(textArray[i]);
+          expect(text).toBeInTheDocument();
+        }
       });
     });
     describe("button", () => {

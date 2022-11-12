@@ -54,53 +54,46 @@ describe("HamburgerComponent", () => {
       render(HamburgerComponent);
       let img = screen.queryByRole("img");
       await user.click(img);
-      let home = screen.queryByText("home");
-      expect(home).toBeInTheDocument();
-    });
-    it("has newbie challenges list item", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let img = screen.queryByRole("img");
-      await user.click(img);
-      let newbie = screen.queryByText("newbie challenges");
-      expect(newbie).toBeInTheDocument();
-    });
-    it("has junior challenges list item", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let img = screen.queryByRole("img");
-      await user.click(img);
-      let junior = screen.queryByText("junior challenges");
-      expect(junior).toBeInTheDocument();
+      const itemArray = ["home", "newbie challenges", "junior challenges"];
+      for (let i = 0; i < itemArray.length; i++) {
+        const item = screen.queryByText(itemArray[i]);
+        expect(item).toBeInTheDocument();
+      }
     });
   });
   describe("has appropriate links", () => {
-    it("has appropriate home link", async () => {
+    const urls = [
+      { url: "https://localhost/", expect: "https://localhost/" },
+      {
+        url: "https://localhost/newbie-challenges",
+        expect: "https://localhost/newbie-challenges",
+      },
+      {
+        url: "https://localhost/junior-challenges",
+        expect: "https://localhost/junior-challenges",
+      },
+    ];
+    it("has appropriate href", async () => {
+      global.window = Object.create(window);
       const user = userEvent.setup();
-      render(HamburgerComponent);
       let img = screen.queryByRole("img");
+      render(HamburgerComponent);
+      const defineUrl = (url) => {
+        Object.defineProperty(window, "location", {
+          value: {
+            href: url,
+          },
+          writable: true,
+        });
+      };
       await user.click(img);
-      let home = screen.queryByText("home");
-      await user.click(home);
-      expect(window.location.href).toContain("/");
+      const itemArray = ["home", "newbie challenges", "junior challenges"];
+      for (let i = 0; i < urls.length; i++) {
+        const item = screen.queryByText(itemArray[i]);
+        await user.click(item);
+        defineUrl(urls[i].url);
+        expect(window.location.href).toEqual(urls[i].expect);
+      }
     });
-    /*it("has appropriate newbie link", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let img = screen.queryByRole("img");
-      await user.click(img);
-      let newbie = screen.queryByText("newbie challenges");
-      await user.click(newbie);
-      expect(window.location.href).toContain("/newbie-challenges");
-    });
-    it("has appropriate junior link", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let img = screen.queryByRole("img");
-      await user.click(img);
-      let junior = screen.queryByText("junior challenges");
-      await user.click(junior);
-      expect(window.location.href).toContain("/junior-challenges");
-    });*/
   });
 });

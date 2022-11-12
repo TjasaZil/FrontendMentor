@@ -30,32 +30,19 @@ describe("NFTPreviewCard", () => {
         const paragraph = screen.queryAllByRole("paragraph");
         expect(paragraph.length).toBe(4);
       });
-      it("has appropriate paragraph 1 text", () => {
+      it("has approipriate paragraph text", () => {
         render(NFT);
-        const paragraph = screen.queryByText(
-          "Our Equilibrium collection promotes balance and calm."
-        );
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has appropriate paragraph 2 text", () => {
-        render(NFT);
-        const paragraph = screen.queryByText("0.041 eth");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has appropriate paragraph 3 text", () => {
-        render(NFT);
-        const paragraph = screen.queryByText("3 days left");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has appropriate paragraph 4 text", () => {
-        render(NFT);
-        const paragraph = screen.queryByText("Creation of");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has appropriate span text", () => {
-        render(NFT);
-        const span = screen.queryByText("Jules Wyvern");
-        expect(span).toBeInTheDocument();
+        const parAlt = [
+          "Our Equilibrium collection promotes balance and calm.",
+          "0.041 eth",
+          "3 days left",
+          "Creation of",
+          "Jules Wyvern",
+        ];
+        for (let i = 0; i < parAlt.length; i++) {
+          const paragraph = screen.queryByText(parAlt[i]);
+          expect(paragraph).toBeInTheDocument();
+        }
       });
     });
     describe("images", () => {
@@ -64,46 +51,31 @@ describe("NFTPreviewCard", () => {
         const images = screen.queryAllByRole("img");
         expect(images.length).toBe(4);
       });
-      it("clock icon has src", () => {
+      it("has appropriate image alt text", () => {
         render(NFT);
-        const clock = screen.queryByAltText("clock icon");
-        expect(clock).toHaveAttribute("src");
+        const altAlt = [
+          "clock icon",
+          "etherium icon",
+          "Jules Wyvern avatar",
+          "equilibrium",
+        ];
+        for (let i = 0; i < altAlt.length; i++) {
+          const alt = screen.queryByAltText(altAlt[i]);
+          expect(alt).toBeInTheDocument();
+        }
       });
-      it("clock icon has alt", () => {
+      it("has appropriate image src Attribute", () => {
         render(NFT);
-        const clock = screen.queryByAltText("clock icon");
-        expect(clock).toBeInTheDocument();
-      });
-      it("eth icon has src", () => {
-        render(NFT);
-        const eth = screen.queryByAltText("etherium icon");
-        expect(eth).toHaveAttribute("src");
-      });
-      it("eth has alt text", () => {
-        render(NFT);
-        const eth = screen.queryByAltText("etherium icon");
-        expect(eth).toBeInTheDocument();
-      });
-
-      it("image avatar has src", () => {
-        render(NFT);
-        const avatar = screen.queryByAltText("Jules Wyvern avatar");
-        expect(avatar).toHaveAttribute("src");
-      });
-      it("image avatar alt text", () => {
-        render(NFT);
-        const avatar = screen.queryByAltText("Jules Wyvern avatar");
-        expect(avatar).toBeInTheDocument();
-      });
-      it("image equilibrium has src", () => {
-        render(NFT);
-        const equi = screen.queryByAltText("equilibrium");
-        expect(equi).toHaveAttribute("src");
-      });
-      it("image equilibrium alt text", () => {
-        render(NFT);
-        const equi = screen.queryByAltText("equilibrium");
-        expect(equi).toBeInTheDocument();
+        const altAlt = [
+          "clock icon",
+          "etherium icon",
+          "Jules Wyvern avatar",
+          "equilibrium",
+        ];
+        for (let i = 0; i < altAlt.length; i++) {
+          const alt = screen.queryByAltText(altAlt[i]);
+          expect(alt).toHaveAttribute("src");
+        }
       });
     });
   });
