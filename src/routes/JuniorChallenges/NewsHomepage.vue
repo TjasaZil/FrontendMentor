@@ -70,7 +70,7 @@
     <!-- BODY -->
     <!--- TOP -->
     <div
-      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-12 laptop:w-[1100px] laptop:h-[450px] laptop:pb-8"
+      class="flex flex-col laptop:flex-row justify-center items-center w-full mx-auto laptop:mt-20 xl:mt-12 laptop:w-[1100px] laptop:h-[450px] laptop:pb-10"
     >
       <!-- HERO IMAGE -->
       <div
@@ -128,7 +128,7 @@
         data-testid="blog-section-test"
       >
         <div
-          class="space-y-4 flex flex-col justify-center items-start w-11/12 laptop:w-10/12 m-auto text-left"
+          class="space-y-5 flex flex-col justify-center items-start w-11/12 laptop:w-10/12 m-auto text-left"
         >
           <h2
             class="text-news-soft-orange text-3xl font-black"
@@ -165,7 +165,7 @@
     <!-- BOTTOM -->
 
     <div
-      class="flex flex-col laptop:flex-row justify-start items-start mt-12 w-11/12 mx-auto laptop:w-[1000px] laptop:h-[129px] laptop:space-x-5"
+      class="flex flex-col laptop:flex-row justify-start items-start mt-12 w-11/12 mx-auto laptop:w-[1000px] laptop:h-[119px] laptop:space-x-5"
     >
       <div
         v-for="blog in blogs"
