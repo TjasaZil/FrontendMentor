@@ -8,7 +8,7 @@
       class="absolute h-24 mx-auto top-0 left-0 flex flex-row justify-between w-full items-center px-3 bg-news-off-white laptop:h-36"
     >
       <div
-        class="flex flex-row justify-between w-full h-24 mx-auto laptop:h-36 relative top-0 items-center px-3 laptop:w-[1110px]"
+        class="flex flex-row justify-between w-full h-24 mx-auto laptop:h-36 relative top-0 items-center px-3 laptop:w-[1110px] laptop:mt-12"
       >
         <!-- ICON -->
         <img
@@ -74,7 +74,7 @@
     >
       <!-- HERO IMAGE -->
       <div
-        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10"
+        class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-16"
       >
         <picture>
           <source
@@ -89,7 +89,7 @@
             src="@/assets/NewsHomepage/image-web-3-mobile.jpg"
             alt="hero image"
             data-testid="hero-image-test"
-            class="w-11/12 mx-auto laptop:w-[700px]"
+            class="w-11/12 mx-auto laptop:w-[710px]"
           />
         </picture>
 
