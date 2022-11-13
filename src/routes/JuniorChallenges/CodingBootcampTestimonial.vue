@@ -21,7 +21,7 @@
           x-intersect="$el.classList.add('swingIn')"
         />
         <button
-          class="flex justify-between items-center px-5 py-2 rounded-full bg-white w-28 h-14 mx-auto -mt-12 z-[100] sticky laptop:ml-14 laptop:-mt-8"
+          class="flex justify-between items-center px-5 py-2 rounded-full bg-white w-28 h-14 mx-auto -mt-12 z-[100] sticky laptop:ml-14 laptop:-mt-8 hover:animate-pulse hover:opacity-90 hover:scale-105"
           @click="nextTestimonial"
           x-intersect="$el.classList.add('rollInBlurredLeft')"
         >
@@ -36,7 +36,7 @@
       </div>
 
       <div
-        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-[134px] laptop:-mt-10"
+        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-[134px] laptop:-mt-12"
       >
         <img
           src="@/assets/CodingBootcampTestimonials/pattern-quotes.svg"
@@ -133,7 +133,7 @@ export default {
     background-position: left bottom;
   }
   .background {
-    padding: 75px;
+    padding: 72px;
   }
 }
 .background {
@@ -147,7 +147,7 @@ export default {
   height: auto;
 }
 .image {
-  @apply w-10/12 p-6 m-auto rounded-md laptop:w-[560px] mt-5 laptop:my-0 laptop:p-0 laptop:mt-8 laptop:mr-2 shadow-2xl shadow-bootcamp-dark-blue;
+  @apply w-10/12 p-6 m-auto rounded-md laptop:w-[550px] mt-5 laptop:my-0 laptop:p-0 laptop:mt-8 laptop:mr-2 shadow-2xl shadow-bootcamp-dark-blue;
 }
 .paragraph {
   @apply font-light text-lg laptop:text-[32px] laptop:leading-10 text-left;
