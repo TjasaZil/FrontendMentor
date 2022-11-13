@@ -59,6 +59,11 @@ const router = createRouter({
       component: () => import("@/routes/JuniorChallenges/NewsHomepage.vue"),
     },
     {
+      path: "/coding-bootcamp-testimonials",
+      component: () =>
+        import("@/routes/JuniorChallenges/CodingBootcampTestimonial.vue"),
+    },
+    {
       path: "/Intermediate-challenges",
       component: () => import("@/routes/IntermediatePage.vue"),
     },

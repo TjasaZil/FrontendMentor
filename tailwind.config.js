@@ -59,6 +59,8 @@ module.exports = {
         "news-grayish-blue": "hsl(233, 8%, 79%)",
         "news-dark-grayish-blue": "hsl(236, 13%, 42%)",
         "news-very-dark-blue": "hsl(240, 100%, 5%)",
+        "bootcamp-dark-blue": "hsl(240, 38%, 20%)",
+        "bootcamp-grayish-blue": "hsl(240, 18%, 77%)",
       },
       width: {
         "profile-mobile-container-width": "326px",
