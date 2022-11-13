@@ -5,19 +5,25 @@
     <div>
       <div
         class="bg-advice-dark-grayish-blue rounded-lg flex flex-col justify-center items-center h-[315px] w-5/6 mobilem:w-[343px] tablet:w-[540px] tablet:h-[322px] space-y-3"
+        x-intersect="$el.classList.add('swingIn')"
       >
         <h1
           class="text-sm text-advice-neon-green tracking-widest uppercase -mt-7"
+          x-intersect="$el.classList.add('fadeIn')"
         >
           Advice #{{ number }}
         </h1>
         <p
           class="w-10/12 mx-auto text-advice-light-cyan text-2xl tablet:leading-9 tablet:text-[28px] text-center pt-4"
+          x-intersect="$el.classList.add('fadeIn')"
           data-testid="paragraph-test"
         >
           "{{ advice }}"
         </p>
-        <div class="flex justify-center items-center w-10/12">
+        <div
+          class="flex justify-center items-center w-10/12"
+          x-intersect="$el.classList.add('fadeIn')"
+        >
           <picture>
             <source
               media="(min-width:768px)"
@@ -39,6 +45,7 @@
       <button
         @click="generateNewAdvice"
         class="btn bg-advice-neon-green rounded-full w-16 h-16 relative -mt-8 ml-[138px] tablet:ml-[238px]"
+        x-intersect="$el.classList.add('rollInBlurredLeft')"
       >
         <img
           src="@/assets/AdviceGenerator/icon-dice.svg"

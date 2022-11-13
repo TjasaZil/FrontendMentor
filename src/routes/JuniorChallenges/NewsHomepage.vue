@@ -16,6 +16,7 @@
           alt="logo icon"
           data-testid="logo-icon-test"
           class="laptop:ml-10"
+          x-intersect="$el.classList.add('swingIn')"
         />
         <!-- MOBILE MENU -->
         <div class="laptop:hidden">
@@ -76,7 +77,7 @@
       <div
         class="laptop:flex laptop:flex-col laptop:justify-center laptop:items-center laptop:space-x-10 laptop:mt-4"
       >
-        <picture>
+        <picture x-intersect="$el.classList.add('background')">
           <source
             media="(min-width:768px)"
             srcset="@/assets/NewsHomepage/image-web-3-desktop.jpg"
@@ -96,6 +97,7 @@
         <!-- HERO TEXT -->
         <div
           class="text-left w-11/12 space-y-5 mt-5 mx-auto laptop:flex laptop:justify-start laptop:items-center laptop:w-[650px] laptop:space-y-0 laptop:mx-auto laptop:mt-4"
+          x-intersect="$el.classList.add('fadeInUp')"
         >
           <h1
             class="text-news-very-dark-blue font-extrabold text-5xl w-3/4 laptop:w-1/2 laptop:text-5xl"
@@ -125,10 +127,12 @@
       <!-- DARK BLOG SECTION -->
       <div
         class="bg-news-very-dark-blue w-11/12 mx-auto text-left flex flex-col justify-center items-center mt-3 laptop:w-1/3 laptop:max-w-[350px] laptop:h-[450px] laptop:mx-0"
+        x-intersect="$el.classList.add('swingIn')"
         data-testid="blog-section-test"
       >
         <div
           class="space-y-5 flex flex-col justify-center items-start w-11/12 laptop:w-10/12 m-auto text-left"
+          x-intersect="$el.classList.add('fadeIn')"
         >
           <h2
             class="text-news-soft-orange text-3xl font-black"
@@ -176,11 +180,13 @@
           :src="blog.img"
           :alt="blog.alt"
           class="w-1/4 mobilel:w-[167px] laptop:w-[100px] laptop:h-[119px]"
+          x-intersect="$el.classList.add('rollInBlurredLeft')"
           data-testid="bottom-image-test"
         />
 
         <div
           class="flex flex-col justify-start items-start text-left space-y-3 laptop:space-y-1"
+          x-intersect="$el.classList.add('fadeIn')"
         >
           <p
             class="text-news-grayish-blue text-4xl font-bold laptop:text-3xl"
