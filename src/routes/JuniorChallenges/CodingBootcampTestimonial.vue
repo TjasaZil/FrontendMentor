@@ -11,16 +11,19 @@
           v-if="this.next"
           src="@/assets/CodingBootcampTestimonials/image-tanya.jpg"
           alt="user image"
+          x-intersect="$el.classList.add('swingIn')"
         />
         <img
           class="image"
           v-else
           src="@/assets/CodingBootcampTestimonials/image-john.jpg"
           alt="user image"
+          x-intersect="$el.classList.add('swingIn')"
         />
         <button
           class="flex justify-between items-center px-5 py-2 rounded-full bg-white w-28 h-14 mx-auto -mt-12 z-[100] sticky laptop:ml-14 laptop:-mt-8"
           @click="nextTestimonial"
+          x-intersect="$el.classList.add('rollInBlurredLeft')"
         >
           <img
             src="@/assets/CodingBootcampTestimonials/icon-prev.svg"
@@ -39,11 +42,13 @@
           src="@/assets/CodingBootcampTestimonials/pattern-quotes.svg"
           alt="quotes image"
           class="w-2/12 -mb-10 laptop:w-[120px] laptop:mr-80"
+          x-intersect="$el.classList.add('fadeIn')"
         />
         <p
           v-if="this.next"
           class="paragraph text-bootcamp-dark-blue"
           data-testid="paragraph-test"
+          x-intersect="$el.classList.add('fadeLeftRight')"
         >
           “ I’ve been interested in coding for a while but never taken the jump,
           until now. I couldn’t recommend this course enough. I’m now in the job
@@ -53,13 +58,15 @@
           v-else
           class="paragraph text-bootcamp-dark-blue"
           data-testid="paragraph-test"
+          x-intersect="$el.classList.add('fadeLeftRight')"
         >
           “ If you want to lay the best foundation possible I’d recommend taking
           this course. The depth the instructors go into is incredible. I now
           feel so confident about starting up as a professional developer. ”
         </p>
         <div
-          class="flex flex-col justify-center items-center laptop:flex-row laptop:space-x-3 laptop:text-left w-full laptop:justify-start"
+          class="flex flex-col justify-center items-center laptop:flex-row laptop:space-x-3 laptop:text-left w-full laptop:justify-start mt-5"
+          x-intersect="$el.classList.add('fadeRightLeft')"
         >
           <p
             v-if="this.next"
@@ -146,7 +153,7 @@ export default {
   @apply font-light text-lg laptop:text-[32px] laptop:leading-10 text-left;
 }
 .name {
-  @apply font-bold text-base mt-5 laptop:mt-0 laptop:text-xl;
+  @apply font-bold text-base  laptop:text-xl;
 }
 .job {
   @apply font-medium text-base laptop:text-xl;
