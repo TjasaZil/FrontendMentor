@@ -36,7 +36,7 @@
       </div>
 
       <div
-        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-[134px] laptop:-mt-12"
+        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-36 laptop:-mt-[52px]"
       >
         <img
           src="@/assets/CodingBootcampTestimonials/pattern-quotes.svg"
@@ -65,7 +65,7 @@
           feel so confident about starting up as a professional developer. ”
         </p>
         <div
-          class="flex flex-col justify-center items-center laptop:flex-row laptop:space-x-3 laptop:text-left w-full laptop:justify-start mt-5"
+          class="flex flex-col justify-center items-center laptop:flex-row laptop:space-x-3 laptop:text-left w-full laptop:justify-start mt-5 laptop:mt-10"
           x-intersect="$el.classList.add('fadeRightLeft')"
         >
           <p
@@ -133,7 +133,7 @@ export default {
     background-position: left bottom;
   }
   .background {
-    padding: 72px;
+    padding: 80px;
   }
 }
 .background {
@@ -147,10 +147,10 @@ export default {
   height: auto;
 }
 .image {
-  @apply w-10/12 p-6 m-auto rounded-md laptop:w-[550px] mt-5 laptop:my-0 laptop:p-0 laptop:mt-8 laptop:mr-2 shadow-2xl shadow-bootcamp-dark-blue;
+  @apply w-10/12 p-6 m-auto rounded-md laptop:w-[540px] mt-5 laptop:my-0 laptop:p-0 laptop:mt-8 laptop:mr-2 shadow-2xl shadow-bootcamp-dark-blue;
 }
 .paragraph {
-  @apply font-light text-lg laptop:text-[32px] laptop:leading-10 text-left;
+  @apply font-light text-lg laptop:text-[32px] laptop:leading-[42px] text-left;
 }
 .name {
   @apply font-bold text-base  laptop:text-xl;
