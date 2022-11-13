@@ -36,7 +36,7 @@
       </div>
 
       <div
-        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-36 laptop:-mt-12"
+        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-36 laptop:-mt-10"
       >
         <img
           src="@/assets/CodingBootcampTestimonials/pattern-quotes.svg"
