@@ -11,6 +11,7 @@ describe("InteractiveRatingComponent", () => {
         const heading = screen.queryByRole("heading");
         expect(heading).toBeInTheDocument();
       });
+
       it("has a heading when the button is clicked", async () => {
         render(Interactive);
         const user = userEvent.setup();
