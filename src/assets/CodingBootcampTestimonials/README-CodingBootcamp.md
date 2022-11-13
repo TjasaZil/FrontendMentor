@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/advice-generator-app-scss-and-vanilla-js-gtZRJ5Y_LO)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/coding-bootcamp-testimonial-7mRKyPZkkd)
 - Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/coding-bootcamp-testimonials)
 
 ## My process

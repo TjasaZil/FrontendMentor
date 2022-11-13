@@ -36,7 +36,7 @@
       </div>
 
       <div
-        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-36"
+        class="flex flex-col justify-center items-center mt-10 w-10/12 tablet:w-[540px] laptop:w-[635px] laptop:relative z-50 laptop:left-[134px] laptop:mt-0"
       >
         <img
           src="@/assets/CodingBootcampTestimonials/pattern-quotes.svg"
@@ -147,7 +147,7 @@ export default {
   height: auto;
 }
 .image {
-  @apply w-10/12 p-6 m-auto rounded-md laptop:w-[540px] mt-5 laptop:my-0 laptop:p-0 laptop:mt-12;
+  @apply w-10/12 p-6 m-auto rounded-md laptop:w-[580px] mt-5 laptop:my-0 laptop:p-0 laptop:mt-8 laptop:mr-5 shadow-2xl shadow-bootcamp-dark-blue;
 }
 .paragraph {
   @apply font-light text-lg laptop:text-[32px] laptop:leading-10 text-left;
