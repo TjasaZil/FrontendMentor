@@ -97,14 +97,14 @@
 
     <!-- IMAGES -->
     <div
-      class="flex flex-row flex-wrap content-center justify-center laptop:justify-between mt-20 w-full mx-auto max-w-[1110px]"
+      class="w-full flex flex-row flex-wrap content-center justify-center laptop:justify-between mt-20 mx-auto max-w-[1110px]"
     >
       <img
         v-for="image in images"
         :key="image"
         :src="image"
         alt="People enjoying our services"
-        class="rounded-lg w-1/3 laptop:w-1/4 mt-5 ml-5 laptop:max-w-[252px]"
+        class="rounded-lg w-1/3 laptop:w-1/4 mt-5 ml-5 laptop:max-w-[242px]"
       />
     </div>
 
@@ -147,20 +147,20 @@
         </div>
       </div>
       <footer
-        class="w-full mx-auto flex flex-col justify-center content-center text-center bg-meet-teal relative bottom-0 left-0 z-20 text-meet-light laptopl:h-[308px]"
+        class="w-full mx-auto flex flex-col justify-center content-center text-center bg-meet-teal relative bottom-0 left-0 z-20 text-meet-light"
       >
         <div
-          class="footer pt-44 w-full laptop:pt-[132px]"
+          class="footer pt-44 w-full laptop:pt-24 laptop:pb-20"
           data-testid="footer-background-class"
         >
           <div
             class="laptopl:flex laptopl:w-[1110px] laptopl:mx-auto laptopl:justify-between laptopl:text-left laptopl:my-auto"
           >
-            <h2 class="font-black text-[42px] mx-auto w-8/12">
+            <h2 class="font-black text-[42px] mx-auto w-8/12 laptop:w-[350px]">
               Experience more together
             </h2>
             <p
-              class="w-8/12 mx-auto font-medium text-[26px] leading-[36px] pt-7 tablet:text-[20px] laptop:leading-[26px] laptop:text-[17px]"
+              class="w-8/12 mx-auto font-medium text-[26px] leading-[36px] pt-7 tablet:text-[20px] laptop:leading-[26px] laptop:text-[18px] laptop:w-[350px]"
             >
               Stay connected with reliable HD meetings and unlimited one-on-one
               and group video sessions.
@@ -219,7 +219,7 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 7rem center;
-  height: 318px;
+  height: 328px;
 }
 .footer {
   display: block;
@@ -254,7 +254,7 @@ export default {
   .footer::before {
     background-image: url("@/assets/MeetLandingPage/desktop/image-footer.jpg");
     background-position: center;
-    height: 308px;
+    height: 328px;
   }
 }
 </style>
