@@ -1,10 +1,12 @@
 <template>
   <div class="main-div bg-meet-light text-meet-dark w-full overflow-x-hidden">
+    <!-- LOGO -->
     <img
       alt="Meet landing page logo"
       src="@/assets/MeetLandingPage/logo.svg"
       class="w-[119px] mx-auto pt-14"
     />
+    <!-- MOBILE/TABLET HERO -->
     <div class="laptop:hidden w-full mx-auto mt-11">
       <div class="mobile-hero" data-testid="mobile-tablet-hero-image"></div>
       <div
@@ -37,58 +39,63 @@
         </button>
       </div>
     </div>
+
+    <!-- DESKTOP HERO -->
     <div
-      class="hidden laptop:flex flex-row justify-center content-center w-full"
+      class="hidden laptop:flex flex-row justify-center content-center w-full max-w-[1504px] mt-32 text-center mx-auto"
     >
       <div
-        class="desktop-left-hero"
+        class="desktop-left-hero w-1/3"
         data-testid="desktop-left-hero-image"
       ></div>
-      <div class="flex flex-col justify-center content-center">
+      <div class="flex flex-col justify-between content-center w-1/3">
         <h1
-          class="text-meet-dark w-1/3 mx-auto font-black text-[64px] leading-[64px]"
+          class="text-meet-dark mx-auto font-black text-[64px] laptop:text-[50px] laptopl:text-[68px] leading-[64px]"
         >
           Group Chat for Everyone
         </h1>
         <p
-          class="w-1/3 mx-auto text-meet-gray font-medium text-[26px] leading-[36px]"
+          class="mx-auto text-meet-gray font-medium text-[26px] laptop:leading-[26px] laptop:text-[16px] leading-[36px]"
         >
           Meet makes it easy to connect with others face-to-face virtually and
           collaborate across any device.
         </p>
 
         <div
-          class="mx-auto flex flex-col justify-center content-center text-center space-y-3 mt-8"
+          class="mx-auto flex justify-center items-center text-center space-x-3 mt-8"
         >
           <button
-            class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-teal mx-auto hover:bg-opacity-75 max-w-[193px]"
+            class="border-0 rounded-full px-8 py-5 text-[16px] font-black text-meet-light bg-meet-teal mx-auto hover:bg-opacity-75 max-w-[193px]"
           >
             Download
             <span class="text-meet-light-teal">v1.3</span></button
           ><button
-            class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[139px]"
+            class="border-0 rounded-full px-7 py-5 text-[16px] font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[139px]"
           >
             What is it?
           </button>
         </div>
       </div>
       <div
-        class="desktop-right-hero"
+        class="desktop-right-hero w-1/3"
         data-testid="desktop-right-hero-image"
       ></div>
     </div>
+    <!-- NUMBER 1 -->
     <div
       class="w-full mx-auto mt-20 flex flex-col justify-center content-center"
     >
       <div
-        class="border-l border-l-meet-gray h-[100px] absolute mb-[73px] left-1/2 opacity-75"
+        class="border-l border-l-meet-gray h-[90px] absolute mb-[55px] left-1/2 opacity-75"
       ></div>
       <div
-        class="border rounded-full border-solid border-meet-gray w-[80px] h-[80px] mt-[100px] mx-auto border-opacity-75 bg-meet-light"
+        class="border rounded-full border-solid border-meet-gray w-[56px] h-[56px] mt-[90px] mx-auto border-opacity-75 bg-meet-light"
       >
-        <p class="text-meet-gray font-bold text-center mt-6 text-xl">01</p>
+        <p class="text-meet-gray font-bold text-center mt-3 text-xl">01</p>
       </div>
     </div>
+
+    <!-- IMAGES -->
     <div
       class="flex flex-row flex-wrap content-center justify-center mt-20 w-full mx-auto"
     >
@@ -100,19 +107,23 @@
         class="rounded-lg w-1/3 mt-5 ml-5 laptop:max-w-[242px] tablet:max-w-[156px]"
       />
     </div>
+
+    <!-- TEXT -->
     <div
       class="mt-20 space-y-8 flex flex-col justify-center content-center text-center"
     >
-      <h3 class="uppercase text-meet-teal text-2xl tracking-[4px] font-bold">
+      <h3
+        class="mx-auto uppercase text-meet-teal text-2xl tracking-[4px] font-bold laptop:w-1/3"
+      >
         built for modern use
       </h3>
       <h2
-        class="text-meet-dark font-black text-5xl mx-auto w-10/12 tablet:w-6/12"
+        class="text-meet-dark font-black text-5xl mx-auto w-10/12 tablet:w-9/12 laptop:w-1/3"
       >
         Smarter meetings all in one place
       </h2>
       <p
-        class="w-10/12 tablet:w-9/12 mx-auto text-meet-gray font-medium text-[26px] leading-[36px] tablet:text-[20px]"
+        class="w-10/12 tablet:w-9/12 mx-auto text-meet-gray font-medium text-[26px] leading-[36px] tablet:text-[20px] laptop:leading-[26px] laptop:text-[17px] laptop:w-1/3"
       >
         Send messages, share files, show your screen, and record your meetings —
         all in one workspace. Control who can join with invite-only team access,
@@ -120,38 +131,47 @@
       </p>
     </div>
 
+    <!-- FOOTER -->
+
     <div class="w-full mx-auto">
       <div
         class="w-full mx-auto mt-20 flex flex-col justify-center content-center relative top-10 z-50"
       >
         <div
-          class="border-l border-l-meet-gray h-[100px] absolute mb-[73px] left-1/2 opacity-75"
+          class="border-l border-l-meet-gray h-[90px] absolute mb-[55px] left-1/2 opacity-75"
         ></div>
         <div
-          class="border rounded-full border-solid border-meet-gray w-[80px] h-[80px] mt-[100px] mx-auto border-opacity-75 bg-meet-light"
+          class="border rounded-full border-solid border-meet-gray w-[56px] h-[56px] mt-[90px] mx-auto border-opacity-75 bg-meet-light"
         >
-          <p class="text-meet-gray font-bold text-center mt-6 text-xl">02</p>
+          <p class="text-meet-gray font-bold text-center mt-3 text-xl">02</p>
         </div>
       </div>
       <footer
-        class="w-full mx-auto flex flex-col justify-center content-center text-center bg-meet-teal relative bottom-0 left-0 z-20 text-meet-light laptop:flex-row laptop:justify-between laptop:w-full laptop:content-center"
+        class="w-full mx-auto flex flex-col justify-center content-center text-center bg-meet-teal relative bottom-0 left-0 z-20 text-meet-light"
       >
-        <div class="footer pt-44" data-testid="footer-background-class">
-          <h2 class="font-black text-5xl mx-auto w-8/12 laptop:w-1/3">
-            Experience more together
-          </h2>
-          <p
-            class="w-8/12 mx-auto font-medium text-[26px] leading-[36px] pt-7 tablet:text-[20px] laptop:w-1/3"
+        <div
+          class="footer pt-44 w-full laptopl:pt-20"
+          data-testid="footer-background-class"
+        >
+          <div
+            class="laptopl:flex laptopl:w-[1110px] laptopl:mx-auto laptopl:justify-between laptopl:text-left"
           >
-            Stay connected with reliable HD meetings and unlimited one-on-one
-            and group video sessions.
-          </p>
-          <button
-            class="w-6/12 border-0 rounded-full px-5 py-5 text-xl font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[193px] mt-7 mb-20 laptop:w-1/3"
-          >
-            Download
-            <span class="text-meet-light-purple">v1.3</span>
-          </button>
+            <h2 class="font-black text-5xl mx-auto w-8/12">
+              Experience more together
+            </h2>
+            <p
+              class="w-8/12 mx-auto font-medium text-[26px] leading-[36px] pt-7 tablet:text-[20px] laptop:leading-[26px] laptop:text-[17px]"
+            >
+              Stay connected with reliable HD meetings and unlimited one-on-one
+              and group video sessions.
+            </p>
+            <button
+              class="w-6/12 border-0 rounded-full px-8 py-5 text-[16px] font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[193px] mt-7 mb-20"
+            >
+              Download
+              <span class="text-meet-light-purple">v1.3</span>
+            </button>
+          </div>
         </div>
       </footer>
     </div>
@@ -191,15 +211,15 @@ export default {
   background-image: url("@/assets/MeetLandingPage/desktop/image-hero-left.png");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100px;
-  width: 100px;
+  background-position: -2.5rem center;
+  height: 358px;
 }
 .desktop-right-hero {
   background-image: url("@/assets/MeetLandingPage/desktop/image-hero-right.png");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100px;
-  width: 100px;
+  background-position: 5rem center;
+  height: 358px;
 }
 .footer {
   display: block;
@@ -233,6 +253,7 @@ export default {
 @media only screen and (min-width: 1024px) {
   .footer::before {
     background-image: url("@/assets/MeetLandingPage/desktop/image-footer.jpg");
+    background-position: center;
   }
 }
 </style>
