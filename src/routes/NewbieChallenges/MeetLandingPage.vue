@@ -97,20 +97,20 @@
 
     <!-- IMAGES -->
     <div
-      class="w-full flex flex-row flex-wrap content-center justify-center laptop:justify-between mt-20 mx-auto max-w-[1210px] laptop:mt-28"
+      class="w-full flex flex-row flex-wrap content-center justify-center laptop:justify-between mt-20 mx-auto max-w-[1410px] laptop:mt-28"
     >
       <img
         v-for="image in images"
         :key="image"
         :src="image"
         alt="People enjoying our services"
-        class="rounded-lg w-1/3 laptop:w-1/4 mt-5 ml-5 laptop:ml-0 laptop:max-w-[292px]"
+        class="rounded-lg w-1/3 laptop:w-1/4 mt-5 ml-5 laptop:ml-0 laptop:max-w-[322px]"
       />
     </div>
 
     <!-- TEXT -->
     <div
-      class="mt-32 space-y-8 flex flex-col justify-center content-center text-center"
+      class="mt-32 space-y-7 flex flex-col justify-center content-center text-center"
     >
       <h2
         class="mx-auto uppercase text-meet-teal text-2xl tracking-[4px] font-bold laptop:w-1/3"
@@ -123,7 +123,7 @@
         Smarter meetings all in one place
       </h3>
       <p
-        class="w-10/12 tablet:w-9/12 mx-auto text-meet-gray font-medium text-[26px] leading-[36px] tablet:text-[20px] laptop:leading-[28px] laptop:text-[18px] laptop:w-[550px]"
+        class="w-10/12 tablet:w-9/12 mx-auto text-meet-gray font-medium text-[26px] leading-[36px] tablet:text-[20px] laptop:leading-[28px] laptop:text-[21px] laptop:w-[650px]"
       >
         Send messages, share files, show your screen, and record your meetings —
         all in one workspace. Control who can join with invite-only team access,
@@ -212,14 +212,14 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: -5rem center;
-  height: 338px;
+  height: 348px;
 }
 .desktop-right-hero {
   background-image: url("@/assets/MeetLandingPage/desktop/image-hero-right.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 5rem center;
-  height: 338px;
+  height: 348px;
 }
 .footer {
   display: block;
