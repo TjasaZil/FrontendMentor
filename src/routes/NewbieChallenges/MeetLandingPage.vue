@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="main-div bg-meet-light text-meet-dark w-full overflow-x-hidden"
-  >
+  <main class="main-div bg-meet-light text-meet-dark w-full overflow-x-hidden">
     <!-- LOGO -->
     <img
       alt="Meet landing page logo"
@@ -9,7 +7,7 @@
       class="w-[119px] mx-auto pt-24"
     />
     <!-- MOBILE/TABLET HERO -->
-    <section class="laptop:hidden w-full mx-auto mt-11">
+    <header class="laptop:hidden w-full mx-auto mt-11">
       <section
         class="mobile-hero"
         data-testid="mobile-tablet-hero-image"
@@ -29,7 +27,7 @@
           collaborate across any device.
         </p>
       </section>
-      <div
+      <section
         class="mx-auto flex flex-col justify-center content-center text-center space-y-3 mt-8 tablet:flex-row tablet:items-center tablet:space-y-0 tablet:w-1/2"
       >
         <button
@@ -42,11 +40,11 @@
         >
           What is it?
         </button>
-      </div>
-    </section>
+      </section>
+    </header>
 
     <!-- DESKTOP HERO -->
-    <section
+    <header
       class="hidden laptop:flex flex-row justify-center content-center w-full max-w-[1504px] mt-28 text-center mx-auto"
     >
       <section
@@ -67,10 +65,10 @@
         </p>
 
         <section
-          class="mx-auto flex justify-center items-center text-center space-x-3 mt-8"
+          class="mx-auto flex justify-center items-center text-center space-x-5"
         >
           <button
-            class="border-0 rounded-full px-8 py-5 text-[16px] font-black text-meet-light bg-meet-teal mx-auto hover:bg-opacity-75 max-w-[193px]"
+            class="border-0 rounded-full px-10 py-5 text-[16px] font-black text-meet-light bg-meet-teal mx-auto hover:bg-opacity-75 max-w-[193px]"
           >
             Download
             <span class="text-meet-light-teal">v1.3</span></button
@@ -85,10 +83,10 @@
         class="desktop-right-hero w-1/3"
         data-testid="desktop-right-hero-image"
       ></section>
-    </section>
+    </header>
     <!-- NUMBER 1 -->
     <section
-      class="w-full mx-auto mt-20 flex flex-col justify-center content-center relative top-10 z-50"
+      class="w-full mx-auto mt-32 flex flex-col justify-center content-center relative top-10 z-50"
     >
       <section
         class="border-l border-l-meet-gray h-[90px] absolute mb-[55px] left-1/2 opacity-75"
@@ -102,14 +100,14 @@
 
     <!-- IMAGES -->
     <section
-      class="w-full flex flex-row flex-wrap content-center justify-center laptop:justify-between mt-20 mx-auto max-w-[1210px]"
+      class="w-full flex flex-row flex-wrap content-center justify-center laptop:justify-between mt-20 mx-auto max-w-[1210px] laptop:mt-28"
     >
       <img
         v-for="image in images"
         :key="image"
         :src="image"
         alt="People enjoying our services"
-        class="rounded-lg w-1/3 laptop:w-1/4 mt-5 ml-5 laptop:max-w-[262px]"
+        class="rounded-lg w-1/3 laptop:w-1/4 mt-5 ml-5 laptop:ml-0 laptop:max-w-[282px]"
       />
     </section>
 
@@ -180,7 +178,7 @@
         </section>
       </footer>
     </section>
-  </section>
+  </main>
 </template>
 
 <script>
@@ -216,15 +214,15 @@ export default {
   background-image: url("@/assets/MeetLandingPage/desktop/image-hero-left.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: -2.5rem center;
-  height: 318px;
+  background-position: -7rem center;
+  height: 338px;
 }
 .desktop-right-hero {
   background-image: url("@/assets/MeetLandingPage/desktop/image-hero-right.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 7rem center;
-  height: 328px;
+  background-position: 11rem center;
+  height: 338px;
 }
 .footer {
   display: block;
