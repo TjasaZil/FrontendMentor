@@ -1,20 +1,41 @@
 <template>
-  <div class="main-div bg-meet-light text-meet-dark h-screen">
+  <div class="main-div bg-meet-light text-meet-dark w-full overflow-x-hidden">
     <img
       alt="Meet landing page logo"
       src="@/assets/MeetLandingPage/logo.svg"
-      class="w-12"
+      class="w-[119px] mx-auto pt-14"
     />
-    <div class="laptop:hidden">
+    <div class="laptop:hidden w-full mx-auto mt-11">
       <div class="mobile-hero" data-testid="mobile-tablet-hero-image"></div>
-      <div>
-        <h1>Group Chat for Everyone</h1>
-        <p>
+      <div
+        class="w-11/12 mx-auto flex flex-col justify-center content-center text-center space-y-8 mt-5"
+      >
+        <h1
+          class="text-meet-dark w-9/12 mx-auto font-black text-[64px] leading-[64px]"
+        >
+          Group Chat for Everyone
+        </h1>
+        <p
+          class="w-11/12 mx-auto text-meet-gray font-medium text-[26px] leading-[36px]"
+        >
           Meet makes it easy to connect with others face-to-face virtually and
           collaborate across any device.
         </p>
       </div>
-      <div><button>Download v1.3</button><button>What is it?</button></div>
+      <div
+        class="mx-auto flex flex-col justify-center content-center text-center space-y-3 mt-8"
+      >
+        <button
+          class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-teal w-5/12 mx-auto hover:bg-opacity-75 max-w-[193px]"
+        >
+          Download
+          <span class="text-meet-light-teal">v1.3</span></button
+        ><button
+          class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-purple w-4/12 mx-auto hover:bg-opacity-75 max-w-[139px]"
+        >
+          What is it?
+        </button>
+      </div>
     </div>
     <div
       class="hidden laptop:flex flex-row justify-center content-center w-full"
@@ -23,50 +44,111 @@
         class="desktop-left-hero"
         data-testid="desktop-left-hero-image"
       ></div>
-      <div>
-        <h1>Group Chat for Everyone</h1>
-        <p>
+      <div class="flex flex-col justify-center content-center">
+        <h1
+          class="text-meet-dark w-1/3 mx-auto font-black text-[64px] leading-[64px]"
+        >
+          Group Chat for Everyone
+        </h1>
+        <p
+          class="w-1/3 mx-auto text-meet-gray font-medium text-[26px] leading-[36px]"
+        >
           Meet makes it easy to connect with others face-to-face virtually and
           collaborate across any device.
         </p>
+
+        <div
+          class="mx-auto flex flex-col justify-center content-center text-center space-y-3 mt-8"
+        >
+          <button
+            class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-teal mx-auto hover:bg-opacity-75 max-w-[193px]"
+          >
+            Download
+            <span class="text-meet-light-teal">v1.3</span></button
+          ><button
+            class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[139px]"
+          >
+            What is it?
+          </button>
+        </div>
       </div>
-      <div><button>Download v1.3</button><button>btn2</button></div>
       <div
         class="desktop-right-hero"
         data-testid="desktop-right-hero-image"
       ></div>
     </div>
-    <div>number 1</div>
-    <div>
+    <div
+      class="w-full mx-auto mt-20 flex flex-col justify-center content-center"
+    >
+      <div
+        class="border-l border-l-meet-gray h-[100px] absolute mb-[73px] left-1/2 opacity-75"
+      ></div>
+      <div
+        class="border rounded-full border-solid border-meet-gray w-[80px] h-[80px] mt-[100px] mx-auto border-opacity-75 bg-meet-light"
+      >
+        <p class="text-meet-gray font-bold text-center mt-6 text-xl">01</p>
+      </div>
+    </div>
+    <div
+      class="flex flex-row flex-wrap content-center justify-center mt-20 w-full mx-auto"
+    >
       <img
         v-for="image in images"
         :key="image"
         :src="image"
         alt="People enjoying our services"
+        class="rounded-lg w-1/3 mt-5 ml-5 max-w-[242px]"
       />
     </div>
-    <div>
-      <h3>built for modern use</h3>
-      <h2>Smarter meetings all in one place</h2>
-      <p>
+    <div
+      class="mt-20 space-y-8 flex flex-col justify-center content-center text-center"
+    >
+      <h3 class="uppercase text-meet-teal text-2xl tracking-[4px] font-bold">
+        built for modern use
+      </h3>
+      <h2 class="text-meet-dark font-black text-5xl mx-auto w-8/12">
+        Smarter meetings all in one place
+      </h2>
+      <p
+        class="w-10/12 mx-auto text-meet-gray font-medium text-[26px] leading-[36px]"
+      >
         Send messages, share files, show your screen, and record your meetings —
         all in one workspace. Control who can join with invite-only team access,
         data encryption, and data export.
       </p>
     </div>
-    <div>number2</div>
 
-    <div class="w-full mx-auto bg-meet-teal bg-opacity-40">
-      <footer
-        class="footer w-full mx-auto flex flex-col justify-center content-center bg-meet-teal"
-        data-testid="footer-image"
+    <div class="w-full mx-auto">
+      <div
+        class="w-full mx-auto mt-20 flex flex-col justify-center content-center relative top-10 z-50"
       >
-        <h2>Experience more together</h2>
-        <p>
-          Stay connected with reliable HD meetings and unlimited one-on-one and
-          group video sessions.
-        </p>
-        <button>Download v1.3</button>
+        <div
+          class="border-l border-l-meet-gray h-[100px] absolute mb-[73px] left-1/2 opacity-75"
+        ></div>
+        <div
+          class="border rounded-full border-solid border-meet-gray w-[80px] h-[80px] mt-[100px] mx-auto border-opacity-75 bg-meet-light"
+        >
+          <p class="text-meet-gray font-bold text-center mt-6 text-xl">02</p>
+        </div>
+      </div>
+      <footer
+        class="w-full mx-auto flex flex-col justify-center content-center text-center bg-meet-teal relative bottom-0 left-0 z-20 text-meet-light"
+      >
+        <div class="footer pt-44" data-testid="footer-background-class">
+          <h2 class="font-black text-5xl mx-auto w-8/12">
+            Experience more together
+          </h2>
+          <p class="w-8/12 mx-auto font-medium text-[26px] leading-[36px] pt-7">
+            Stay connected with reliable HD meetings and unlimited one-on-one
+            and group video sessions.
+          </p>
+          <button
+            class="w-6/12 border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[193px] mt-7 mb-20"
+          >
+            Download
+            <span class="text-meet-light-purple">v1.3</span>
+          </button>
+        </div>
       </footer>
     </div>
   </div>
@@ -96,9 +178,10 @@ export default {
 .mobile-hero {
   background-image: url("@/assets/MeetLandingPage/tablet/image-hero.png");
   background-repeat: no-repeat;
+  background-position: -2.5rem center;
   background-size: contain;
-  width: 100vw;
-  height: 100px;
+  width: 110vw;
+  height: 353px;
 }
 .desktop-left-hero {
   background-image: url("@/assets/MeetLandingPage/desktop/image-hero-left.png");
@@ -115,9 +198,37 @@ export default {
   width: 100px;
 }
 .footer {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.footer::before {
+  content: "";
   background-image: url("@/assets/MeetLandingPage/mobile/image-footer.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  z-index: -1;
+}
+@media only screen and (min-width: 700px) {
+  .mobile-hero {
+    background-repeat: no-repeat;
+    background-position: -2.5rem center;
+    background-size: contain;
+    width: 120vw;
+    height: 403px;
+  }
+  .footer::before {
+    background-image: url("@/assets/MeetLandingPage/tablet/image-footer.jpg");
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer::before {
+    background-image: url("@/assets/MeetLandingPage/desktop/image-footer.jpg");
+  }
 }
 </style>

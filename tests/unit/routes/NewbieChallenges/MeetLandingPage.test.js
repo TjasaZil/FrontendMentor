@@ -48,7 +48,7 @@ describe("MeetLandingPage", () => {
       });
       it("has appropriate footer image", () => {
         render(Meet);
-        const footer = screen.queryByTestId("footer-image");
+        const footer = screen.queryByTestId("footer-background-class");
         expect(footer).toHaveClass("footer");
       });
       it("has 4 pictures in the middle", () => {
@@ -115,13 +115,13 @@ describe("MeetLandingPage", () => {
       });
       it("has 3 download buttons", () => {
         render(Meet);
-        const btn = screen.queryAllByText(/download v1.3/i);
+        const btn = screen.queryAllByText(/download/i);
         expect(btn.length).toBe(3);
       });
       it("has one what is it button", () => {
         render(Meet);
-        const btn = screen.queryByText(/what is it?/i);
-        expect(btn).toBeVisible();
+        const btn = screen.queryAllByText(/what is it?/i);
+        expect(btn.length).toBe(2);
       });
     });
   });
