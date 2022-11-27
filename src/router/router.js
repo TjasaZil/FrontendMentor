@@ -47,6 +47,10 @@ const router = createRouter({
       component: () => import("@/routes/NewbieChallenges/SinglePriceGrid.vue"),
     },
     {
+      path: "/meet-landing-page",
+      component: () => import("@/routes/NewbieChallenges/MeetLandingPage.vue"),
+    },
+    {
       path: "/junior-challenges",
       component: () => import("@/routes/JuniorPage.vue"),
     },

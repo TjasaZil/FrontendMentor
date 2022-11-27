@@ -68,6 +68,13 @@
           router="/ping-comming-soon"
           x-intersect="$el.classList.add('swingIn')"
         />
+        <Container
+          :image="MeetImage"
+          alt="Meet Landing Page"
+          heading="Meet Landing Page"
+          router="/meet-landing-page"
+          x-intersect="$el.classList.add('swingIn')"
+        />
       </section>
     </section>
     <Footer />
@@ -85,6 +92,7 @@ import ProfileImage from "@/assets/ProfileCardComponent/design/desktop-preview.j
 import InteractiveImage from "@/assets/InteractiveRatingComponent/design/desktop-preview.jpg";
 import OrderImage from "@/assets/OrderSumaryComponent/design/desktop-preview.jpg";
 import PriceImage from "@/assets/SinglePriceGrid/design/desktop-preview.jpg";
+import MeetImage from "@/assets/MeetLandingPage/preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 
@@ -101,6 +109,7 @@ export default {
       InteractiveImage,
       OrderImage,
       PriceImage,
+      MeetImage,
     };
   },
 };

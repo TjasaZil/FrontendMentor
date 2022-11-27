@@ -61,6 +61,13 @@ module.exports = {
         "news-very-dark-blue": "hsl(240, 100%, 5%)",
         "bootcamp-dark-blue": "hsl(240, 38%, 20%)",
         "bootcamp-grayish-blue": "hsl(240, 18%, 77%)",
+        "meet-teal": "#4d96a9",
+        "meet-purple": "#855fb1",
+        "meet-dark": "#28283d",
+        "meet-gray": "#87879d",
+        "meet-light-teal": "#8fe3f9",
+        "meet-light-purple": "#d9b8ff",
+        "meet-light": "#fafafa",
       },
       width: {
         "profile-mobile-container-width": "326px",

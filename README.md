@@ -41,8 +41,16 @@ npm run lint
 - [Profile Card Component](https://frontendmentor-steel.vercel.app/profile-card-component)
 - [Product Preview Card Component](https://frontendmentor-steel.vercel.app/product-preview-card-component)
 - [Ping Single Column Coming Soon Page](https://frontendmentor-steel.vercel.app/ping-comming-soon)
+- [Order Summary Component](https://frontendmentor-steel.vercel.app/order-summary-component)
+- [Single Price Grid](https://frontendmentor-steel.vercel.app/single-price-grid)
+- [Interactive Rating Component](https://frontendmentor-steel.vercel.app/interactive-rating-component)
+- [Meet Landing Page](https://frontendmentor-steel.vercel.app/meet-landing-page)
 
 ### Junior:
+
+- [Advice Generator](https://frontendmentor-steel.vercel.app/advice-generator)
+- [News Homepage](https://frontendmentor-steel.vercel.app/news-homepage)
+- [Coding Bootcamp Testimonials](https://frontendmentor-steel.vercel.app/coding-bootcamp-testimonials)
 
 ## Build with:
 
