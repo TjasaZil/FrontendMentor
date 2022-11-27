@@ -4,7 +4,7 @@
     <img
       alt="Meet landing page logo"
       src="@/assets/MeetLandingPage/logo.svg"
-      class="w-[119px] mx-auto pt-14"
+      class="w-[119px] mx-auto pt-24"
     />
     <!-- MOBILE/TABLET HERO -->
     <div class="laptop:hidden w-full mx-auto mt-11">
@@ -25,15 +25,15 @@
         </p>
       </div>
       <div
-        class="mx-auto flex flex-col justify-center content-center text-center space-y-3 mt-8 tablet:flex-row tablet:items-center tablet:space-y-0 tablet:w-1/3 tablet:space-x-3"
+        class="mx-auto flex flex-col justify-center content-center text-center space-y-3 mt-8 tablet:flex-row tablet:items-center tablet:space-y-0 tablet:w-1/2"
       >
         <button
-          class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-teal mx-auto hover:bg-opacity-75 max-w-[263px] tablet:text-lg"
+          class="border-0 rounded-full px-8 py-5 text-xl font-black text-meet-light bg-meet-teal mx-auto hover:bg-opacity-75 max-w-[263px] tablet:text-lg"
         >
           Download
           <span class="text-meet-light-teal">v1.3</span></button
         ><button
-          class="border-0 rounded-full px-4 py-5 text-xl font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[189px]"
+          class="border-0 rounded-full px-8 py-5 text-xl font-black text-meet-light bg-meet-purple mx-auto hover:bg-opacity-75 max-w-[189px]"
         >
           What is it?
         </button>
@@ -83,7 +83,7 @@
     </div>
     <!-- NUMBER 1 -->
     <div
-      class="w-full mx-auto mt-20 flex flex-col justify-center content-center"
+      class="w-full mx-auto mt-20 flex flex-col justify-center content-center relative top-10 z-50"
     >
       <div
         class="border-l border-l-meet-gray h-[90px] absolute mb-[55px] left-1/2 opacity-75"
@@ -97,14 +97,14 @@
 
     <!-- IMAGES -->
     <div
-      class="flex flex-row flex-wrap content-center justify-center mt-20 w-full mx-auto"
+      class="flex flex-row flex-wrap content-center justify-center laptop:justify-between mt-20 w-full mx-auto max-w-[1110px]"
     >
       <img
         v-for="image in images"
         :key="image"
         :src="image"
         alt="People enjoying our services"
-        class="rounded-lg w-1/3 mt-5 ml-5 laptop:max-w-[242px] tablet:max-w-[156px]"
+        class="rounded-lg w-1/3 laptop:w-1/4 mt-5 ml-5 laptop:max-w-[252px]"
       />
     </div>
 
@@ -147,16 +147,16 @@
         </div>
       </div>
       <footer
-        class="w-full mx-auto flex flex-col justify-center content-center text-center bg-meet-teal relative bottom-0 left-0 z-20 text-meet-light"
+        class="w-full mx-auto flex flex-col justify-center content-center text-center bg-meet-teal relative bottom-0 left-0 z-20 text-meet-light laptopl:h-[308px]"
       >
         <div
-          class="footer pt-44 w-full laptopl:pt-20"
+          class="footer pt-44 w-full laptop:pt-[132px]"
           data-testid="footer-background-class"
         >
           <div
-            class="laptopl:flex laptopl:w-[1110px] laptopl:mx-auto laptopl:justify-between laptopl:text-left"
+            class="laptopl:flex laptopl:w-[1110px] laptopl:mx-auto laptopl:justify-between laptopl:text-left laptopl:my-auto"
           >
-            <h2 class="font-black text-5xl mx-auto w-8/12">
+            <h2 class="font-black text-[42px] mx-auto w-8/12">
               Experience more together
             </h2>
             <p
@@ -212,14 +212,14 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: -2.5rem center;
-  height: 358px;
+  height: 318px;
 }
 .desktop-right-hero {
   background-image: url("@/assets/MeetLandingPage/desktop/image-hero-right.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 5rem center;
-  height: 358px;
+  background-position: 7rem center;
+  height: 318px;
 }
 .footer {
   display: block;
@@ -254,6 +254,7 @@ export default {
   .footer::before {
     background-image: url("@/assets/MeetLandingPage/desktop/image-footer.jpg");
     background-position: center;
+    height: 308px;
   }
 }
 </style>
