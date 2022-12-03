@@ -37,7 +37,7 @@ describe("Navigation", () => {
     describe("appropriate list items", () => {
       it("has appropriate listitem", () => {
         render(Navigation);
-        const itemArray = ["home", "newbie", "junior"];
+        const itemArray = ["home", "newbie", "junior, intermediate"];
         for (let i = 0; i < itemArray.length; i++) {
           const item = screen.queryByText(itemArray[i]);
           expect(item).toBeInTheDocument();

@@ -29,6 +29,7 @@ export default {
         { text: "home", url: "/" },
         { text: "newbie challenges", url: "/newbie-challenges" },
         { text: "junior challenges", url: "/junior-challenges" },
+        { text: "intermediate challenges", url: "/intermediate-challenges" },
       ],
     };
   },

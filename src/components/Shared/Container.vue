@@ -17,7 +17,7 @@
       {{ heading }}
     </h3>
     <hr class="w-5/6 border-2 bg-slate-50 border-slate-50 rounded-lg mx-auto" />
-    <div role="paragraph" class="w-5/6 mx-auto text-">
+    <div role="paragraph" class="w-5/6 mx-auto text-center">
       {{ paragraph }}
     </div>
     <div class="flex justify-around items-center pb-3 mx-auto w-full">

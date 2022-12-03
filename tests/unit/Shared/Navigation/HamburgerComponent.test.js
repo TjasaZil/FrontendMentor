@@ -54,7 +54,11 @@ describe("HamburgerComponent", () => {
       render(HamburgerComponent);
       let img = screen.queryByRole("img");
       await user.click(img);
-      const itemArray = ["home", "newbie challenges", "junior challenges"];
+      const itemArray = [
+        "home",
+        "newbie challenges",
+        "junior challenges, intermediate challenges",
+      ];
       for (let i = 0; i < itemArray.length; i++) {
         const item = screen.queryByText(itemArray[i]);
         expect(item).toBeInTheDocument();
