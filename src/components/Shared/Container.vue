@@ -1,6 +1,6 @@
 <template>
   <section
-    class="border-2 border-solid border-slate-200 w-full tablet:w-1/3 laptopl:w-1/5 4kay:w-1/6 rounded-lg hover:shadow-lg hover:scale-105 hover:opacity-70 flex flex-col justify-center items-center space-y-5 my-2 mx-1"
+    class="border-2 border-solid border-slate-200 w-full tablet:w-1/3 laptopl:w-1/5 4kay:w-1/6 rounded-lg hover:shadow-lg hover:scale-105 hover:opacity-70 flex flex-col justify-between items-center space-y-5 my-2 mx-1 laptop:h-[450px] 4kay:h-[600px]"
   >
     <div class="img-container">
       <img

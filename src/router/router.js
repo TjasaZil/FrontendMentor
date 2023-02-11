@@ -73,6 +73,10 @@ const router = createRouter({
         import("@/routes/JuniorChallenges/CodingBootcampTestimonial.vue"),
     },
     {
+      path: "/github-user-search",
+      component: () => import("@/routes/JuniorChallenges/GithubSearch.vue"),
+    },
+    {
       path: "/Intermediate-challenges",
       component: () => import("@/routes/IntermediatePage.vue"),
     },

@@ -33,6 +33,13 @@
           router="/coding-bootcamp-testimonials"
           x-intersect="$el.classList.add('swingIn')"
         />
+        <Container
+          :image="GithubSearch"
+          alt="Github user search app"
+          heading="Github user search app"
+          router="/github-user-search"
+          x-intersect="$el.classList.add('swingIn')"
+        />
       </section>
     </section>
     <Footer />
@@ -45,6 +52,7 @@ import Container from "@/components/Shared/Container.vue";
 import AdviceImage from "@/assets/AdviceGenerator/design/desktop-preview.jpg";
 import NewsImage from "@/assets/NewsHomepage/design/desktop-preview.jpg";
 import BootcampImage from "@/assets/CodingBootcampTestimonials/design/desktop-preview.jpg";
+import GithubSearch from "@/assets/githubSearch/preview.jpg";
 import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 export default {
@@ -55,6 +63,7 @@ export default {
       AdviceImage,
       NewsImage,
       BootcampImage,
+      GithubSearch,
     };
   },
 };
