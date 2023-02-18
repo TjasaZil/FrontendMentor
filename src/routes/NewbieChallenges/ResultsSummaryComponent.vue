@@ -34,22 +34,30 @@
             <li
               v-for="result in results"
               :key="result"
-              class="border-2 border-blue-700 rounded-xl w-full mx-auto flex flex-row justify-between items-center"
+              :class="squareClasses(result.category)"
+              class="rounded-xl w-full mx-auto flex flex-row justify-between items-center"
             >
               <div
-                class="border-solid border-pink-700 flex flex-row justify-between items-center w-5/6 mx-auto"
+                class="flex flex-row justify-between items-center w-5/6 mx-auto"
               >
                 <div
                   class="flex flex-row justify-start items-center space-x-2 py-3"
                 >
                   <img :src="result.icon" alt="icon for the result" />
-                  <p>{{ result.category }}</p>
+                  <p :class="squareClasses">{{ result.category }}</p>
                 </div>
-                <p>{{ result.score }}<span> / 100</span></p>
+                <p class="text-black font-bold">
+                  {{ result.score
+                  }}<span class="text-meet-gray font-medium"> / 100</span>
+                </p>
               </div>
             </li>
           </ul>
-          <button>Continue</button>
+          <button
+            class="w-full rounded-full bg-results-summary-dark-blue text-white font-bold text-base py-3"
+          >
+            Continue
+          </button>
         </div>
       </div>
     </div>
@@ -65,6 +73,19 @@ export default {
       results: [],
     };
   },
+  computed: {
+    squareClasses() {
+      const styleClass = {
+        Reaction: "reaction",
+        Memory: "memory",
+        Verbal: "verbal",
+        Visual: "visual",
+      };
+      return (category) => {
+        return [styleClass[category]];
+      };
+    },
+  },
   mounted() {
     axios
       .get(
@@ -73,6 +94,7 @@ export default {
       .then((response) => {
         this.results = response.data;
         console.log(response.data);
+        console.log(this.results.category);
       })
       .catch((error) => {
         console.log(error.response.data);
@@ -82,4 +104,21 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.2);
+}
+.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.2);
+}
+.verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.2);
+}
+.visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 0.2);
+}
+</style>
