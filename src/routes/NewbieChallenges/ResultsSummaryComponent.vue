@@ -3,7 +3,7 @@
     class="bg-white font-['Hanken_Grotesk'] w-screen h-screen tablet:h-full laptopl:h-screen flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
   >
     <div
-      class="w-full h-full mx-auto text-center tablet:w-[736px] tablet:h-[500px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue-bg tablet:mt-64 tablet:mb-32"
+      class="w-full h-full mx-auto text-center tablet:w-[736px] tablet:h-[500px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue-bg tablet:mt-[270px] tablet:mb-32"
       x-intersect="$el.classList.add('swingIn')"
     >
       <div
