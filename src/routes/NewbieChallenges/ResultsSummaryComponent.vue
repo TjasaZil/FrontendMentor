@@ -1,9 +1,9 @@
 <template>
   <div
-    class="bg-white font-['Hanken_Grotesk'] w-screen h-screen tablet:h-full laptopl:h-screen flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
+    class="bg-white font-['Hanken_Grotesk'] w-screen h-screen laptop:h-full laptopl:h-screen flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
   >
     <div
-      class="w-full h-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue-bg tablet:mt-[278px] tablet:mb-32"
+      class="w-full h-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue-bg laptop:mt-[282px] tablet:mb-32"
       x-intersect="$el.classList.add('swingIn')"
     >
       <div
@@ -31,18 +31,23 @@
             >of 100</span
           >
         </div>
-        <h3
-          class="text-results-summary-pale-blue font-bold text-xl tablet:text-3xl"
-          x-intersect="$el.classList.add('fadeIn')"
+        <div
+          class="space-y-5 tablet:w-full tablet:text-center tablet:mx-auto tablet:space-y-3"
         >
-          Great
-        </h3>
-        <p
-          class="pb-5 text-sm text-results-summary-light-lavender font-medium mx-auto w-5/6 tablet:text-lg tablet:max-w-[267px]"
-          x-intersect="$el.classList.add('fadeIn')"
-        >
-          Your Preformance exceeded 65% of the people conducting the test here!
-        </p>
+          <h3
+            class="text-results-summary-pale-blue font-bold text-xl tablet:text-3xl"
+            x-intersect="$el.classList.add('fadeIn')"
+          >
+            Great
+          </h3>
+          <p
+            class="pb-5 text-sm text-results-summary-light-lavender font-medium mx-auto w-5/6 tablet:text-lg tablet:max-w-[267px]"
+            x-intersect="$el.classList.add('fadeIn')"
+          >
+            Your Preformance exceeded 65% of the people conducting the test
+            here!
+          </p>
+        </div>
       </div>
       <div
         class="bg-white w-full text-black tablet:h-[512px] tablet:rounded-r-2xl"
