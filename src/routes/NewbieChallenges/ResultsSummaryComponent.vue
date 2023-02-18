@@ -3,7 +3,7 @@
     class="bg-white font-['Hanken_Grotesk'] w-screen h-screen tablet:h-full laptopl:h-screen flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
   >
     <div
-      class="w-full h-full mx-auto text-center tablet:w-[736px] tablet:h-[500px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue-bg tablet:mt-[270px] tablet:mb-32"
+      class="w-full h-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue-bg tablet:mt-[278px] tablet:mb-32"
       x-intersect="$el.classList.add('swingIn')"
     >
       <div
@@ -45,7 +45,7 @@
         </p>
       </div>
       <div
-        class="bg-white w-full text-black tablet:h-[500px] tablet:rounded-r-2xl"
+        class="bg-white w-full text-black tablet:h-[512px] tablet:rounded-r-2xl"
       >
         <div
           class="bg-white w-5/6 mx-auto pt-5 space-y-4 tablet:w-[272px] h-full tablet:flex tablet:flex-col tablet:justify-evenly"
@@ -81,7 +81,7 @@
             </li>
           </ul>
           <button
-            class="w-full rounded-full bg-results-summary-dark-blue text-white font-bold text-base py-3 hover:bg-gradient-to-b from-results-summary-violet-blue to-results-summary-royal-blue tablet:py-4"
+            class="w-full rounded-full bg-results-summary-dark-blue text-white font-bold text-base py-3 hover:bg-gradient-to-b from-results-summary-violet-blue to-results-summary-royal-blue tablet:py-4 tablet:text-lg"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             Continue
