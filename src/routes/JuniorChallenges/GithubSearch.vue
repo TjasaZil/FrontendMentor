@@ -1,26 +1,33 @@
 <template>
   <div
-    class="font-['Space_Mono'] w-screen h-screen flex flex-col justify-start pt-10 tablet:pt-0 tablet:justify-center items-center"
+    class="font-['Space_Mono'] w-screen h-screen flex flex-col justify-start pt-10 tablet:pt-0 tablet:justify-center items-center bg-github-dark-black"
   >
     <div
-      class="border-2 border-solid border-red-500 mx-auto flex flex-col justify-center items-center w-[327px] tablet:w-[573px] laptop:w-[730px] space-y-5"
+      class="mx-auto flex flex-col justify-center items-center w-[327px] tablet:w-[573px] laptop:w-[730px] space-y-5"
     >
-      <div
-        class="w-full flex justify-between items-center border-2 border-green-500"
-      >
+      <div class="w-full flex justify-between items-center">
         <h1 data-testid="main-heading-test">devfinder</h1>
         <div class="flex justify-end items-center space-x-3">
-          <p data-testid="theme-text-test">theme</p>
+          <p data-testid="theme-text-test" v-if="this.darkMode">Light</p>
+          <p data-testid="theme-text-test" v-if="!this.darkMode">Dark</p>
           <button data-testid="theme-btn-test">
             <img
+              v-if="this.darkMode"
               alt="theme button image"
               src="../../assets/githubSearch/icon-sun.svg"
+              @click="changeTheme"
+            />
+            <img
+              v-if="!this.darkMode"
+              @click="changeTheme"
+              alt="theme button image"
+              src="../../assets/githubSearch/icon-moon.svg"
             />
           </button>
         </div>
       </div>
       <div
-        class="border-2 border-white rounded-lg w-full flex justify-between p-2 items-center"
+        class="rounded-lg w-full flex justify-between p-2 items-center bg-github-dark-blue"
       >
         <img
           alt="search icon"
@@ -29,7 +36,8 @@
         <input
           type="text"
           placeholder="Search GitHub username..."
-          class="w-full"
+          class="w-full bg-github-dark-blue placeholder:text-github-dark-white placeholder:text-xs"
+          v-model="githubUser"
         />
         <button
           data-testid="search-btn-test"
@@ -40,51 +48,68 @@
         </button>
       </div>
       <div
-        class="border-4 border-pink-400 rounded-xl w-full p-4 flex flex-col justify-end items-end space-y-8"
+        class="rounded-xl w-full p-4 flex flex-col justify-end items-end space-y-8 bg-github-dark-blue"
       >
         <div class="w-full flex justify-between align-top space-x-6">
           <div
-            class="w-11/12 border-red-600 border-2 mx-auto flex justify-between tablet:justify-start tablet:space-x-10 items-center"
+            class="w-11/12 mx-auto flex flex-col justify-between space-y-5 tablet:justify-start tablet:space-x-10 items-center laptop:items-center laptop:justify-between laptop:space-y-0"
           >
-            <img
-              :src="user.avatar_url"
-              alt="image icon"
-              class="rounded-full w-[70px] h-[70px] tablet:w-[117px] tablet:h-[117px]"
-              data-testid="profile-img-test"
-            />
-
-            <div class="flex flex-col justify-center items-start text-left">
-              <h2 data-testid="profile-name-test">
-                {{ user.name || "Not available" }}
-              </h2>
-              <h3 data-testid="username-name-test">
-                @{{ user.login || "Not available" }}
-              </h3>
-              <p data-testid="profile-date-test">
-                Joined
-                <span>
-                  {{
-                    user.created_at
-                      ? new Date(user.created_at).toLocaleDateString("en-GB", {
-                          day: "numeric",
-                          month: "short",
-                          year: "numeric",
-                        })
-                      : "Not available"
-                  }}
-                </span>
-              </p>
+            <div
+              class="w-full mx-auto flex justify-between tablet:justify-start tablet:space-x-10 items-center laptop:items-start laptop:justify-between"
+            >
+              <img
+                :src="user.avatar_url"
+                alt="image icon"
+                class="rounded-full w-[70px] h-[70px] tablet:w-[117px] tablet:h-[117px]"
+                data-testid="profile-img-test"
+              />
+              <div
+                class="w-full laptop:flex laptop:justify-between laptop:items-start"
+              >
+                <div class="flex flex-col justify-center items-start text-left">
+                  <h2 data-testid="profile-name-test">
+                    {{ user.name || "Not available" }}
+                  </h2>
+                  <h3
+                    data-testid="username-name-test"
+                    class="text-github-light-blue"
+                  >
+                    @{{ user.login || "Not available" }}
+                  </h3>
+                </div>
+                <p data-testid="profile-date-test">
+                  Joined
+                  <span>
+                    {{
+                      user.created_at
+                        ? new Date(user.created_at).toLocaleDateString(
+                            "en-GB",
+                            {
+                              day: "numeric",
+                              month: "short",
+                              year: "numeric",
+                            }
+                          )
+                        : "Not available"
+                    }}
+                  </span>
+                </p>
+              </div>
             </div>
+            <p
+              data-testid="profile-bio-test"
+              class="mx-auto text-center laptop:text-left laptop:max-w-[480px]"
+            >
+              {{ user.bio || "Not available" }}
+            </p>
           </div>
         </div>
-        <p data-testid="profile-bio-test" class="mx-auto text-center">
-          {{ user.bio || "Not available" }}
-        </p>
+
         <div
-          class="border-4 border-green-800 mx-auto w-11/12 max-w-[480px] laptop:mx-0 flex flex-col justify-center items-center"
+          class="mx-auto w-11/12 max-w-[480px] laptop:mx-0 flex flex-col justify-center items-center"
         >
           <div
-            class="border-4 border-white w-full flex justify-between items-center"
+            class="b w-full flex justify-evenly items-center bg-github-dark-black py-3 rounded-xl"
           >
             <div class="flex flex-col justify-center items-center">
               <h4 data-testid="info-headings-test">Repos</h4>
@@ -106,7 +131,7 @@
             </div>
           </div>
           <div
-            class="border-4 border-yellow-300 w-full flex flex-col tablet:flex-row tablet:flex-wrap items-start justify-center tablet:items-center"
+            class="w-full flex flex-col tablet:flex-row tablet:flex-wrap items-start justify-center tablet:items-center"
             data-testid="social-media-test"
           >
             <div class="w-1/2 space-x-5 mt-5 flex justify-start items-center">
@@ -163,6 +188,8 @@ export default {
   name: "GithubSearch",
   data() {
     return {
+      darkMode: true,
+      githubUser: "",
       datas: [
         { src: Tag, alt: "location", text: "text1" },
         { src: Twitter, alt: "twitter", text: "{{user.twitter_username}} " },
@@ -176,7 +203,7 @@ export default {
   methods: {
     searchUser() {
       axios
-        .get(`https://api.github.com/users/zuzexx`)
+        .get(`https://api.github.com/users/${this.githubUser}`)
         .then((response) => {
           console.log(response.data);
           this.user = response.data;
@@ -184,18 +211,15 @@ export default {
         .catch((error) => {
           console.log(error.message);
         });
+      this.githubUser = "";
+    },
+    changeTheme() {
+      this.darkMode = !this.darkMode;
     },
   },
   mounted() {
-    axios
-      .get(`https://api.github.com/users/octocat`)
-      .then((response) => {
-        console.log(response.data);
-        this.user = response.data;
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    this.githubUser = "octocat";
+    this.searchUser();
   },
 };
 </script>
