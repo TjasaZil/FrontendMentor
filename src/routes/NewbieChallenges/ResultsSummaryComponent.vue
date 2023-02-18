@@ -27,18 +27,57 @@
           Your Preformance exceeded 65% of the people conducting the test here!
         </p>
       </div>
+      <div class="bg-white w-full text-black">
+        <div class="bg-white w-5/6 mx-auto pt-5 space-y-5">
+          <h4 class="text-left">Summary</h4>
+          <ul class="space-y-5">
+            <li
+              v-for="result in results"
+              :key="result"
+              class="border-2 border-blue-700 rounded-xl w-full mx-auto flex flex-row justify-between items-center"
+            >
+              <div
+                class="border-solid border-pink-700 flex flex-row justify-between items-center w-5/6 mx-auto"
+              >
+                <div
+                  class="flex flex-row justify-start items-center space-x-2 py-3"
+                >
+                  <img :src="result.icon" alt="icon for the result" />
+                  <p>{{ result.category }}</p>
+                </div>
+                <p>{{ result.score }}<span> / 100</span></p>
+              </div>
+            </li>
+          </ul>
+          <button>Continue</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "ResultsSummaryPage",
+  data() {
+    return {
+      results: [],
+    };
+  },
   mounted() {
-    fetch("../../assets/ResultsSummaryComponent/data.json")
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .error((err) => console.log(err));
+    axios
+      .get(
+        "https://frontendmentor-cb0e5-default-rtdb.europe-west1.firebasedatabase.app/resultsSummary.json"
+      )
+      .then((response) => {
+        this.results = response.data;
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+        console.log(error.response.status);
+      });
   },
 };
 </script>

@@ -1,0 +1,24 @@
+{
+  "resultsSummary": [
+    {
+      "category": "Reaction",
+      "score": 80,
+      "icon": "https://firebasestorage.googleapis.com/v0/b/frontendmentor-cb0e5.appspot.com/o/icon-reaction.svg?alt=media&token=0e537146-d196-4970-945f-df915282f99c"
+    },
+    {
+      "category": "Memory",
+      "score": 92,
+      "icon": "https://firebasestorage.googleapis.com/v0/b/frontendmentor-cb0e5.appspot.com/o/icon-memory.svg?alt=media&token=df75133f-9938-43bc-bee2-dc840177a08b"
+    },
+    {
+      "category": "Verbal",
+      "score": 61,
+      "icon": "https://firebasestorage.googleapis.com/v0/b/frontendmentor-cb0e5.appspot.com/o/icon-verbal.svg?alt=media&token=9a012cb9-15bb-455b-8ccf-43bb86473a04"
+    },
+    {
+      "category": "Visual",
+      "score": 72,
+      "icon": "https://firebasestorage.googleapis.com/v0/b/frontendmentor-cb0e5.appspot.com/o/icon-visual.svg?alt=media&token=23a5d0e2-7817-42e3-a437-c10ad1ec73e3"
+    }
+  ]
+}
