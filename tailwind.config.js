@@ -80,6 +80,7 @@ module.exports = {
         "results-summary-royal-blue": "hsl(241, 81%, 54%)",
         "results-summary-violet-blue": "hsla(256, 72%, 46%, 1)",
         "results-summary-perian-blue": "hsla(241, 72%, 46%, 0.5)",
+        "results-summary-perian-blue-bg": "hsla(241, 72%, 46%, 0.2)",
         "results-summary-pale-blue": "hsl(221, 100%, 96%)",
         "results-summary-light-lavender": "hsl(241, 100%, 89%)",
         "results-summary-dark-blue": "hsl(224, 30%, 27%)",
