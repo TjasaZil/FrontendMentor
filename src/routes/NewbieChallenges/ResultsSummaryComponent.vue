@@ -4,19 +4,28 @@
   >
     <div
       class="w-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue"
+      x-intersect="$el.classList.add('swingIn')"
     >
       <div
         class="w-full text-center flex flex-col justify-center items-center space-y-3 rounded-b-2xl bg-gradient-to-b from-results-summary-slate-blue to-results-summary-royal-blue tablet:w-[600px] tablet:h-[512px] tablet:rounded-2xl tablet:justify-evenly"
+        x-intersect="$el.classList.add('fadeLeftRight')"
       >
         <h2
           class="font-bold text-lg text-results-summary-light-lavender pt-6 tablet:text-2xl"
+          x-intersect="$el.classList.add('fadeIn')"
         >
           Your Result
         </h2>
         <div
           class="py-5 px-8 rounded-full bg-gradient-to-b from-results-summary-violet-blue via-results-summary-perian-blue tablet:w-[200px] tablet:h-[200px] tablet:p-0 tablet:flex tablet:flex-col tablet:justify-center tablet:items-center tablet:mx-auto"
+          x-intersect="$el.classList.add('fadeIn')"
         >
-          <p class="text-4xl font-extrabold text-white tablet:text-7xl">76</p>
+          <p
+            class="text-4xl font-extrabold text-white tablet:text-7xl"
+            x-intersect="$el.classList.add('fadeIn')"
+          >
+            76
+          </p>
           <span
             class="text-results-summary-slate-blue text-sm font-medium tablet:text-lg"
             >of 100</span
@@ -24,11 +33,13 @@
         </div>
         <h3
           class="text-results-summary-pale-blue font-bold text-xl tablet:text-3xl"
+          x-intersect="$el.classList.add('fadeIn')"
         >
           Great
         </h3>
         <p
           class="pb-5 text-sm text-results-summary-light-lavender font-medium mx-auto w-5/6 tablet:text-lg tablet:max-w-[267px]"
+          x-intersect="$el.classList.add('fadeIn')"
         >
           Your Preformance exceeded 65% of the people conducting the test here!
         </p>
@@ -39,8 +50,16 @@
         <div
           class="bg-white w-5/6 mx-auto pt-5 space-y-5 tablet:w-[272px] h-full tablet:flex tablet:flex-col tablet:justify-evenly"
         >
-          <h4 class="text-left text-lg tablet:text-2xl font-bold">Summary</h4>
-          <ul class="space-y-5">
+          <h4
+            class="text-left text-lg tablet:text-2xl font-bold"
+            x-intersect="$el.classList.add('fadeRightLeft')"
+          >
+            Summary
+          </h4>
+          <ul
+            class="space-y-5"
+            x-intersect="$el.classList.add('fadeRightLeft')"
+          >
             <li
               v-for="result in results"
               :key="result"
@@ -65,6 +84,7 @@
           </ul>
           <button
             class="w-full rounded-full bg-results-summary-dark-blue text-white font-bold text-base py-3 hover:bg-gradient-to-b from-results-summary-violet-blue to-results-summary-royal-blue tablet:py-4"
+            x-intersect="$el.classList.add('fadeRightLeft')"
           >
             Continue
           </button>
