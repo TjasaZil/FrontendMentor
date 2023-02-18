@@ -3,11 +3,11 @@
     class="bg-white font-['Hanken_Grotesk'] w-screen h-screen flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
   >
     <div
-      class="w-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue"
+      class="w-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-center tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue"
       x-intersect="$el.classList.add('swingIn')"
     >
       <div
-        class="w-full text-center flex flex-col justify-center items-center space-y-3 rounded-b-2xl bg-gradient-to-b from-results-summary-slate-blue to-results-summary-royal-blue tablet:w-[600px] tablet:h-full tablet:rounded-2xl tablet:justify-evenly"
+        class="w-full text-center flex flex-col justify-center items-center space-y-3 rounded-b-2xl bg-gradient-to-b from-results-summary-slate-blue to-results-summary-royal-blue tablet:w-[700px] tablet:h-full tablet:rounded-2xl tablet:justify-evenly"
         x-intersect="$el.classList.add('fadeLeftRight')"
       >
         <h2
@@ -48,7 +48,7 @@
         class="bg-white w-full text-black tablet:h-[512px] tablet:rounded-r-2xl"
       >
         <div
-          class="bg-white w-5/6 mx-auto pt-5 space-y-5 tablet:w-[272px] h-full tablet:flex tablet:flex-col tablet:justify-evenly"
+          class="bg-white w-5/6 mx-auto pt-5 space-y-4 tablet:w-[272px] h-full tablet:flex tablet:flex-col tablet:justify-evenly"
         >
           <h4
             class="text-left text-lg tablet:text-2xl font-bold"
@@ -57,21 +57,19 @@
             Summary
           </h4>
           <ul
-            class="space-y-5"
+            class="space-y-3"
             x-intersect="$el.classList.add('fadeRightLeft')"
           >
             <li
               v-for="result in results"
               :key="result"
               :class="squareClasses(result.category)"
-              class="rounded-xl w-full mx-auto flex flex-row justify-between items-center"
+              class="rounded-xl w-full mx-auto flex flex-row justify-between items-center py-4"
             >
               <div
                 class="flex flex-row justify-between items-center w-5/6 mx-auto"
               >
-                <div
-                  class="flex flex-row justify-start items-center space-x-2 py-3"
-                >
+                <div class="flex flex-row justify-start items-center space-x-2">
                   <img :src="result.icon" alt="icon for the result" />
                   <p :class="squareClasses">{{ result.category }}</p>
                 </div>
