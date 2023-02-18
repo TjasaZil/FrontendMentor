@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/single-price-grid-X5tXTbwuK)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/results-summary-component-Gd7UCSBrBo)
 - Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/results-summary-component)
 
 ## My process
