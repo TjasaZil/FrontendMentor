@@ -13,6 +13,13 @@
         class="mt-16 w-5/6 mx-auto flex flex-wrap justify-around items-center"
       >
         <Container
+          :image="RScomponent"
+          alt="Results Summary Component"
+          heading="Results Summary Component"
+          router="/results-summary-component"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
           :image="NFTImage"
           alt="NFT image"
           heading="NFT Preview Card Component"
@@ -84,6 +91,7 @@
 <script>
 import IntroText from "@/components/Shared/IntroText.vue";
 import Container from "@/components/Shared/Container.vue";
+import RScomponent from "@/assets/ResultsSummaryComponent/design/desktop-design.jpg";
 import NFTImage from "@/assets/NFTPreviewCard/design/desktop-design.jpg";
 import QRImage from "@/assets/QRCodeComponent/design/desktop-preview.jpg";
 import PingImage from "@/assets/PingCommingSoon/design/desktop-preview.jpg";
@@ -110,6 +118,7 @@ export default {
       OrderImage,
       PriceImage,
       MeetImage,
+      RScomponent,
     };
   },
 };
