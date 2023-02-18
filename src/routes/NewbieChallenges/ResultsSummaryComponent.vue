@@ -1,9 +1,9 @@
 <template>
   <div
-    class="bg-white font-['Hanken_Grotesk'] w-screen h-screen flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
+    class="bg-white font-['Hanken_Grotesk'] w-screen h-full flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
   >
     <div
-      class="w-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-center tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue"
+      class="w-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-center tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue tablet mt-72"
       x-intersect="$el.classList.add('swingIn')"
     >
       <div
