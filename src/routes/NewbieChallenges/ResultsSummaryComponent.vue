@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-white tablet:bg-results-summary-pale-blue font-['Hanken_Grotesk'] w-screen h-screen flex flex-col tablet:items-center tablet:justify-center"
+    class="bg-white font-['Hanken_Grotesk'] w-screen h-screen flex flex-col tablet:items-center tablet:justify-center overflow-hidden"
   >
     <div
       class="w-full mx-auto text-center tablet:w-[736px] tablet:h-[512px] tablet:flex tablet:justify-start tablet:items-center tablet:bg-white tablet:rounded-2xl tablet:shadow-2xl tablet:shadow-results-summary-perian-blue"
       x-intersect="$el.classList.add('swingIn')"
     >
       <div
-        class="w-full text-center flex flex-col justify-center items-center space-y-3 rounded-b-2xl bg-gradient-to-b from-results-summary-slate-blue to-results-summary-royal-blue tablet:w-[600px] tablet:h-[512px] tablet:rounded-2xl tablet:justify-evenly"
+        class="w-full text-center flex flex-col justify-center items-center space-y-3 rounded-b-2xl bg-gradient-to-b from-results-summary-slate-blue to-results-summary-royal-blue tablet:w-[600px] tablet:h-full tablet:rounded-2xl tablet:justify-evenly"
         x-intersect="$el.classList.add('fadeLeftRight')"
       >
         <h2
@@ -137,18 +137,18 @@ export default {
 <style scoped>
 .reaction {
   color: hsl(0, 100%, 67%);
-  background-color: hsla(0, 100%, 67%, 0.2);
+  background-color: hsla(0, 100%, 67%, 0.1);
 }
 .memory {
   color: hsl(39, 100%, 56%);
-  background-color: hsla(39, 100%, 56%, 0.2);
+  background-color: hsla(39, 100%, 56%, 0.1);
 }
 .verbal {
   color: hsl(166, 100%, 37%);
-  background-color: hsla(166, 100%, 37%, 0.2);
+  background-color: hsla(166, 100%, 37%, 0.1);
 }
 .visual {
   color: hsl(234, 85%, 45%);
-  background-color: hsla(234, 85%, 45%, 0.2);
+  background-color: hsla(234, 85%, 45%, 0.1);
 }
 </style>
