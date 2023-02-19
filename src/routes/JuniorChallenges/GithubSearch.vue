@@ -1,7 +1,7 @@
 <template>
   <div class="main" :class="{ light: lightMode }">
     <div
-      class="mx-auto flex flex-col justify-center items-center w-[327px] tablet:w-[573px] laptop:w-[730px] space-y-5"
+      class="mx-auto flex flex-col justify-center items-center w-[327px] tablet:w-[573px] laptop:w-[730px] space-y-5 laptop:space-y-9"
     >
       <div class="w-full flex justify-between items-center">
         <h1 class="main-heading" :class="{ light: lightMode }">devfinder</h1>
@@ -93,7 +93,7 @@
         </div>
 
         <div
-          class="mx-auto w-11/12 max-w-[480px] laptop:mx-0 flex flex-col justify-center items-center"
+          class="mx-auto w-11/12 max-w-[480px] laptop:mx-0 flex flex-col justify-center items-center laptop:py-4"
         >
           <div
             :class="{ light: lightMode }"
@@ -207,26 +207,26 @@ export default {
 
 <style scoped>
 .main {
-  @apply font-['Space_Mono'] w-screen h-screen flex flex-col justify-start pt-10 tablet:pt-0 tablet:justify-center items-center bg-github-dark-black;
+  @apply font-['Space_Mono'] w-screen h-screen flex flex-col justify-start pt-10 tablet:pt-0 tablet:justify-center items-center  bg-github-dark-black;
 }
 .main.light {
   @apply bg-github-light-shell;
 }
 .main-heading {
-  @apply text-2xl font-semibold text-github-dark-white;
+  @apply text-2xl font-semibold text-github-dark-white laptop:text-3xl;
 }
 .light.main-heading,
 .light.theme-text {
   @apply text-github-light-black;
 }
 .input-container {
-  @apply rounded-lg w-full flex justify-between p-2 items-center bg-github-dark-blue;
+  @apply rounded-lg w-full flex justify-between p-2 items-center bg-github-dark-blue laptop:py-3;
 }
 .light.input-container {
   @apply bg-github-light-white shadow-md shadow-github-light-gray;
 }
 .main-component {
-  @apply rounded-xl w-full p-4 flex flex-col justify-end items-end space-y-8 bg-github-dark-blue laptop:py-8;
+  @apply rounded-xl w-full p-4 flex flex-col justify-end items-end space-y-8 bg-github-dark-blue laptop:py-6;
 }
 .light.main-component {
   @apply bg-github-light-white shadow-md shadow-github-light-gray;
@@ -243,7 +243,7 @@ export default {
   color: #697c9a;
 }
 .user-name {
-  @apply text-lg font-bold;
+  @apply text-lg font-bold laptop:text-2xl;
 }
 .light.user-name {
   @apply text-github-light-black;
@@ -263,10 +263,10 @@ export default {
   @apply bg-github-light-shell;
 }
 .repo-text {
-  @apply text-xs laptop:text-base;
+  @apply text-xs laptop:text-lg;
 }
 .repo-num {
-  @apply font-extrabold text-base laptop:text-lg;
+  @apply font-extrabold text-base laptop:text-xl;
 }
 .light.repo-num {
   @apply text-github-light-black;
