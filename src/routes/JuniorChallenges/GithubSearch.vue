@@ -199,7 +199,7 @@ export default {
     },
   },
   mounted() {
-    this.githubUser = "zuzexx";
+    this.githubUser = "octocat";
     this.searchUser();
   },
 };
