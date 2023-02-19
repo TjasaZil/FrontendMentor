@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/coding-bootcamp-testimonial-7mRKyPZkkd)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/github-user-search-RGDAPZ5wcK)
 - Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/github-user-search)
 
 ## My process
