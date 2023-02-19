@@ -80,6 +80,11 @@ const router = createRouter({
       path: "/Intermediate-challenges",
       component: () => import("@/routes/IntermediatePage.vue"),
     },
+    {
+      path: "/dictionary-web-app",
+      component: () =>
+        import("@/routes/IntermediateChallenges/DictionaryWebApp.vue"),
+    },
   ],
 });
 
