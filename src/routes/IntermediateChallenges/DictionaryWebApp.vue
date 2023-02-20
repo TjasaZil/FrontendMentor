@@ -8,7 +8,7 @@
     <!-- HEADER -->
     <header
       :class="chooseFont(fontStyle)"
-      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px] py-4 laptop:pt-10"
+      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px] py-4 laptop:pt-16"
     >
       <img src="@/assets/DictionaryWebApp/images/logo.svg" alt="book icon" />
       <div class="flex flex-row justify-center items-center space-x-2">
@@ -20,7 +20,7 @@
             dark: darkMode,
             chooseFont,
           }"
-          class="text-black w-24 input"
+          class="text-black w-24 input laptop:text-lg"
           v-model="fontStyle"
         />
         <datalist id="fonts">
@@ -183,7 +183,7 @@
                 </p>
                 <p
                   v-if="definition.synonyms && definition.synonyms.length > 0"
-                  class="text-dictionary-violet font-semibold py-3 pl-6"
+                  class="text-dictionary-violet font-semibold py-10 pl-6"
                 >
                   <span class="text-dictionary-dark-gray">Synonyms:</span>
                   {{ definition.synonyms.join(", ") }}
@@ -191,7 +191,7 @@
 
                 <p
                   v-if="definition.antonyms && definition.antonyms.length > 0"
-                  class="text-dictionary-violet font-semibold pt-2 pl-6"
+                  class="text-dictionary-violet font-semibold py-10 pl-6"
                 >
                   <span class="text-dictionary-dark-gray">Antonyms:</span>
                   {{ definition.antonyms.join(", ") }}
