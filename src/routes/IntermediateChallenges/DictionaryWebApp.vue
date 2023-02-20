@@ -8,7 +8,7 @@
     <!-- HEADER -->
     <header
       :class="chooseFont(fontStyle)"
-      class="border-2 border-green-600 w-full flex flex-row justify-between items-center p-2"
+      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px]"
     >
       <img src="@/assets/DictionaryWebApp/images/logo.svg" alt="book icon" />
       <div class="flex flex-row justify-center items-center space-x-2">
@@ -28,9 +28,17 @@
         <div class="h-full border-l-2 p-2">
           <!-- TOGGLE -->
           <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer" />
+            <input
+              type="checkbox"
+              value=""
+              class="sr-only peer"
+              @click="changeTheme"
+            />
             <div
-              class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"
+              :class="{
+                dark: darkMode,
+              }"
+              class="w-11 h-6 bg-dictionary-dark-gray peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all toggle"
             ></div>
             <span class="ml-3 text-sm font-medium text-gray-900"
               ><img
@@ -48,12 +56,12 @@
     >
       <!-- SEARCH -->
       <div
-        class="border-2 border-amber-500 w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-5"
+        class="w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-5 max-w-[736px] bg-dictionary-middle-gray"
       >
         <input
           type="text"
-          placeholder="text"
-          class="w-full text-black border-2 border-blue-600 py-1 px-2"
+          placeholder="Search the word"
+          class="w-full text-dictionary-darkest py-1 px-2 bg-dictionary-middle-gray"
           v-model="searchedWord"
         /><button @click="searchWord">
           <img
@@ -64,7 +72,7 @@
       </div>
       <!-- TEXT -->
       <section
-        class="border-2 border-pink-500 w-11/12 mx-auto flex flex-col justify-center items-center text-left"
+        class="border-2 border-pink-500 w-11/12 mx-auto flex flex-col justify-center items-center text-left max-w-[736px]"
       >
         <!-- HEADING -->
 
@@ -73,13 +81,17 @@
           class="w-full flex flex-row justify-between items-center text-black pt-5"
         >
           <div>
-            <h1>{{ word[0].word }}</h1>
-            <p>{{ word[0].phonetics[0].text }}</p>
+            <h1 class="text-dictionary-darkest text-3xl font-semibold">
+              {{ word[0].word }}
+            </h1>
+            <p class="text-dictionary-violet text-lg tracking-[-0.175rem]">
+              {{ word[0].phonetics[0].text }}
+            </p>
           </div>
           <button>
             <img
               alt="play icon"
-              class="w-10 h-10"
+              class="w-12 h-12"
               src="@/assets/DictionaryWebApp/images/icon-play.svg"
               @click="playAudio"
             />
@@ -89,20 +101,41 @@
         <!-- MEANINGS -->
         <div
           v-if="word.length"
-          class="w-full flex flex-col justify-center items-start text-left text-black border-2 border-amber-500 pt-10"
+          class="w-full flex flex-col justify-center items-start text-left text-black pt-10"
         >
           <div
             v-for="(meaning, index) in word[0].meanings"
             :key="index"
             class="space-y-3"
           >
-            <h2 class="pt-5">{{ meaning.partOfSpeech }}</h2>
-            <ul class="border-2 border-green-400 text-black w-full">
+            <div
+              class="w-full flex flex-row justify-center items-start space-x-3 border border-red-500 pt-5"
+            >
+              <h2 class="text-dictionary-darkest font-semibold text-base">
+                {{ meaning.partOfSpeech }}
+              </h2>
+              <hr
+                class="border-b border-t-0 py-[0.3rem] border-dictionary-dark-gray w-full"
+              />
+            </div>
+            <ul class="border-2 border-green-400 text-black w-full space-y-3">
+              <span class="text-dictionary-dark-gray">Meaning</span>
               <li
                 v-for="(definition, index) in meaning.definitions"
                 :key="index"
+                class="w-full flex flex-col justify-center items-center"
               >
-                <p>{{ definition.definition }}</p>
+                <div
+                  class="w-full flex flex-row justify-evenly items-start space-x-5"
+                >
+                  <div
+                    class="bg-dictionary-violet w-1 h-2 px-1 rounded-full mt-1"
+                  ></div>
+                  <p class="font-normal text-dictionary-middle-dark">
+                    {{ definition.definition }}
+                  </p>
+                </div>
+
                 <p
                   v-if="
                     definition.example !== undefined &&
@@ -135,7 +168,7 @@
     </div>
     <!-- FOOTER -->
     <footer
-      class="w-11/12 mx-auto pt-4 flex flex-col text-left justify-start items-center"
+      class="w-11/12 mx-auto pt-4 flex flex-col text-left justify-start items-center max-w-[736px]"
     >
       <div
         v-if="word.length"
@@ -201,6 +234,10 @@ export default {
       const audio = new Audio(this.word[0].phonetics[0].audio);
       audio.play();
     },
+    changeTheme() {
+      this.darkMode = !this.darkMode;
+      console.log(this.darkMode);
+    },
   },
   mounted() {
     this.fontStyle = "Mono";
@@ -220,5 +257,8 @@ export default {
 }
 .mono {
   @apply font-mono;
+}
+.dark.toggle {
+  @apply bg-dictionary-violet;
 }
 </style>
