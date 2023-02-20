@@ -8,7 +8,7 @@
     <!-- HEADER -->
     <header
       :class="chooseFont(fontStyle)"
-      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px]"
+      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px] py-4 laptop:py-6"
     >
       <img src="@/assets/DictionaryWebApp/images/logo.svg" alt="book icon" />
       <div class="flex flex-row justify-center items-center space-x-2">
@@ -20,7 +20,7 @@
             dark: darkMode,
             chooseFont,
           }"
-          class="text-black border-2 border-red-500 w-24 input"
+          class="text-black w-24 input"
           v-model="fontStyle"
         />
         <datalist id="fonts">
@@ -70,42 +70,45 @@
           }"
           type="text"
           placeholder="Search the word"
-          class="w-full text-dictionary-darkest py-1 px-2 bg-dictionary-middle-gray div-search dark:text-dictionary-white"
+          class="w-full text-dictionary-darkest py-1 px-2 bg-dictionary-middle-gray div-search dark:text-dictionary-white laptop:py-3"
           v-model="searchedWord"
         /><button @click="searchWord">
           <img
             src="@/assets/DictionaryWebApp/images/icon-search.svg"
             alt="search-icon"
+            class="laptop:w-5 laptop:ml-2"
           />
         </button>
       </div>
       <!-- TEXT -->
       <section
-        class="border-2 border-pink-500 w-11/12 mx-auto flex flex-col justify-center items-center text-left max-w-[736px]"
+        class="w-11/12 mx-auto flex flex-col justify-center items-center text-left max-w-[736px]"
       >
         <!-- HEADING -->
 
         <div
           v-if="word.length > 0"
-          class="w-full flex flex-row justify-between items-center text-black pt-5"
+          class="w-full flex flex-row justify-between items-center text-black pt-5 laptop:mt-8"
         >
-          <div>
+          <div class="space-y-3">
             <h1
               :class="{
                 dark: darkMode,
               }"
-              class="text-dictionary-darkest text-3xl font-semibold main-text"
+              class="text-dictionary-darkest text-3xl font-semibold main-text laptop:text-5xl"
             >
               {{ word[0].word }}
             </h1>
-            <p class="text-dictionary-violet text-lg tracking-[-0.175rem]">
+            <p
+              class="text-dictionary-violet text-lg tracking-[-0.175rem] laptop:text-xl"
+            >
               {{ word[0].phonetics[0].text }}
             </p>
           </div>
           <button>
             <img
               alt="play icon"
-              class="w-12 h-12"
+              class="w-12 h-12 laptop:w-20 laptop:h-20"
               src="@/assets/DictionaryWebApp/images/icon-play.svg"
               @click="playAudio"
             />
@@ -120,16 +123,16 @@
           <div
             v-for="(meaning, index) in word[0].meanings"
             :key="index"
-            class="space-y-3"
+            class="space-y-3 w-full"
           >
             <div
-              class="w-full flex flex-row justify-center items-start space-x-3 border border-red-500 pt-5"
+              class="w-full flex flex-row justify-center items-start space-x-3 pt-5"
             >
               <h2
                 :class="{
                   dark: darkMode,
                 }"
-                class="text-dictionary-darkest font-semibold text-base part-o-speech"
+                class="text-dictionary-darkest font-semibold text-base part-o-speech laptop:text-lg"
               >
                 {{ meaning.partOfSpeech }}
               </h2>
@@ -137,10 +140,10 @@
                 :class="{
                   dark: darkMode,
                 }"
-                class="border-b border-t-0 py-[0.3rem] border-dictionary-middle-gray w-full line"
+                class="border-b border-t-0 py-[0.3rem] border-dictionary-middle-gray w-full line laptop:text-lg"
               />
             </div>
-            <ul class="border-2 border-green-400 text-black w-full space-y-3">
+            <ul class="text-black w-full space-y-3">
               <span
                 :class="{
                   dark: darkMode,
@@ -151,7 +154,7 @@
               <li
                 v-for="(definition, index) in meaning.definitions"
                 :key="index"
-                class="w-full flex flex-col justify-start items-start text-left border border-amber-600"
+                class="w-full flex flex-col justify-start items-start text-left"
               >
                 <div
                   class="w-full flex flex-row justify-start items-start space-x-5"
@@ -179,21 +182,19 @@
                   "{{ definition.example }}"
                 </p>
                 <p
-                  v-if="
-                    definition.synonyms !== undefined &&
-                    definition.synonyms.length > 0
-                  "
+                  v-if="definition.synonyms && definition.synonyms.length > 0"
+                  class="text-dictionary-violet font-semibold pt-2 pl-6"
                 >
-                  <em class="text-dictionary-dark-gray">Synonyms:</em>
+                  <span class="text-dictionary-dark-gray">Synonyms:</span>
                   {{ definition.synonyms.join(", ") }}
                 </p>
+
                 <p
-                  v-if="
-                    definition.antonyms !== undefined &&
-                    definition.antonyms.length > 0
-                  "
+                  v-if="definition.antonyms && definition.antonyms.length > 0"
+                  class="text-dictionary-violet font-semibold pt-2 pl-6"
                 >
-                  <em>Antonyms:</em> {{ definition.antonyms.join(", ") }}
+                  <span class="text-dictionary-dark-gray">Antonyms:</span>
+                  {{ definition.antonyms.join(", ") }}
                 </p>
               </li>
             </ul>
@@ -208,9 +209,9 @@
     >
       <div
         v-if="word.length"
-        class="w-full flex flex-col text-left justify-start items-start border-t-2 border-t-dictionary-middle-gray pt-5"
+        class="w-full flex flex-col text-left justify-start items-start border-t-2 border-t-dictionary-middle-gray pt-5 laptop:flex-row laptop:items-start laptop:space-x-3"
       >
-        <p class="text-dictionary-dark-gray underline">Source</p>
+        <p class="text-dictionary-dark-gray text-sm">Source</p>
         <a
           :href="word[0].sourceUrls[0]"
           target="_blank"
@@ -277,7 +278,7 @@ export default {
   },
   mounted() {
     this.fontStyle = "Mono";
-    this.searchedWord = "hello";
+    this.searchedWord = "keyboard";
     this.searchWord();
     console.log(this.fontStyle);
   },
