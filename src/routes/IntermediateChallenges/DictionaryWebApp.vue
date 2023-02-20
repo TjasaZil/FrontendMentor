@@ -8,7 +8,7 @@
     <!-- HEADER -->
     <header
       :class="chooseFont(fontStyle)"
-      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px] py-4 laptop:pt-16"
+      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px] py-4 laptop:pt-12"
     >
       <img src="@/assets/DictionaryWebApp/images/logo.svg" alt="book icon" />
       <div class="flex flex-row justify-center items-center space-x-2">
@@ -16,11 +16,8 @@
         <input
           list="fonts"
           placeholder="Choose font"
-          :class="{
-            dark: darkMode,
-            chooseFont,
-          }"
-          class="text-black w-24 input laptop:text-lg"
+          :class="{ dark: darkMode, chooseFont }"
+          class="text-black w-20 input laptop:text-xl font-semibold"
           v-model="fontStyle"
         />
         <datalist id="fonts">
@@ -62,7 +59,7 @@
         :class="{
           dark: darkMode,
         }"
-        class="w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-5 max-w-[736px] bg-dictionary-light-gray div-outer-search"
+        class="w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-8 max-w-[736px] bg-dictionary-light-gray div-outer-search"
       >
         <input
           :class="{
@@ -166,7 +163,7 @@
                     :class="{
                       dark: darkMode,
                     }"
-                    class="font-light text-dictionary-middle-dark definition"
+                    class="font-light text-dictionary-middle-dark definition laptop:text-xl"
                   >
                     {{ definition.definition }}
                   </p>
@@ -177,7 +174,7 @@
                     definition.example !== undefined &&
                     definition.example !== ''
                   "
-                  class="py-3 text-dictionary-dark-gray pl-6"
+                  class="py-3 text-dictionary-dark-gray laptop:text-lg pl-6"
                 >
                   "{{ definition.example }}"
                 </p>
