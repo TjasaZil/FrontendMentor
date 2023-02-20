@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-screen h-screen main bg-white text-black overflow-x-hidden"
+    class="w-screen h-screen main bg-white text-black overflow-x-hidden main"
     :class="{
       dark: darkMode,
     }"
@@ -16,9 +16,12 @@
         <input
           list="fonts"
           placeholder="Choose font"
-          class="text-black border-2 border-red-500 w-24"
+          :class="{
+            dark: darkMode,
+            chooseFont,
+          }"
+          class="text-black border-2 border-red-500 w-24 input"
           v-model="fontStyle"
-          :class="chooseFont"
         />
         <datalist id="fonts">
           <option value="Sans Serif" />
@@ -56,12 +59,18 @@
     >
       <!-- SEARCH -->
       <div
-        class="w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-5 max-w-[736px] bg-dictionary-middle-gray"
+        :class="{
+          dark: darkMode,
+        }"
+        class="w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-5 max-w-[736px] bg-dictionary-middle-gray div-outer-search"
       >
         <input
+          :class="{
+            dark: darkMode,
+          }"
           type="text"
           placeholder="Search the word"
-          class="w-full text-dictionary-darkest py-1 px-2 bg-dictionary-middle-gray"
+          class="w-full text-dictionary-darkest py-1 px-2 bg-dictionary-middle-gray div-search dark:text-dictionary-white"
           v-model="searchedWord"
         /><button @click="searchWord">
           <img
@@ -81,7 +90,12 @@
           class="w-full flex flex-row justify-between items-center text-black pt-5"
         >
           <div>
-            <h1 class="text-dictionary-darkest text-3xl font-semibold">
+            <h1
+              :class="{
+                dark: darkMode,
+              }"
+              class="text-dictionary-darkest text-3xl font-semibold main-text"
+            >
               {{ word[0].word }}
             </h1>
             <p class="text-dictionary-violet text-lg tracking-[-0.175rem]">
@@ -111,27 +125,46 @@
             <div
               class="w-full flex flex-row justify-center items-start space-x-3 border border-red-500 pt-5"
             >
-              <h2 class="text-dictionary-darkest font-semibold text-base">
+              <h2
+                :class="{
+                  dark: darkMode,
+                }"
+                class="text-dictionary-darkest font-semibold text-base part-o-speech"
+              >
                 {{ meaning.partOfSpeech }}
               </h2>
               <hr
-                class="border-b border-t-0 py-[0.3rem] border-dictionary-dark-gray w-full"
+                :class="{
+                  dark: darkMode,
+                }"
+                class="border-b border-t-0 py-[0.3rem] border-dictionary-middle-gray w-full line"
               />
             </div>
             <ul class="border-2 border-green-400 text-black w-full space-y-3">
-              <span class="text-dictionary-dark-gray">Meaning</span>
+              <span
+                :class="{
+                  dark: darkMode,
+                }"
+                class="text-dictionary-dark-gray"
+                >Meaning</span
+              >
               <li
                 v-for="(definition, index) in meaning.definitions"
                 :key="index"
-                class="w-full flex flex-col justify-center items-center"
+                class="w-full flex flex-col justify-start items-start text-left border border-amber-600"
               >
                 <div
-                  class="w-full flex flex-row justify-evenly items-start space-x-5"
+                  class="w-full flex flex-row justify-start items-start space-x-5"
                 >
                   <div
                     class="bg-dictionary-violet w-1 h-2 px-1 rounded-full mt-1"
                   ></div>
-                  <p class="font-normal text-dictionary-middle-dark">
+                  <p
+                    :class="{
+                      dark: darkMode,
+                    }"
+                    class="font-light text-dictionary-middle-dark definition"
+                  >
                     {{ definition.definition }}
                   </p>
                 </div>
@@ -141,8 +174,9 @@
                     definition.example !== undefined &&
                     definition.example !== ''
                   "
+                  class="pt-2 text-dictionary-dark-gray pl-6"
                 >
-                  {{ definition.example }}
+                  "{{ definition.example }}"
                 </p>
                 <p
                   v-if="
@@ -150,7 +184,8 @@
                     definition.synonyms.length > 0
                   "
                 >
-                  <em>Synonyms:</em> {{ definition.synonyms.join(", ") }}
+                  <em class="text-dictionary-dark-gray">Synonyms:</em>
+                  {{ definition.synonyms.join(", ") }}
                 </p>
                 <p
                   v-if="
@@ -168,18 +203,19 @@
     </div>
     <!-- FOOTER -->
     <footer
+      :class="chooseFont(fontStyle)"
       class="w-11/12 mx-auto pt-4 flex flex-col text-left justify-start items-center max-w-[736px]"
     >
       <div
         v-if="word.length"
-        class="w-full flex flex-col text-left justify-start items-start border-t-2 border-t-green-600 pt-5"
+        class="w-full flex flex-col text-left justify-start items-start border-t-2 border-t-dictionary-middle-gray pt-5"
       >
-        <p class="">Source</p>
+        <p class="text-dictionary-dark-gray underline">Source</p>
         <a
           :href="word[0].sourceUrls[0]"
           target="_blank"
-          class="border-2 border-yellow-400 w-full flex flex-row justify-start items-center space-x-2"
-          ><p class="text-sm underline">{{ word[0].sourceUrls[0] }}</p>
+          class="w-full flex flex-row justify-start items-center space-x-2"
+          ><p class="text-sm hover:underline">{{ word[0].sourceUrls[0] }}</p>
           <img
             alt="link"
             src="@/assets/DictionaryWebApp/images/icon-new-window.svg"
@@ -241,7 +277,7 @@ export default {
   },
   mounted() {
     this.fontStyle = "Mono";
-    this.searchedWord = "keyboard";
+    this.searchedWord = "hello";
     this.searchWord();
     console.log(this.fontStyle);
   },
@@ -258,7 +294,30 @@ export default {
 .mono {
   @apply font-mono;
 }
+.dark.input {
+  @apply bg-dictionary-darkest text-dictionary-white;
+}
 .dark.toggle {
   @apply bg-dictionary-violet;
+}
+.dark.main {
+  @apply bg-dictionary-darkest;
+}
+.dark.div-outer-search,
+.dark.div-search {
+  @apply bg-dictionary-middle-dark;
+}
+.dark.div-search {
+  @apply text-dictionary-white placeholder:text-dictionary-dark-gray;
+}
+.dark.main-text,
+.dark.part-o-speech {
+  @apply text-dictionary-white;
+}
+.dark.line {
+  @apply border-dictionary-light-dark;
+}
+.dark.definition {
+  @apply text-dictionary-middle-gray;
 }
 </style>
