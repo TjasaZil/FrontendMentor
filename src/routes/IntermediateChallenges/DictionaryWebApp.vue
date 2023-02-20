@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-screen h-screen main bg-white text-black overflow-x-hidden main"
+    class="w-screen h-full main bg-white text-black overflow-x-hidden main"
     :class="{
       dark: darkMode,
     }"
