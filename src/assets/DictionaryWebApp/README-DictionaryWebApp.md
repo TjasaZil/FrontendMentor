@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/single-price-grid-X5tXTbwuK)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/dictionary-web-app-JVxqcsDTuc)
 - Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/dictionary-web-app)
 
 ## My process
