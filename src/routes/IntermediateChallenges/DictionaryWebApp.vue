@@ -134,8 +134,24 @@
       </section>
     </div>
     <!-- FOOTER -->
-    <footer>
-      <p v-if="word.length">{{ word[0].sourceUrls[0] }}</p>
+    <footer
+      class="w-11/12 mx-auto pt-4 flex flex-col text-left justify-start items-center"
+    >
+      <div
+        v-if="word.length"
+        class="w-full flex flex-col text-left justify-start items-start border-t-2 border-t-green-600 pt-5"
+      >
+        <p class="">Source</p>
+        <a
+          :href="word[0].sourceUrls[0]"
+          target="_blank"
+          class="border-2 border-yellow-400 w-full flex flex-row justify-start items-center space-x-2"
+          ><p class="text-sm underline">{{ word[0].sourceUrls[0] }}</p>
+          <img
+            alt="link"
+            src="@/assets/DictionaryWebApp/images/icon-new-window.svg"
+        /></a>
+      </div>
     </footer>
   </div>
 </template>
