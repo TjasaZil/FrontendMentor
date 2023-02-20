@@ -133,6 +133,7 @@
               >
                 {{ meaning.partOfSpeech }}
               </h2>
+
               <hr
                 :class="{
                   dark: darkMode,
@@ -194,6 +195,21 @@
                   {{ definition.antonyms.join(", ") }}
                 </p>
               </li>
+              <p
+                v-if="meaning.synonyms && meaning.synonyms.length > 0"
+                class="text-dictionary-violet font-semibold py-10 pl-6"
+              >
+                <span class="text-dictionary-dark-gray">Synonyms:</span>
+                {{ meaning.synonyms.join(", ") }}
+              </p>
+
+              <p
+                v-if="meaning.antonyms && meaning.antonyms.length > 0"
+                class="text-dictionary-violet font-semibold py-10 pl-6"
+              >
+                <span class="text-dictionary-dark-gray">Antonyms:</span>
+                {{ meaning.antonyms.join(", ") }}
+              </p>
             </ul>
           </div>
         </div>
