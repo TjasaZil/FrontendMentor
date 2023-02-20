@@ -8,7 +8,7 @@
     <!-- HEADER -->
     <header
       :class="chooseFont(fontStyle)"
-      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px] py-4 laptop:py-6"
+      class="w-11/12 mx-auto flex flex-row justify-between items-center max-w-[736px] py-4 laptop:pt-10"
     >
       <img src="@/assets/DictionaryWebApp/images/logo.svg" alt="book icon" />
       <div class="flex flex-row justify-center items-center space-x-2">
@@ -62,7 +62,7 @@
         :class="{
           dark: darkMode,
         }"
-        class="w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-5 max-w-[736px] bg-dictionary-middle-gray div-outer-search"
+        class="w-11/12 mx-auto flex flex-row justify-center items-center p-2 rounded-xl mt-5 max-w-[736px] bg-dictionary-light-gray div-outer-search"
       >
         <input
           :class="{
@@ -70,7 +70,7 @@
           }"
           type="text"
           placeholder="Search the word"
-          class="w-full text-dictionary-darkest py-1 px-2 bg-dictionary-middle-gray div-search dark:text-dictionary-white laptop:py-3"
+          class="w-full text-dictionary-darkest py-1 px-2 bg-dictionary-light-gray div-search dark:text-dictionary-white laptop:py-3"
           v-model="searchedWord"
         /><button @click="searchWord">
           <img
@@ -95,12 +95,12 @@
               :class="{
                 dark: darkMode,
               }"
-              class="text-dictionary-darkest text-3xl font-semibold main-text laptop:text-5xl"
+              class="text-dictionary-darkest text-3xl font-semibold main-text laptop:text-7xl"
             >
               {{ word[0].word }}
             </h1>
             <p
-              class="text-dictionary-violet text-lg tracking-[-0.175rem] laptop:text-xl"
+              class="text-dictionary-violet text-lg tracking-[-0.175rem] laptop:text-3xl laptop:tracking-normal"
             >
               {{ word[0].phonetics[0].text }}
             </p>
@@ -132,7 +132,7 @@
                 :class="{
                   dark: darkMode,
                 }"
-                class="text-dictionary-darkest font-semibold text-base part-o-speech laptop:text-lg"
+                class="text-dictionary-darkest font-semibold text-base part-o-speech laptop:text-xl italic"
               >
                 {{ meaning.partOfSpeech }}
               </h2>
@@ -177,13 +177,13 @@
                     definition.example !== undefined &&
                     definition.example !== ''
                   "
-                  class="pt-2 text-dictionary-dark-gray pl-6"
+                  class="py-3 text-dictionary-dark-gray pl-6"
                 >
                   "{{ definition.example }}"
                 </p>
                 <p
                   v-if="definition.synonyms && definition.synonyms.length > 0"
-                  class="text-dictionary-violet font-semibold pt-2 pl-6"
+                  class="text-dictionary-violet font-semibold py-3 pl-6"
                 >
                   <span class="text-dictionary-dark-gray">Synonyms:</span>
                   {{ definition.synonyms.join(", ") }}
@@ -277,7 +277,7 @@ export default {
     },
   },
   mounted() {
-    this.fontStyle = "Mono";
+    this.fontStyle = "Serif";
     this.searchedWord = "keyboard";
     this.searchWord();
     console.log(this.fontStyle);
