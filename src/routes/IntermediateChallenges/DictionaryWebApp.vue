@@ -123,7 +123,7 @@
             class="space-y-3 w-full"
           >
             <div
-              class="w-full flex flex-row justify-center items-start space-x-3 pt-5"
+              class="w-full flex flex-row justify-center items-start space-x-3 py-4"
             >
               <h2
                 :class="{
@@ -138,7 +138,7 @@
                 :class="{
                   dark: darkMode,
                 }"
-                class="border-b border-t-0 py-[0.3rem] border-dictionary-middle-gray w-full line laptop:text-lg"
+                class="border-b border-t-0 py-[0.3rem] border-dictionary-middle-gray w-full line"
               />
             </div>
             <ul class="text-black w-full space-y-3">
@@ -146,7 +146,7 @@
                 :class="{
                   dark: darkMode,
                 }"
-                class="text-dictionary-dark-gray"
+                class="text-dictionary-dark-gray laptop:text-xl"
                 >Meaning</span
               >
               <li
@@ -181,7 +181,7 @@
                 </p>
                 <p
                   v-if="definition.synonyms && definition.synonyms.length > 0"
-                  class="text-dictionary-violet font-semibold py-10 pl-6"
+                  class="text-dictionary-violet font-semibold py-10 pl-6 laptop:text-xl"
                 >
                   <span class="text-dictionary-dark-gray">Synonyms:</span>
                   {{ definition.synonyms.join(", ") }}
@@ -189,7 +189,7 @@
 
                 <p
                   v-if="definition.antonyms && definition.antonyms.length > 0"
-                  class="text-dictionary-violet font-semibold py-10 pl-6"
+                  class="text-dictionary-violet font-semibold py-10 pl-6 laptop:text-xl"
                 >
                   <span class="text-dictionary-dark-gray">Antonyms:</span>
                   {{ definition.antonyms.join(", ") }}
@@ -197,7 +197,7 @@
               </li>
               <p
                 v-if="meaning.synonyms && meaning.synonyms.length > 0"
-                class="text-dictionary-violet font-semibold py-10 pl-6"
+                class="text-dictionary-violet font-semibold py-10 pl-6 laptop:text-xl"
               >
                 <span class="text-dictionary-dark-gray">Synonyms:</span>
                 {{ meaning.synonyms.join(", ") }}
@@ -205,7 +205,7 @@
 
               <p
                 v-if="meaning.antonyms && meaning.antonyms.length > 0"
-                class="text-dictionary-violet font-semibold py-10 pl-6"
+                class="text-dictionary-violet font-semibold py-10 pl-6 laptop:text-xl"
               >
                 <span class="text-dictionary-dark-gray">Antonyms:</span>
                 {{ meaning.antonyms.join(", ") }}
