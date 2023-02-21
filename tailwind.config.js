@@ -103,6 +103,8 @@ module.exports = {
         "dictionary-white": "#ffffff",
         "dictionary-violet": "#a445ed",
         "dictionary-red": "#ff5252",
+        "ip-very-dark-gray": "hsl(0, 0%, 17%)",
+        "ip-dark-gray": "hsl(0, 0%, 59%)",
       },
       width: {
         "profile-mobile-container-width": "326px",

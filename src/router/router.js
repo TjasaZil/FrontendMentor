@@ -85,6 +85,10 @@ const router = createRouter({
       component: () =>
         import("@/routes/IntermediateChallenges/DictionaryWebApp.vue"),
     },
+    {
+      path: "/ip-address-tracker",
+      component: () => import("@/routes/IntermediateChallenges/IPtracker.vue"),
+    },
   ],
 });
 

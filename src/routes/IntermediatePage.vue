@@ -12,6 +12,20 @@
       <section
         class="mt-16 w-5/6 mx-auto flex flex-wrap justify-around items-center"
       >
+        <Container
+          :image="IP"
+          alt="IP address tracker"
+          heading="IP Address Tracker"
+          router="/ip-address-tracker"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
+          :image="DictionaryWebApp"
+          alt="Dictionary Web App"
+          heading="Dictionary Web App"
+          router="/dictionary-web-app"
+          x-intersect="$el.classList.add('swingIn')"
+        />
         <section
           class="border-2 border-solid border-slate-200 w-full tablet:w-1/3 laptopl:w-1/5 4kay:w-1/6 rounded-lg hover:shadow-lg hover:scale-105 hover:opacity-70 flex flex-col justify-between items-center space-y-5 my-2 mx-1 laptop:h-[450px] 4kay:h-[600px]"
           x-intersect="$el.classList.add('swingIn')"
@@ -50,13 +64,6 @@
             /></a>
           </div>
         </section>
-        <Container
-          :image="DictionaryWebApp"
-          alt="Dictionary Web App"
-          heading="Dictionary Web App"
-          router="/dictionary-web-app"
-          x-intersect="$el.classList.add('swingIn')"
-        />
       </section>
     </section>
     <Footer />
@@ -71,6 +78,7 @@ import Navigation from "@/components/Shared/Navigation/Navigation.vue";
 import Footer from "@/components/Shared/Footer.vue";
 import MainButton from "@/components/Shared/MainButton.vue";
 import DictionaryWebApp from "@/assets/DictionaryWebApp/preview.jpg";
+import IP from "@/assets/IPtracker/design/desktop-preview.jpg";
 export default {
   name: "NewbiePage",
   components: { IntroText, Navigation, Footer, MainButton, Container },
@@ -78,6 +86,7 @@ export default {
     return {
       BankImage,
       DictionaryWebApp,
+      IP,
     };
   },
 };
