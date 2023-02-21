@@ -32,7 +32,7 @@
       >
         <h2>location</h2>
         <p>{{ countries.location.country }}</p>
-        <p>{{ countries.location.region }}</p>
+        <p v-if="countries.location.region">{{ countries.location.region }}</p>
       </div>
       <div
         v-if="countries.location"
@@ -48,11 +48,18 @@
         <p>{{ countries.isp }}</p>
       </div>
     </div>
+    <div id="map" class="w-full h-full"></div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import leaflet from "leaflet";
+//let map;
+//let marker = leaflet.marker([51.5, -0.09]).addTo(map);
+const mapboxToken =
+  "pk.eyJ1IjoiZWZuaW5qYSIsImEiOiJja3QzaHdodW0wMGpuMm9wNzFkZmxqMWhxIn0.3VyMKEhaoPeVFYFD7vN1wg";
+const openCageApiKey = "4a06189b544d4ac4b6cf081a10ebba4f";
 export default {
   name: "IPtracker",
   data() {
@@ -71,7 +78,7 @@ export default {
         .then((response) => {
           this.countries = response.data;
           console.log(response.data);
-          console.log(this.countries);
+          this.makeMap();
         })
         .catch((error) => {
           console.log(error.message);
@@ -79,13 +86,66 @@ export default {
             this.errorMessage = "Please enter valid IP";
           }
         });
+
       this.IP = "";
       this.errorMessage = "";
+    },
+    makeMap() {
+      //let map;
+      if (this.countries.location && this.countries.location.region) {
+        axios
+          .get(
+            `https://api.opencagedata.com/geocode/v1/json?q=${this.countries.location.region}&key=${openCageApiKey}`
+          )
+          .then((response) => {
+            console.log(response.data);
+            const { lat, lng } = response.data.results[0].geometry;
+            this.latitude = lat;
+            this.longitude = lng;
+
+            //remove previous map and marker
+            if (this.marker) {
+              this.marker.remove();
+            }
+            if (this.map) {
+              this.map.remove();
+            }
+            // create map
+            this.map = leaflet
+              .map("map")
+              .setView([this.latitude, this.longitude], 13);
+            leaflet.marker([this.latitude, this.longitude]).addTo(this.map);
+            leaflet
+              .tileLayer(
+                `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${mapboxToken}`,
+                {
+                  maxZoom: 18,
+                  attribution:
+                    'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                  id: "mapbox/streets-v11",
+                  tileSize: 512,
+                  zoomOffset: -1,
+                  accessToken: `${mapboxToken}`,
+                }
+              )
+              .addTo(this.map);
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+          .catch((error) => {
+            console.log(error.message);
+            if (error.message == "Request failed with status code 422") {
+              this.errorMessage = "Please enter valid IP";
+            }
+          });
+      }
     },
   },
   mounted() {
     this.IP = "192.212.174.101";
     this.getData();
+    //this.makeMap();
   },
 };
 </script>
