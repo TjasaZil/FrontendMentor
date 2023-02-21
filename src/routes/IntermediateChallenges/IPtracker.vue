@@ -91,7 +91,6 @@ export default {
       this.errorMessage = "";
     },
     makeMap() {
-      //let map;
       if (this.countries.location && this.countries.location.region) {
         axios
           .get(
@@ -110,6 +109,14 @@ export default {
             if (this.map) {
               this.map.remove();
             }
+
+            // check if map container exists before initializing
+            const mapContainer = document.getElementById("map");
+            if (!mapContainer) {
+              console.log("Map container does not exist");
+              return;
+            }
+
             // create map
             this.map = leaflet
               .map("map")
@@ -132,11 +139,14 @@ export default {
           })
           .catch((error) => {
             console.log(error);
-          })
-          .catch((error) => {
-            console.log(error.message);
             if (error.message == "Request failed with status code 422") {
               this.errorMessage = "Please enter valid IP";
+            }
+          })
+          .finally(() => {
+            // check if latitude and longitude values have been set
+            if (!this.latitude || !this.longitude) {
+              this.errorMessage = "Not enough data to get a map";
             }
           });
       }
@@ -145,7 +155,6 @@ export default {
   mounted() {
     this.IP = "192.212.174.101";
     this.getData();
-    //this.makeMap();
   },
 };
 </script>
