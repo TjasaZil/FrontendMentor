@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen h-screen font-['Rubik']">
     <div
-      class="w-5/6 mx-auto flex flex-col justify-center items-center border-2 border-green-600 p-5"
+      class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-10 px-2 background"
     >
       <div
         class="border-2 border-blue-400 w-full flex flex-row justify-center items-center"
@@ -19,7 +19,9 @@
           />
         </button>
       </div>
-      <p class="text-red-500 text-base font-semibold p-4">{{ errorMessage }}</p>
+      <p class="text-red-500 text-base font-semibold p-4">
+        {{ errorMessage }}
+      </p>
       <div
         class="flex flex-col justify-center items-center border-2 border-amber-600"
       >
@@ -32,7 +34,9 @@
       >
         <h2>location</h2>
         <p>{{ countries.location.country }}</p>
-        <p v-if="countries.location.region">{{ countries.location.region }}</p>
+        <p v-if="countries.location.region">
+          {{ countries.location.region }}
+        </p>
       </div>
       <div
         v-if="countries.location"
@@ -48,7 +52,7 @@
         <p>{{ countries.isp }}</p>
       </div>
     </div>
-    <div id="map" class="w-full h-full"></div>
+    <div id="map" class="w-full h-full -mt-4 border-2 border-pink-400"></div>
   </div>
 </template>
 
@@ -153,10 +157,22 @@ export default {
     },
   },
   mounted() {
-    this.IP = "192.212.174.101";
+    this.IP = "223.57.154.168";
     this.getData();
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.background {
+  background-image: url("@/assets/IPtracker/images/pattern-bg-mobile.png");
+  background-position: top, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width: 1000px) {
+  .background {
+    background-image: url("@/assets/IPtracker/images/pattern-bg-desktop.png");
+  }
+}
+</style>
