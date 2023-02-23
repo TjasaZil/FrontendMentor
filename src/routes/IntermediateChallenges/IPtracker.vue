@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen h-screen font-['Rubik']">
     <div
-      class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-5 px-2 background absolute top-0 z-10 h-80"
+      class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-5 px-2 background absolute top-0 z-10 h-80 laptop:h-72"
     >
       <h1 class="text-white font-semibold text-2xl laptop:text-4xl">
         IP Address Tracker
