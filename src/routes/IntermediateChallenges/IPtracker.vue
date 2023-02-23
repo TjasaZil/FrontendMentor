@@ -1,18 +1,19 @@
 <template>
   <div class="w-screen h-screen font-['Rubik']">
     <div
-      class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-10 px-2 background"
+      class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-5 px-2 background absolute top-0 z-10"
     >
+      <h1 class="text-white font-semibold text-xl my-5">IP Address Tracker</h1>
       <div
-        class="border-2 border-blue-400 w-full flex flex-row justify-center items-center"
+        class="w-full flex flex-row justify-center items-center max-w-[555px]"
       >
         <input
           type="text"
           v-model="IP"
           aria-label="input"
-          class="w-1/3 p-2 text-black"
+          class="w-full h-full p-3 text-black rounded-l-lg"
           placeholder="Search for any IP adress or domain"
-        /><button class="bg-black p-4" @click="getData">
+        /><button class="bg-black p-4 rounded-r-lg h-full" @click="getData">
           <img
             alt="search arrow"
             src="@/assets/IPtracker/images/icon-arrow.svg"
@@ -52,18 +53,21 @@
         <p>{{ countries.isp }}</p>
       </div>
     </div>
-    <div id="map" class="w-full h-full -mt-4 border-2 border-pink-400"></div>
+    <div
+      id="map"
+      class="w-full h-full mt-52 border-2 border-pink-400 relative z-0"
+    ></div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import leaflet from "leaflet";
-//let map;
-//let marker = leaflet.marker([51.5, -0.09]).addTo(map);
+import mark from "@/assets/IPtracker/images/icon-location.svg";
 const mapboxToken =
   "pk.eyJ1IjoiZWZuaW5qYSIsImEiOiJja3QzaHdodW0wMGpuMm9wNzFkZmxqMWhxIn0.3VyMKEhaoPeVFYFD7vN1wg";
 const openCageApiKey = "4a06189b544d4ac4b6cf081a10ebba4f";
+let iconBlack = leaflet.icon({ iconUrl: mark, iconSize: [21, 28] });
 export default {
   name: "IPtracker",
   data() {
@@ -71,6 +75,7 @@ export default {
       countries: [],
       IP: "",
       errorMessage: "",
+      mark,
     };
   },
   methods: {
@@ -125,12 +130,14 @@ export default {
             this.map = leaflet
               .map("map")
               .setView([this.latitude, this.longitude], 13);
-            leaflet.marker([this.latitude, this.longitude]).addTo(this.map);
+            leaflet
+              .marker([this.latitude, this.longitude], { icon: iconBlack })
+              .addTo(this.map);
             leaflet
               .tileLayer(
                 `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${mapboxToken}`,
                 {
-                  maxZoom: 18,
+                  maxZoom: 15,
                   attribution:
                     'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                   id: "mapbox/streets-v11",
