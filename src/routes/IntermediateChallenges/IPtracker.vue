@@ -1,19 +1,24 @@
 <template>
   <div class="w-screen h-screen font-['Rubik']">
     <div
-      class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-5 px-2 background absolute top-0 z-10"
+      class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-5 px-2 background absolute top-0 z-10 h-80"
     >
-      <h1 class="text-white font-semibold text-xl my-5">IP Address Tracker</h1>
+      <h1 class="text-white font-semibold text-2xl laptop:text-4xl">
+        IP Address Tracker
+      </h1>
       <div
-        class="w-full flex flex-row justify-center items-center max-w-[555px]"
+        class="w-5/6 flex flex-row justify-center items-center max-w-[555px] my-5"
       >
         <input
           type="text"
           v-model="IP"
           aria-label="input"
-          class="w-full h-full p-3 text-black rounded-l-lg"
+          class="w-full h-full p-3 text-black rounded-l-lg py-3"
           placeholder="Search for any IP adress or domain"
-        /><button class="bg-black p-4 rounded-r-lg h-full" @click="getData">
+        /><button
+          class="bg-black p-4 rounded-r-lg h-full hover:bg-ip-dark-gray"
+          @click="getData"
+        >
           <img
             alt="search arrow"
             src="@/assets/IPtracker/images/icon-arrow.svg"
@@ -23,36 +28,39 @@
       <p class="text-red-500 text-base font-semibold p-4">
         {{ errorMessage }}
       </p>
+      <!-- DATA -->
+
       <div
-        class="flex flex-col justify-center items-center border-2 border-amber-600"
+        class="w-5/6 flex flex-col justify-center items-center p-3 bg-white rounded-xl space-y-5 absolute z-20 top-2/3 shadow-lg shadow-ip-dark-gray laptop:w-11/12 max-w-[1110px] laptop:flex-row laptop:justify-start text-left laptop:space-y-0 laptop:py-10 laptop:top-3/4"
       >
-        <h2>ip adress</h2>
-        <p>{{ countries.ip }}</p>
-      </div>
-      <div
-        v-if="countries.location"
-        class="flex flex-col justify-center items-center border-2 border-amber-600"
-      >
-        <h2>location</h2>
-        <p>{{ countries.location.country }}</p>
-        <p v-if="countries.location.region">
-          {{ countries.location.region }}
-        </p>
-      </div>
-      <div
-        v-if="countries.location"
-        class="flex flex-col justify-center items-center border-2 border-amber-600"
-      >
-        <h2>timezone</h2>
-        <p>{{ countries.location.timezone }}</p>
-      </div>
-      <div
-        class="flex flex-col justify-center items-center border-2 border-amber-600"
-      >
-        <h2>isp</h2>
-        <p>{{ countries.isp }}</p>
+        <div class="data-container laptop:border-r border-r-ip-dark-gray">
+          <h2 class="data-heading">ip adress</h2>
+          <p class="data-text">{{ countries.ip }}</p>
+        </div>
+        <div
+          v-if="countries.location && countries.location.region"
+          class="data-container laptop:border-r border-r-ip-dark-gray"
+        >
+          <h2 class="data-heading">location</h2>
+          <p class="data-text">
+            {{ countries.location.region }},{{ countries.location.country }}
+          </p>
+        </div>
+        <div
+          v-if="countries.location"
+          class="data-container laptop:border-r border-r-ip-dark-gray"
+        >
+          <h2 class="data-heading">timezone</h2>
+          <p class="data-text">{{ countries.location.timezone }}</p>
+        </div>
+        <div class="data-container">
+          <h2 class="data-heading">isp</h2>
+          <p class="data-text">{{ countries.isp }}</p>
+        </div>
       </div>
     </div>
+
+    <!-- MAP -->
     <div
       id="map"
       class="w-full h-full mt-52 border-2 border-pink-400 relative z-0"
@@ -181,5 +189,14 @@ export default {
   .background {
     background-image: url("@/assets/IPtracker/images/pattern-bg-desktop.png");
   }
+}
+.data-heading {
+  @apply uppercase text-ip-dark-gray font-semibold text-xs laptop:text-sm;
+}
+.data-text {
+  @apply text-ip-very-dark-gray font-semibold text-lg laptop:text-xl;
+}
+.data-container {
+  @apply flex flex-col justify-center items-center  laptop:text-left laptop:justify-start laptop:w-1/4 laptop:px-8 laptop:h-full laptop:items-start laptop:py-3;
 }
 </style>
