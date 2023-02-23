@@ -13,7 +13,7 @@
           type="text"
           v-model="IP"
           aria-label="input"
-          class="w-full h-full p-3 text-black rounded-l-lg py-3"
+          class="w-full h-full p-3 text-black rounded-l-lg py-3 laptop:p-4"
           placeholder="Search for any IP adress or domain"
         /><button
           class="bg-black p-4 rounded-r-lg h-full hover:bg-ip-dark-gray"
@@ -191,10 +191,10 @@ export default {
   }
 }
 .data-heading {
-  @apply uppercase text-ip-dark-gray font-semibold text-xs laptop:text-sm;
+  @apply uppercase text-ip-dark-gray font-semibold text-xs laptop:text-lg;
 }
 .data-text {
-  @apply text-ip-very-dark-gray font-semibold text-lg laptop:text-xl;
+  @apply text-ip-very-dark-gray font-semibold text-lg laptop:text-2xl;
 }
 .data-container {
   @apply flex flex-col justify-center items-center  laptop:text-left laptop:justify-start laptop:w-1/4 laptop:px-8 laptop:h-full laptop:items-start laptop:py-3;
