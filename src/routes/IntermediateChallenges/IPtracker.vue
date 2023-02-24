@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen font-['Rubik']">
+  <div class="w-screen h-screen overflow-x-hidden font-['Rubik']">
     <div
       class="w-full mx-auto flex flex-col justify-center items-center border-2 border-green-600 py-5 px-2 background absolute top-0 z-10 h-80 laptop:h-72"
     >
@@ -40,7 +40,7 @@
           <p class="data-text">{{ countries.ip }}</p>
         </div>
         <div
-          v-if="countries.location && countries.location.region"
+          v-if="countries.location?.region"
           class="data-container laptop:border-r border-r-ip-dark-gray"
         >
           <h2 class="data-heading">location</h2>

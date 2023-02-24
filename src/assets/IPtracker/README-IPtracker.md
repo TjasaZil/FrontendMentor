@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/dictionary-web-app-JVxqcsDTuc)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/ip-adress-tracker-UBGAZL7rOU)
 - Live Site URL: [Vercel live site](https://frontendmentor-steel.vercel.app/ip-address-tracker)
 
 ## My process
