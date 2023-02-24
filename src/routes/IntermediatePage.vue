@@ -13,12 +13,13 @@
         class="mt-16 w-5/6 mx-auto flex flex-wrap justify-around items-center"
       >
         <Container
-          :image="IP"
-          alt="IP address tracker"
-          heading="IP Address Tracker"
-          router="/ip-address-tracker"
+          :image="Markdown"
+          alt="In-browser markdown editor"
+          heading="In-browser markdown editor"
+          router="/markdown-editor"
           x-intersect="$el.classList.add('swingIn')"
         />
+
         <Container
           :image="DictionaryWebApp"
           alt="Dictionary Web App"
@@ -27,10 +28,10 @@
           x-intersect="$el.classList.add('swingIn')"
         />
         <Container
-          :image="Markdown"
-          alt="In-browser markdown editor"
-          heading="In-browser markdown editor"
-          router="/markdown-editor"
+          :image="IP"
+          alt="IP address tracker"
+          heading="IP Address Tracker"
+          router="/ip-address-tracker"
           x-intersect="$el.classList.add('swingIn')"
         />
         <section
