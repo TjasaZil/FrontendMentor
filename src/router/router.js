@@ -89,6 +89,11 @@ const router = createRouter({
       path: "/ip-address-tracker",
       component: () => import("@/routes/IntermediateChallenges/IPtracker.vue"),
     },
+    {
+      path: "/password-generator-app",
+      component: () =>
+        import("@/routes/IntermediateChallenges/PasswordGenerator.vue"),
+    },
   ],
 });
 

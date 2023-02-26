@@ -13,6 +13,13 @@
         class="mt-16 w-5/6 mx-auto flex flex-wrap justify-around items-center"
       >
         <Container
+          :image="Password"
+          alt="Password generator app"
+          heading="Password generator app"
+          router="/password-generator-app"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
           :image="IP"
           alt="IP address tracker"
           heading="IP Address Tracker"
@@ -79,6 +86,7 @@ import Footer from "@/components/Shared/Footer.vue";
 import MainButton from "@/components/Shared/MainButton.vue";
 import DictionaryWebApp from "@/assets/DictionaryWebApp/preview.jpg";
 import IP from "@/assets/IPtracker/design/desktop-preview.jpg";
+import Password from "@/assets/PasswordGenerator/preview.jpg";
 export default {
   name: "NewbiePage",
   components: { IntroText, Navigation, Footer, MainButton, Container },
@@ -87,6 +95,7 @@ export default {
       BankImage,
       DictionaryWebApp,
       IP,
+      Password,
     };
   },
 };
