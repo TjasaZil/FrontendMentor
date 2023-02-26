@@ -1,21 +1,31 @@
 <template>
   <div class="w-screen overflow-x-hidden min-h-screen">
-    {{ this.title }}
+    <div class="w-full p-5 flex flex-row justify-between items-center">
+      <input
+        type="text"
+        v-model="title"
+        class="text-black border-b border-b-black bg-transparent"
+      />
+    </div>
+
     <div class="flex flex-row justify-start items-center w-full h-full">
       <textarea
         class="w-1/2 h-screen bg-white text-black"
         v-model="inputText"
-      /><textarea
-        :value="inputText"
-        class="w-1/2 h-screen bg-black text-white"
-        readonly
       />
+      <div
+        class="w-1/2 h-screen bg-black text-white"
+        v-html="parseMarkdown"
+      ></div>
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import DOMPurify from "dompurify";
+import { marked } from "marked";
+
 export default {
   name: "MarkdownEditor",
   data() {
@@ -23,7 +33,16 @@ export default {
       inputText: "",
       title: "",
       text: [],
+      parsed: "",
     };
+  },
+  computed: {
+    parseMarkdown() {
+      if (!this.inputText) {
+        return "";
+      }
+      return DOMPurify.sanitize(marked.parse(this.inputText));
+    },
   },
   methods: {
     textFunction() {
@@ -38,13 +57,13 @@ export default {
           this.inputText = this.text[1].content;
           this.title = this.text[1].name;
           console.log(this.inputText);
+          console.log(typeof DOMPurify.sanitize(marked.parse(this.inputText)));
         })
         .catch((error) => {
           console.log(error.message);
         });
     },
   },
-
   mounted() {
     this.textFunction();
   },
