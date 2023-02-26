@@ -12,16 +12,25 @@
       >
         <input
           type="text"
-          class="p-2 bg-transparent placeholder:text-password-grayish text-xl placeholder:text-xl text-password-grayish font-medium"
-          placeholder="password"
+          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium"
+          placeholder="P4$5W0rD!"
           v-model="generatedPassword"
           readonly
-        /><button>
-          <img
-            src="@/assets/PasswordGenerator/images/icon-copy.svg"
-            alt="copy the password"
-          />
-        </button>
+        />
+        <div class="flex flex-row justify-center items-center space-x-5">
+          <p
+            v-if="this.copied"
+            class="uppercase text-lg font-semibold text-password-green"
+          >
+            Copied
+          </p>
+          <button @click="clipPassword()">
+            <img
+              src="@/assets/PasswordGenerator/images/icon-copy.svg"
+              alt="copy the password"
+            />
+          </button>
+        </div>
       </div>
       <!-- MAIN CONTAINER-->
       <div
@@ -96,10 +105,36 @@
               {{ this.strengthValue }}
             </h2>
             <div class="flex flex-row justify-center items-center space-x-2">
-              <div class="border-2 border-password-grayish h-7 w-3"></div>
-              <div class="border-2 border-password-grayish h-7 w-3"></div>
-              <div class="border-2 border-password-grayish h-7 w-3"></div>
-              <div class="border-2 border-password-grayish h-7 w-3"></div>
+              <div
+                class="border-2 border-password-grayish h-7 w-3"
+                :class="{
+                  'too-weak': isTooWeak,
+                  weak: isWeak,
+                  medium: isMedium,
+                  strong: isStrong,
+                }"
+              ></div>
+              <div
+                class="border-2 border-password-grayish h-7 w-3"
+                :class="{
+                  weak: isWeak,
+                  medium: isMedium,
+                  strong: isStrong,
+                }"
+              ></div>
+              <div
+                class="border-2 border-password-grayish h-7 w-3"
+                :class="{
+                  medium: isMedium,
+                  strong: isStrong,
+                }"
+              ></div>
+              <div
+                class="border-2 border-password-grayish h-7 w-3"
+                :class="{
+                  strong: isStrong,
+                }"
+              ></div>
             </div>
           </div>
         </div>
@@ -141,10 +176,26 @@ export default {
       isSymbol: false,
       errorMessage: "",
       strengthValue: "Medium",
+      copied: false,
     };
+  },
+  computed: {
+    isTooWeak() {
+      return this.strengthValue === "Too weak";
+    },
+    isWeak() {
+      return this.strengthValue === "Weak";
+    },
+    isMedium() {
+      return this.strengthValue === "Medium";
+    },
+    isStrong() {
+      return this.strengthValue === "Strong";
+    },
   },
   methods: {
     generatePassword() {
+      this.copied = false;
       this.getPassword();
       this.checked();
       this.checkPasswordStrength();
@@ -194,8 +245,30 @@ export default {
         }
       }
     },
+    clipPassword() {
+      const textarea = document.createElement("textarea");
+      textarea.value = this.generatedPassword;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      this.copied = true;
+    },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.too-weak {
+  @apply border-password-red bg-password-red;
+}
+.weak {
+  @apply border-password-orange bg-password-orange;
+}
+.medium {
+  @apply border-password-yellow bg-password-yellow;
+}
+.strong {
+  @apply border-password-green bg-password-green;
+}
+</style>
