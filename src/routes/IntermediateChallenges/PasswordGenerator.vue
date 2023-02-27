@@ -14,7 +14,7 @@
       >
         <input
           type="text"
-          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium lg:text-2xl lg:p-3"
+          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium lg:text-2xl lg:p-3 placeholder:lg:text-2xl"
           placeholder="P4$5W0rD!"
           v-model="generatedPassword"
           readonly
@@ -56,6 +56,8 @@
             v-model="lengthNumber"
             min="0"
             max="20"
+            @input="updateThumbOffset"
+            ref="rangeInput"
           />
         </div>
         <!-- CHECKBOXES -->
@@ -200,16 +202,18 @@ export default {
   name: "PasswordGenerator",
   data() {
     return {
-      lengthNumber: 10,
+      lengthNumber: 0,
       password: "",
-      generatedPassword: "PTx1f5DaFX",
+      generatedPassword: "",
       isUppercase: false,
-      isLowercase: true,
+      isLowercase: false,
       isNumbers: false,
       isSymbol: false,
       errorMessage: "",
-      strengthValue: "Medium",
+      strengthValue: "",
       copied: false,
+      rangeMin: 0,
+      rangeMax: 100,
     };
   },
   computed: {
@@ -226,6 +230,7 @@ export default {
       return this.strengthValue === "Strong";
     },
   },
+
   methods: {
     generatePassword() {
       this.copied = false;
@@ -367,7 +372,8 @@ export default {
   background-position: center;
   background-size: cover;
 }
-/** hello */
+/** hello*/
+
 input[type="range"] {
   height: 0px;
   background-color: #24232c;
@@ -383,13 +389,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: 9px;
   cursor: pointer;
   animate: 0.2s;
-  background: linear-gradient(
-    to right,
-    #a4ffaf 0%,
-    #a4ffaf calc(50% - 15px),
-    #18171f calc(50% - 15px),
-    #18171f 100%
-  );
+  background-color: #18171f;
 }
 input[type="range"]::-webkit-slider-thumb {
   border: 2px solid #e6e5ea;
