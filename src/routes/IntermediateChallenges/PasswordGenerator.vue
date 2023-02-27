@@ -346,26 +346,17 @@ export default {
 .checkmark:hover {
   border: 2px solid #a4ffaf;
 }
-/* On mouse-over, add a grey background color */
-
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: #a4ffaf;
 }
-
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
-/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
-
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 2px;
   top: 2px;
@@ -375,5 +366,43 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+/** hello */
+input[type="range"] {
+  height: 0px;
+  background-color: #24232c;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: linear-gradient(
+    to right,
+    #a4ffaf 0%,
+    #a4ffaf calc(50% - 15px),
+    #18171f calc(50% - 15px),
+    #18171f 100%
+  );
+}
+input[type="range"]::-webkit-slider-thumb {
+  border: 2px solid #e6e5ea;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background: #e6e5ea;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #18171f;
+  border: 2px solid #a4ffaf;
 }
 </style>
