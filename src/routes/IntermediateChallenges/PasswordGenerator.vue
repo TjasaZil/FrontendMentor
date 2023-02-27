@@ -1,26 +1,28 @@
 <template>
   <div
-    class="w-screen h-screen overflow-hidden flex flex-col justify-center items-center text-['JetBrains_Mono'] bg-password-black"
+    class="w-screen h-screen overflow-hidden flex flex-col justify-center items-center main-div bg-password-black"
   >
     <div
-      class="w-11/12 mx-auto flex flex-col justify-center items-center space-y-5 max-w-[540px]"
+      class="w-11/12 mx-auto flex flex-col justify-center items-center space-y-5 max-w-[540px] lg:space-y-6"
     >
-      <h1 class="text-password-gray capitalize">password generator</h1>
+      <h1 class="text-password-gray capitalize lg:text-xl">
+        password generator
+      </h1>
       <!-- COPY PASSWORD -->
       <div
         class="flex flex-row justify-between items-center bg-password-dark w-full mx-auto p-3"
       >
         <input
           type="text"
-          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium"
+          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium lg:text-2xl lg:p-3"
           placeholder="P4$5W0rD!"
           v-model="generatedPassword"
           readonly
         />
-        <div class="flex flex-row justify-center items-center space-x-5">
+        <div class="flex flex-row justify-center items-center space-x-5 mr-5">
           <p
             v-if="this.copied"
-            class="uppercase text-lg font-semibold text-password-green"
+            class="uppercase text-lg font-semibold text-password-green lg:text-xl"
           >
             Copied
           </p>
@@ -40,8 +42,12 @@
           <div
             class="flex flex-row justify-between items-center w-full mx-auto p-3"
           >
-            <label for="range" class="capitalize">Character length</label>
-            <p>{{ lengthNumber }}</p>
+            <label for="range" class="capitalize lg:text-lg"
+              >Character length</label
+            >
+            <p class="text-password-green font-semibold text-xl lg:text-3xl">
+              {{ lengthNumber }}
+            </p>
           </div>
           <input
             id="range"
@@ -118,13 +124,17 @@
         </div>
         <!-- STRENGTH -->
         <div
-          class="bg-password-black w-11/12 p-3 mx-auto flex flex-row justify-between items-center"
+          class="bg-password-black w-11/12 p-3 mx-auto flex flex-row justify-between items-center lg:p-5"
         >
-          <h2 class="uppercase text-password-gray text-lg font-semibold">
+          <h2
+            class="uppercase text-password-gray text-lg font-semibold lg:text-xl"
+          >
             strength
           </h2>
           <div class="flex flex-row justify-center items-center space-x-3">
-            <h2 class="font-semibold uppercase text-password-grayish text-lg">
+            <h2
+              class="font-semibold uppercase text-password-grayish text-lg lg:text-xl"
+            >
               {{ this.strengthValue }}
             </h2>
             <div class="flex flex-row justify-center items-center space-x-2">
@@ -282,6 +292,10 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+.main-div {
+  font-family: "JetBrains Mono", monospace;
+}
 .too-weak {
   @apply border-password-red bg-password-red;
 }
@@ -329,11 +343,10 @@ export default {
   background-color: transparent;
   border: 2px solid #e6e5ea;
 }
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
+.checkmark:hover {
+  border: 2px solid #a4ffaf;
 }
+/* On mouse-over, add a grey background color */
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
