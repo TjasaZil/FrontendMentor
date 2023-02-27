@@ -57,40 +57,63 @@
           class="w-full flex flex-col justify-start items-center text-password-grayish font-medium"
         >
           <div
-            class="flex flex-row justify-start items-center p-3 space-x-4 w-11/12 mx-auto"
+            class="flex flex-row justify-start items-center space-x-4 w-11/12 mx-auto"
           >
-            <input type="checkbox" id="uppercase" v-model="isUppercase" /><label
-              for="uppercase"
-              class="capitalize"
-              >include uppercase letters</label
-            >
+            <label for="uppercase" class="capitalize container"
+              >include uppercase letters
+              <input
+                type="checkbox"
+                id="uppercase"
+                v-model="isUppercase"
+                class="checkbox"
+                checked />
+              <span class="checkmark"></span
+            ></label>
           </div>
+
           <div
-            class="flex flex-row justify-start items-center p-3 space-x-4 w-11/12 mx-auto"
+            class="flex flex-row justify-start items-center space-x-4 w-11/12 mx-auto"
           >
-            <input type="checkbox" id="lowercase" v-model="isLowercase" /><label
-              for="lowercase"
-              class="capitalize"
-              >include lowercase letters</label
-            >
+            <label for="lowercase" class="capitalize container"
+              >include lowercase letters
+              <input
+                type="checkbox"
+                id="lowercase"
+                v-model="isLowercase"
+                class="checkbox"
+                checked />
+              <span class="checkmark"></span
+            ></label>
           </div>
+
           <div
-            class="flex flex-row justify-start items-center p-3 space-x-4 w-11/12 mx-auto"
+            class="flex flex-row justify-start items-center space-x-4 w-11/12 mx-auto"
           >
-            <input type="checkbox" id="numbers" v-model="isNumbers" /><label
-              for="numbers"
-              class="capitalize"
-              >include numbers</label
-            >
+            <label for="numbers" class="capitalize container"
+              >include numbers
+              <input
+                type="checkbox"
+                id="numbers"
+                v-model="isNumbers"
+                class="checkbox"
+                checked />
+              <span class="checkmark"></span
+            ></label>
           </div>
+
           <div
-            class="flex flex-row justify-start items-center p-3 space-x-4 w-11/12 mx-auto"
+            class="flex flex-row justify-start items-center space-x-4 w-11/12 mx-auto"
           >
-            <input type="checkbox" id="symbols" v-model="isSymbol" /><label
-              for="symbols"
-              class="capitalize"
-              >include symbols</label
-            >
+            <label for="symbols" class="capitalize container"
+              >include symbols
+              <input
+                type="checkbox"
+                id="symbols"
+                v-model="isSymbol"
+                class="checkbox"
+                checked />
+              <span class="checkmark"></span
+            ></label>
           </div>
         </div>
         <!-- STRENGTH -->
@@ -140,7 +163,7 @@
         </div>
         <!-- BUTTON-->
         <button
-          class="w-11/12 bg-password-green text-password-dark py-3 text-lg font-medium mx-auto"
+          class="w-11/12 bg-password-green text-password-dark py-3 text-lg font-medium mx-auto lg:py-4 hover:cursor-pointer hover:bg-transparent hover:border-2 hover:border-password-green hover:text-password-green"
           @click="generatePassword()"
         >
           <div
@@ -270,5 +293,74 @@ export default {
 }
 .strong {
   @apply border-password-green bg-password-green;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #e6e5ea;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 2px solid #e6e5ea;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #a4ffaf;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 2px;
+  top: 2px;
+  width: 11px;
+  height: 11px;
+  background-image: url("@/assets/PasswordGenerator/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 </style>
