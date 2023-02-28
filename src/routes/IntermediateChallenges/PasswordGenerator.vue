@@ -2,7 +2,7 @@
   <div
     class="w-screen h-screen overflow-hidden flex flex-col justify-center items-center main-div bg-password-black"
   >
-    <div
+    <section
       class="w-11/12 mx-auto flex flex-col justify-center items-center space-y-5 max-w-[540px] lg:space-y-8"
     >
       <h1 class="text-password-gray capitalize lg:text-2xl">
@@ -36,7 +36,7 @@
       </div>
       <!-- MAIN CONTAINER-->
       <div
-        class="w-full space-y-5 mx-auto bg-password-dark flex flex-col justify-center items-center py-5"
+        class="w-full space-y-5 mx-auto bg-password-dark flex flex-col justify-between items-center py-5 lg:h-[540px]"
       >
         <div class="w-11/12 mx-auto flex flex-col justify-center items-center">
           <div
@@ -193,7 +193,7 @@
           {{ this.errorMessage }}
         </p>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
