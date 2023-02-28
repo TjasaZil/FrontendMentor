@@ -3,9 +3,9 @@
     class="w-screen h-screen overflow-hidden flex flex-col justify-center items-center main-div bg-password-black"
   >
     <div
-      class="w-11/12 mx-auto flex flex-col justify-center items-center space-y-5 max-w-[540px] lg:space-y-6"
+      class="w-11/12 mx-auto flex flex-col justify-center items-center space-y-5 max-w-[540px] lg:space-y-8"
     >
-      <h1 class="text-password-gray capitalize lg:text-xl">
+      <h1 class="text-password-gray capitalize lg:text-2xl">
         password generator
       </h1>
       <!-- COPY PASSWORD -->
@@ -14,7 +14,7 @@
       >
         <input
           type="text"
-          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium lg:text-2xl lg:p-3 placeholder:lg:text-2xl"
+          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium lg:text-2xl lg:p-3 placeholder:lg:text-3xl"
           placeholder="P4$5W0rD!"
           v-model="generatedPassword"
           readonly
@@ -22,7 +22,7 @@
         <div class="flex flex-row justify-center items-center space-x-5 mr-5">
           <p
             v-if="this.copied"
-            class="uppercase text-lg font-semibold text-password-green lg:text-xl"
+            class="uppercase text-lg font-semibold text-password-green lg:text-2xl"
           >
             Copied
           </p>
@@ -36,16 +36,16 @@
       </div>
       <!-- MAIN CONTAINER-->
       <div
-        class="w-full space-y-5 mx-auto bg-password-dark flex flex-col justify-center items-center py-8"
+        class="w-full space-y-5 mx-auto bg-password-dark flex flex-col justify-center items-center py-5"
       >
         <div class="w-11/12 mx-auto flex flex-col justify-center items-center">
           <div
             class="flex flex-row justify-between items-center w-full mx-auto p-3"
           >
-            <label for="range" class="capitalize lg:text-lg"
+            <label for="range" class="capitalize lg:text-xl"
               >Character length</label
             >
-            <p class="text-password-green font-semibold text-xl lg:text-3xl">
+            <p class="text-password-green font-semibold text-xl lg:text-4xl">
               {{ lengthNumber }}
             </p>
           </div>
@@ -62,7 +62,7 @@
         </div>
         <!-- CHECKBOXES -->
         <div
-          class="w-full flex flex-col justify-start items-center text-password-grayish font-medium"
+          class="w-full flex flex-col justify-start items-center text-password-grayish font-medium lg:text-xl"
         >
           <div
             class="flex flex-row justify-start items-center space-x-4 w-11/12 mx-auto"
