@@ -36,7 +36,7 @@
       </div>
       <!-- MAIN CONTAINER-->
       <div
-        class="w-full space-y-5 mx-auto bg-password-dark flex flex-col justify-between items-center py-5 lg:h-[540px]"
+        class="w-full space-y-5 mx-auto bg-password-dark flex flex-col justify-between items-center py-3 lg:h-[540px]"
       >
         <div class="w-11/12 mx-auto flex flex-col justify-center items-center">
           <div
