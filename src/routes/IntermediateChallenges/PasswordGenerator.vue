@@ -3,7 +3,7 @@
     class="w-screen h-screen overflow-hidden flex flex-col justify-center items-center main-div bg-password-black"
   >
     <section
-      class="w-11/12 mx-auto flex flex-col justify-center items-center space-y-5 max-w-[540px] lg:space-y-8 lg:justify-start h-full pt-36"
+      class="w-11/12 mx-auto flex flex-col justify-center items-center space-y-5 max-w-[540px] lg:space-y-8 lg:justify-start h-full pt-32"
     >
       <h1 class="text-password-gray capitalize lg:text-2xl">
         password generator
@@ -402,9 +402,9 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 input[type="range"]::-webkit-slider-thumb {
   border: 2px solid #e6e5ea;
-  height: 40px;
-  width: 40px;
-  border-radius: 40px;
+  height: 43px;
+  width: 43px;
+  border-radius: 43px;
   background: #e6e5ea;
   cursor: pointer;
   -webkit-appearance: none;
