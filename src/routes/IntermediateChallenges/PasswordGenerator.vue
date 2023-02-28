@@ -234,29 +234,38 @@ export default {
   methods: {
     generatePassword() {
       this.copied = false;
+      this.generatedPassword = "";
       this.getPassword();
       this.checked();
       this.checkPasswordStrength();
-      this.generatedPassword = "";
       for (let i = 1; i <= this.lengthNumber; i++) {
         let k = Math.floor(Math.random() * this.password.length);
         this.generatedPassword += this.password[k];
       }
     },
     getPassword() {
+      this.errorMessage = "";
       if (
         !this.isUppercase &&
         !this.isLowercase &&
         !this.isNumbers &&
         !this.isSymbol
-      )
+      ) {
+        this.generatedPassword = "";
         this.errorMessage = "Please check at least one checkbox";
-      if (this.lengthNumber == 0)
+        console.log(this.errorMessage);
+      }
+
+      if (this.lengthNumber == 0) {
+        this.generatedPassword = "";
         this.errorMessage = "The Password length can not be 0";
+        console.log(this.errorMessage);
+      }
     },
     checked() {
       this.password = "";
-      if (this.isUppercase) this.password += "QWERTZUIOPASDFGHJKLYXCVBNM";
+
+      if (this.isLowercase) this.password += "QWERTZUIOPASDFGHJKLYXCVBNM";
       if (this.isLowercase) this.password += "qwertzuiopasdfghjklyxcvbnm";
       if (this.isNumbers) this.password += "1234567890";
       if (this.isSymbol) this.password += "!#$%&/()=?*-_<>.;[]{}@";
