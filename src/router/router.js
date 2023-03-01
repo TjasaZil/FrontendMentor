@@ -94,6 +94,10 @@ const router = createRouter({
       component: () =>
         import("@/routes/IntermediateChallenges/PasswordGenerator.vue"),
     },
+    {
+      path: "/clock-app",
+      component: () => import("@/routes/IntermediateChallenges/ClockApp.vue"),
+    },
   ],
 });
 

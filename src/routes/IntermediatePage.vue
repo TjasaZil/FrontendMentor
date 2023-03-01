@@ -13,6 +13,13 @@
         class="mt-16 w-5/6 mx-auto flex flex-wrap justify-around items-center"
       >
         <Container
+          :image="Clock"
+          alt="Clock App"
+          heading="Clock App"
+          router="/clock-app"
+          x-intersect="$el.classList.add('swingIn')"
+        />
+        <Container
           :image="Password"
           alt="Password generator app"
           heading="Password generator app"
@@ -87,6 +94,7 @@ import MainButton from "@/components/Shared/MainButton.vue";
 import DictionaryWebApp from "@/assets/DictionaryWebApp/preview.jpg";
 import IP from "@/assets/IPtracker/design/desktop-preview.jpg";
 import Password from "@/assets/PasswordGenerator/preview.jpg";
+import Clock from "@/assets/ClockApp/preview.jpg";
 export default {
   name: "NewbiePage",
   components: { IntroText, Navigation, Footer, MainButton, Container },
@@ -96,6 +104,7 @@ export default {
       DictionaryWebApp,
       IP,
       Password,
+      Clock,
     };
   },
 };
