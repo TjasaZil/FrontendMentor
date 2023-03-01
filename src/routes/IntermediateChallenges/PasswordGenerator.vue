@@ -265,7 +265,7 @@ export default {
     checked() {
       this.password = "";
 
-      if (this.isLowercase) this.password += "QWERTZUIOPASDFGHJKLYXCVBNM";
+      if (this.isUppercase) this.password += "QWERTZUIOPASDFGHJKLYXCVBNM";
       if (this.isLowercase) this.password += "qwertzuiopasdfghjklyxcvbnm";
       if (this.isNumbers) this.password += "1234567890";
       if (this.isSymbol) this.password += "!#$%&/()=?*-_<>.;[]{}@";
