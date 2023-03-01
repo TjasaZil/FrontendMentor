@@ -14,7 +14,7 @@
       >
         <input
           type="text"
-          class="password p-2 bg-transparent placeholder:text-password-gray text-xl placeholder:text-xl text-password-grayish font-medium lg:text-2xl lg:p-3 placeholder:lg:text-3xl"
+          class="w-1/3 lg:w-full password p-2 bg-transparent placeholder:text-password-gray text-base placeholder:text-base md:text-xl mdplaceholder:text-xl text-password-grayish font-medium lg:text-2xl lg:p-3 placeholder:lg:text-3xl"
           placeholder="P4$5W0rD!"
           v-model="generatedPassword"
           readonly
@@ -22,11 +22,11 @@
         <div class="flex flex-row justify-center items-center space-x-5 mr-5">
           <p
             v-if="this.copied"
-            class="uppercase text-lg font-semibold text-password-green lg:text-2xl"
+            class="uppercase sm:text-lg font-semibold text-base placeholder:text-base text-password-green lg:text-2xl"
           >
             Copied
           </p>
-          <button @click="clipPassword()">
+          <button @click="clipPassword()" class="w-4 md:w-5">
             <img
               src="@/assets/PasswordGenerator/images/icon-copy.svg"
               alt="copy the password"
@@ -409,6 +409,18 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -14px;
+}
+@media screen and (max-width: 580px) {
+  input[type="range"]::-webkit-slider-thumb {
+    border: 2px solid #e6e5ea;
+    height: 33px;
+    width: 33px;
+    border-radius: 33px;
+    background: #e6e5ea;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -12px;
+  }
 }
 input[type="range"]::-webkit-slider-thumb:hover {
   background-color: #18171f;
