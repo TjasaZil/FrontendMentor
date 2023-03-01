@@ -18,6 +18,49 @@
         />
       </button>
     </div>
+    <div
+      class="border border-green-400 w-full flex flex-col justify-start space-y-3 p-4 items-center"
+    >
+      <div
+        class="border border-orange-400 w-full flex flex-row justify-start space-x-3 p-4 items-center"
+      >
+        <p>{{ this.timeString }}</p>
+        <p>{{ this.timeAbbrev }}</p>
+      </div>
+      <div
+        class="border border-pink-400 w-full flex flex-row justify-start space-x-3 p-4 items-center"
+      >
+        <p>in {{ this.city }}, {{ this.countryCode }}</p>
+      </div>
+      <div
+        class="border border-blue-400 w-full flex flex-col justify-start space-y-3 p-4 items-center"
+      >
+        <div
+          class="w-full border border-amber-500 flex flex-row justify-between items-center p-3"
+        >
+          <p>current timezone</p>
+          <p>{{ this.timezone }}</p>
+        </div>
+        <div
+          class="w-full border border-amber-500 flex flex-row justify-between items-center p-3"
+        >
+          <p>day of the year</p>
+          <p>in {{ this.dayOfTheYear }}</p>
+        </div>
+        <div
+          class="w-full border border-amber-500 flex flex-row justify-between items-center p-3"
+        >
+          <p>day of the week</p>
+          <p>in {{ this.dayOfTheWeek }}</p>
+        </div>
+        <div
+          class="w-full border border-amber-500 flex flex-row justify-between items-center p-3"
+        >
+          <p>week number</p>
+          <p>in {{ this.weekNumber }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,6 +73,16 @@ export default {
     return {
       randomQuote: "",
       quoteAuthor: "",
+      time: "",
+      timeString: "",
+      IP: "",
+      timeAbbrev: "",
+      timezone: "",
+      city: "",
+      countryCode: "",
+      dayOfTheYear: "",
+      dayOfTheWeek: "",
+      weekNumber: "",
     };
   },
   methods: {
@@ -37,7 +90,6 @@ export default {
       axios
         .get("https://api.quotable.io/random")
         .then((response) => {
-          console.log(response.data);
           this.randomQuote = response.data.content;
           this.quoteAuthor = response.data.author;
         })
@@ -46,9 +98,54 @@ export default {
           this.quoteAuthor = "";
         });
     },
+    getIP() {
+      axios
+        .get(
+          `https://api.ipbase.com/v2/info?apikey=v0hcobrytyiA53POT0tvQkE0LPYfpkTXHrCgMkTj`
+        )
+        .then((response) => {
+          this.IP = response.data.data.ip;
+          this.city = response.data.data.location.city.name;
+          this.countryCode = response.data.data.location.country.alpha2;
+          console.log(this.city);
+          console.log(this.countryCode);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    },
+    getTime() {
+      axios
+        .get(`http://worldtimeapi.org/api/ip/${this.IP}`)
+        .then((response) => {
+          this.dayOfTheWeek = response.data.day_of_week;
+          this.dayOfTheWeek = response.data.day_of_year;
+          this.weekNumber = response.data.week_number;
+          this.timeAbbrev = response.data.abbreviation;
+          this.time = response.data.datetime;
+          this.timezone = response.data.timezone;
+          const date = new Date(this.time);
+          this.timeString = date.toLocaleTimeString(undefined, {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+          });
+          console.log(this.timeString);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          setTimeout(() => {
+            this.getTime();
+          }, 1000); // delay for 1 seconds between API requests
+        });
+    },
   },
   mounted() {
     this.selectRandomQuote();
+    this.getIP();
+    this.getTime();
   },
 };
 </script>
