@@ -45,19 +45,19 @@
           class="w-full border border-amber-500 flex flex-row justify-between items-center p-3"
         >
           <p>day of the year</p>
-          <p>in {{ this.dayOfTheYear }}</p>
+          <p>{{ this.dayOfTheYear }}</p>
         </div>
         <div
           class="w-full border border-amber-500 flex flex-row justify-between items-center p-3"
         >
           <p>day of the week</p>
-          <p>in {{ this.dayOfTheWeek }}</p>
+          <p>{{ this.dayOfTheWeek }}</p>
         </div>
         <div
           class="w-full border border-amber-500 flex flex-row justify-between items-center p-3"
         >
           <p>week number</p>
-          <p>in {{ this.weekNumber }}</p>
+          <p>{{ this.weekNumber }}</p>
         </div>
       </div>
     </div>
@@ -107,8 +107,6 @@ export default {
           this.IP = response.data.data.ip;
           this.city = response.data.data.location.city.name;
           this.countryCode = response.data.data.location.country.alpha2;
-          console.log(this.city);
-          console.log(this.countryCode);
         })
         .catch((error) => {
           console.log(error.message);
@@ -119,7 +117,7 @@ export default {
         .get(`http://worldtimeapi.org/api/ip/${this.IP}`)
         .then((response) => {
           this.dayOfTheWeek = response.data.day_of_week;
-          this.dayOfTheWeek = response.data.day_of_year;
+          this.dayOfTheYear = response.data.day_of_year;
           this.weekNumber = response.data.week_number;
           this.timeAbbrev = response.data.abbreviation;
           this.time = response.data.datetime;
