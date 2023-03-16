@@ -161,9 +161,9 @@
 </template>
 
 <script>
+import axios from "axios";
 import sun from "../../assets/githubSearch/icon-sun.svg";
 import moon from "../../assets/githubSearch/icon-moon.svg";
-import axios from "axios";
 
 export default {
   name: "GithubSearch",

@@ -9,6 +9,7 @@ jest.mock("axios");
 describe("GithubSearch", () => {
   const createProps = (gitProps = {}) => ({
     avatar_url: "www.google.com",
+    login: "Octokitty",
     ...gitProps,
   });
   const renderUser = (gitProps) => {
@@ -30,7 +31,11 @@ describe("GithubSearch", () => {
       renderUser(gitProps);
       expect(screen.getByRole("img")).toBeVisible();
     });
-    it("renders login", () => {});
+    it("renders login", () => {
+      const gitProps = createProps({ login: "Zuzi" });
+      renderUser(gitProps);
+      expect(screen.getByText(/zuzi/i)).toBeInTheDocument();
+    });
     it("renders bio", () => {});
     it("renders blog", () => {});
     it("renders company", () => {});
