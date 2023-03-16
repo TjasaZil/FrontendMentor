@@ -39,13 +39,13 @@ describe("HamburgerComponent", () => {
       let list = screen.queryByRole("list");
       expect(list).toBeInTheDocument();
     });
-    it("has 3 list items", async () => {
+    it("has 4 list items", async () => {
       const user = userEvent.setup();
       render(HamburgerComponent);
       let img = screen.queryByRole("img");
       await user.click(img);
       let listItems = screen.queryAllByRole("listitem");
-      expect(listItems.length).toBe(3);
+      expect(listItems.length).toBe(4);
     });
   });
   describe("list items names", () => {
@@ -57,10 +57,12 @@ describe("HamburgerComponent", () => {
       const itemArray = [
         "home",
         "newbie challenges",
-        "junior challenges, intermediate challenges",
+        "junior challenges",
+        "intermediate challenges",
       ];
       for (let i = 0; i < itemArray.length; i++) {
         const item = screen.queryByText(itemArray[i]);
+        console.log(`Item found:`, item);
         expect(item).toBeInTheDocument();
       }
     });

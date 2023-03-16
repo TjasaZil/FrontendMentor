@@ -29,10 +29,10 @@ describe("Navigation", () => {
       expect(list).toBeInTheDocument();
     });
     render(Navigation);
-    it("has 3 list items", () => {
+    it("has 4 list items", () => {
       render(Navigation);
       let listItems = screen.queryAllByRole("listitem");
-      expect(listItems.length).toBe(3);
+      expect(listItems.length).toBe(4);
     });
     describe("appropriate list items", () => {
       it("has appropriate listitem", () => {
