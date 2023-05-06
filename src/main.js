@@ -3,6 +3,8 @@ import App from "./App.vue";
 import "./index.css";
 import router from "./router/router.js";
 import firebase from "firebase/compat/app";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA-0K4hsiMDDib9yqumeGBHxqSs-Natwl0",
